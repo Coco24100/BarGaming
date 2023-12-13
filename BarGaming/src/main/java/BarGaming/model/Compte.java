@@ -10,28 +10,53 @@ import jakarta.persistence.InheritanceType;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="Jeux")
+@Table(name="Compte")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-public abstract class Jeux {
+public class Compte {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	protected Integer id;
+	private Integer id;
 	
 	@Column
-	protected String nom;
+	private String nom ;
+	
+	@Column
+	private String prenom ;
 	
 	
-	public Jeux() {
+	
+	public Compte(Integer id, String nom, String prenom) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.prenom = prenom;
+	}
+	
+	public Compte(String nom, String prenom) {
+		super();
+		
+		this.nom = nom;
+		this.prenom = prenom;
+	}
+	
+	public Compte() {
 		// TODO Auto-generated constructor stub
 	}
-
+	
+	
+	
 	public String getNom() {
 		return nom;
 	}
-
 	public void setNom(String nom) {
 		this.nom = nom;
+	}
+	public String getPrenom() {
+		return prenom;
+	}
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
 	}
 
 	public Integer getId() {
@@ -41,6 +66,7 @@ public abstract class Jeux {
 	public void setId(Integer id) {
 		this.id = id;
 	}
+	
 	
 	
 	

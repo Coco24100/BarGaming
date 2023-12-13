@@ -5,18 +5,18 @@ import java.time.LocalDateTime;
 public class Reservation {
 	
 	protected Integer id;
-	private Client client;
+	private Compte client;
 	private LocalDateTime dateReservation;
 	private Evenement evenement ;
 	
-	public Reservation(Client client, LocalDateTime dateReservation, Evenement evenement) {
+	public Reservation(Compte client, LocalDateTime dateReservation, Evenement evenement) {
 		super();
 		this.client = client;
 		this.dateReservation = dateReservation;
 		this.evenement = evenement;
 	}
 	
-	public Reservation(Integer id, Client client, LocalDateTime dateReservation, Evenement evenement) {
+	public Reservation(Integer id, Compte client, LocalDateTime dateReservation, Evenement evenement) {
 		super();
 		this.id = id;
 		this.client = client;
@@ -32,11 +32,11 @@ public class Reservation {
 		this.id = id;
 	}
 
-	public Client getClient() {
+	public Compte getClient() {
 		return client;
 	}
 
-	public void setClient(Client client) {
+	public void setClient(Compte client) {
 		this.client = client;
 	}
 

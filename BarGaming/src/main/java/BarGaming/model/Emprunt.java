@@ -2,21 +2,42 @@ package BarGaming.model;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="Location")
 public class Emprunt {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
+	@Column
 	private LocalDate dateEmprunt;
-	private Client client;
+	
+	@Column
+	@ManyToOne
+	private Compte client;
+	
+	@Column
+	@ManyToOne
 	private JeuxSociete jeuxSociete;
 
-	public Emprunt(LocalDate dateEmprunt, Client client, JeuxSociete jeuxSociete) {
+	public Emprunt(LocalDate dateEmprunt, Compte client, JeuxSociete jeuxSociete) {
 		super();
 		this.dateEmprunt = dateEmprunt;
 		this.client = client;
 		this.jeuxSociete = jeuxSociete;
 	}
 
-	public Emprunt(Integer id, LocalDate dateEmprunt, Client client, JeuxSociete jeuxSociete) {
+	public Emprunt(Integer id, LocalDate dateEmprunt, Compte client, JeuxSociete jeuxSociete) {
 		super();
 		this.id = id;
 		this.dateEmprunt = dateEmprunt;
@@ -44,11 +65,11 @@ public class Emprunt {
 		this.dateEmprunt = dateEmprunt;
 	}
 
-	public Client getClient() {
+	public Compte getClient() {
 		return client;
 	}
 
-	public void setClient(Client client) {
+	public void setClient(Compte client) {
 		this.client = client;
 	}
 

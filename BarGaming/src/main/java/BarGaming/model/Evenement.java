@@ -5,35 +5,64 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+
+
+@Entity
+@Table(name="Evenement")
 public class Evenement {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	protected Integer id;
-	protected List<Client> participants = new ArrayList<Client>();
-	protected String nom;
-	protected LocalDate date;
-	protected LocalTime horaireDebut;
-	protected LocalTime horaireFin;
 
-	public Evenement(List<Client> participants, String nom, LocalDate date, LocalTime horaireDebut,
-			LocalTime horaireFin) {
+	
+	@Column
+	protected String nom;
+	@Column
+	protected LocalDate date;
+	@Column
+	protected LocalTime horaireDebut;
+	@Column
+	protected LocalTime horaireFin;
+	
+	@OneToMany(mappedBy = "evenement")
+	private List<Reservation> reservations ;
+	
+	
+
+
+	public Evenement(String nom, LocalDate date, LocalTime horaireDebut, LocalTime horaireFin,
+			List<Reservation> reservations) {
 		super();
-		this.participants = participants;
 		this.nom = nom;
 		this.date = date;
 		this.horaireDebut = horaireDebut;
 		this.horaireFin = horaireFin;
+		this.reservations = reservations;
 	}
+	
+	
 
-	public Evenement(Integer id, List<Client> participants, String nom, LocalDate date, LocalTime horaireDebut,
-			LocalTime horaireFin) {
+	public Evenement(Integer id, String nom, LocalDate date, LocalTime horaireDebut, LocalTime horaireFin,
+			List<Reservation> reservations) {
 		super();
 		this.id = id;
-		this.participants = participants;
 		this.nom = nom;
 		this.date = date;
 		this.horaireDebut = horaireDebut;
 		this.horaireFin = horaireFin;
+		this.reservations = reservations;
 	}
+
+
 
 	public Integer getId() {
 		return id;
@@ -43,13 +72,6 @@ public class Evenement {
 		this.id = id;
 	}
 
-	public List<Client> getParticipants() {
-		return participants;
-	}
-
-	public void setParticipants(List<Client> participants) {
-		this.participants = participants;
-	}
 
 	public String getNom() {
 		return nom;
@@ -82,5 +104,19 @@ public class Evenement {
 	public void setHoraireFin(LocalTime horaireFin) {
 		this.horaireFin = horaireFin;
 	}
+
+
+
+	public List<Reservation> getReservations() {
+		return reservations;
+	}
+
+
+
+	public void setReservations(List<Reservation> reservations) {
+		this.reservations = reservations;
+	}
+	
+	
 
 }
