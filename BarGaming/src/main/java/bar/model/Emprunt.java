@@ -7,6 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 import jakarta.persistence.Table;
@@ -22,22 +23,22 @@ public class Emprunt {
 	@Column(nullable = false)
 	private LocalDate dateEmprunt;
 	
-	@Column
+	@JoinColumn
 	@ManyToOne
-	private Compte client;
+	private Client client;
 	
-	@Column
+	@JoinColumn
 	@ManyToOne
 	private JeuxSociete jeuxSociete;
 
-	public Emprunt(LocalDate dateEmprunt, Compte client, JeuxSociete jeuxSociete) {
+	public Emprunt(LocalDate dateEmprunt, Client client, JeuxSociete jeuxSociete) {
 		super();
 		this.dateEmprunt = dateEmprunt;
 		this.client = client;
 		this.jeuxSociete = jeuxSociete;
 	}
 
-	public Emprunt(Integer id, LocalDate dateEmprunt, Compte client, JeuxSociete jeuxSociete) {
+	public Emprunt(Integer id, LocalDate dateEmprunt, Client client, JeuxSociete jeuxSociete) {
 		super();
 		this.id = id;
 		this.dateEmprunt = dateEmprunt;
@@ -65,11 +66,11 @@ public class Emprunt {
 		this.dateEmprunt = dateEmprunt;
 	}
 
-	public Compte getClient() {
+	public Client getClient() {
 		return client;
 	}
 
-	public void setClient(Compte client) {
+	public void setClient(Client client) {
 		this.client = client;
 	}
 

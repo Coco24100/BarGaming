@@ -1,7 +1,9 @@
 package bar.model;
 
 import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
 
+@Entity
 @DiscriminatorValue("client")
 public class Client extends Compte{
 	public Client() {}

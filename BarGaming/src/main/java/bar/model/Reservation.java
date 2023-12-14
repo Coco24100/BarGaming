@@ -8,6 +8,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
@@ -18,13 +19,15 @@ public class Reservation {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	protected Integer id;
 	
-	@Column
-	private Compte client;
+	
+	@JoinColumn
+	@ManyToOne
+	private Client client;
 	
 	@Column(nullable = false)
 	private LocalDateTime dateReservation;
 	
-	@Column
+	@JoinColumn
 	@ManyToOne
 	private Evenement evenement ;
 	
@@ -33,14 +36,14 @@ public class Reservation {
 	public Reservation() {
 	}
 
-	public Reservation(Compte client, LocalDateTime dateReservation, Evenement evenement) {
+	public Reservation(Client client, LocalDateTime dateReservation, Evenement evenement) {
 		super();
 		this.client = client;
 		this.dateReservation = dateReservation;
 		this.evenement = evenement;
 	}
 	
-	public Reservation(Integer id, Compte client, LocalDateTime dateReservation, Evenement evenement) {
+	public Reservation(Integer id, Client client, LocalDateTime dateReservation, Evenement evenement) {
 		super();
 		this.id = id;
 		this.client = client;
@@ -56,11 +59,11 @@ public class Reservation {
 		this.id = id;
 	}
 
-	public Compte getClient() {
+	public Client getClient() {
 		return client;
 	}
 
-	public void setClient(Compte client) {
+	public void setClient(Client client) {
 		this.client = client;
 	}
 

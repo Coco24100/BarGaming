@@ -2,7 +2,10 @@ package bar.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
 
+
+@Entity
 @DiscriminatorValue("video")
 public class JeuxVideo extends Jeux{
 
