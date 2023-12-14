@@ -1,6 +1,7 @@
-package BarGaming.model;
+package bar.model;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.DiscriminatorColumn;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,15 +11,16 @@ import jakarta.persistence.InheritanceType;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="Jeux")
+@Table(name="jeux")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="type_jeu",columnDefinition = "ENUM('societe','video')")
 public abstract class Jeux {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	protected Integer id;
 	
-	@Column
+	@Column(nullable = false, length = 50)
 	protected String nom;
 	
 	
@@ -26,8 +28,14 @@ public abstract class Jeux {
 		// TODO Auto-generated constructor stub
 	}
 
-	public String getNom() {
-		return nom;
+	public Jeux(Integer id, String nom) {
+		this.id = id;
+		this.nom = nom;
+	}
+	
+
+	public Jeux(String nom) {
+		this.nom = nom;
 	}
 
 	public void setNom(String nom) {
@@ -41,8 +49,11 @@ public abstract class Jeux {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	
-	
+
+	public String getNom() {
+		return nom;
+	}
+
 	
 	
 	

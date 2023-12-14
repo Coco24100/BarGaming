@@ -1,4 +1,4 @@
-package BarGaming.model;
+package bar.model;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -24,10 +24,12 @@ public class Evenement {
 	protected Integer id;
 
 	
-	@Column
+	@Column(nullable = false, length = 50)
 	protected String nom;
-	@Column
+	
+	@Column(nullable = false)
 	protected LocalDate date;
+	
 	@Column
 	protected LocalTime horaireDebut;
 	@Column
@@ -37,7 +39,8 @@ public class Evenement {
 	private List<Reservation> reservations ;
 	
 	
-
+	public Evenement() {
+	}
 
 	public Evenement(String nom, LocalDate date, LocalTime horaireDebut, LocalTime horaireFin,
 			List<Reservation> reservations) {

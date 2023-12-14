@@ -1,4 +1,4 @@
-package BarGaming.model;
+package bar.model;
 
 import java.time.LocalDate;
 
@@ -12,14 +12,14 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="Location")
+@Table(name="location")
 public class Emprunt {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	@Column
+	@Column(nullable = false)
 	private LocalDate dateEmprunt;
 	
 	@Column

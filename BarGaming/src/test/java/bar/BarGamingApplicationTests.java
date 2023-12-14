@@ -1,4 +1,4 @@
-package BarGaming;
+package bar;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
