@@ -16,61 +16,61 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import bar.dao.IDAOCompte;
-import bar.model.Compte;
+import bar.dao.IDAOEvenement;
+import bar.model.Evenement;
 import jakarta.validation.Valid;
 
-
 @RestController
-@RequestMapping("/api/compte")
-public class CompteRestController {
+@RequestMapping("/api/evenement")
+public class EvenementRESTController {
 
 	@Autowired
-	private IDAOCompte daoCompte;
+	private IDAOEvenement daoEvenement;
 	
 	
 	@GetMapping("/{id}")
-	public Compte findById(@PathVariable Integer id) 
+	public Evenement findById(@PathVariable Integer id) 
 	{
-		Optional<Compte> opt = daoCompte.findById(id);
+		Optional<Evenement> opt = daoEvenement.findById(id);
 		if(opt.isEmpty()) 
 		{
 			return null;
 		}
-		return opt.get();
+		return (Evenement) opt.get();
 	}
 	
 	@GetMapping
-	public List<Compte> findAll() 
+	public List<Evenement> findAll() 
 	{
-		return daoCompte.findAll();
+		return daoEvenement.findAll();
 	}
 	
 	
 	@PostMapping
-	public Compte insert(@Valid @RequestBody Compte compte, BindingResult result) 
+	public Evenement insert(@Valid @RequestBody Evenement evenement, BindingResult result) 
 	{
 		if(result.hasErrors()) 
 		{
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Le compte n'est pas valide...");
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "La evenement n'est pas valide...");
 		}
-		return daoCompte.save(compte);
+		return daoEvenement.save(evenement);
 	}
 	
 	@PutMapping("/{id}")
-	public Compte update(@Valid @RequestBody Compte compte, BindingResult result) 
+	public Evenement update(@Valid @RequestBody Evenement evenement, BindingResult result) 
 	{
 		if(result.hasErrors()) 
 		{
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Le compte n'est pas valide...");
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "La evenement n'est pas valide...");
 		}
-		return daoCompte.save(compte);
+		return daoEvenement.save(evenement);
 	}
 	
 	@DeleteMapping("/{id}")
 	public void delete(@PathVariable Integer id) 
 	{
-		daoCompte.deleteById(id);
+		daoEvenement.deleteById(id);
 	}
+	
 	
 }

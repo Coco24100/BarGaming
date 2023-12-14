@@ -17,4 +17,6 @@ public interface IDAOJeux extends JpaRepository<Jeux,Integer>{
 	@Query("from JeuxSociete")
 	public List<JeuxSociete> findAllJeuxSociete();
 	
+
+	
 }
