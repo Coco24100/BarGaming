@@ -1,5 +1,6 @@
 package bar.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,7 +17,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import bar.controller.dto.EvenementResponse;
+import bar.controller.dto.EvenementResponse;
 import bar.dao.IDAOEvenement;
+import bar.model.Evenement;
 import bar.model.Evenement;
 import jakarta.validation.Valid;
 
@@ -29,20 +33,36 @@ public class EvenementRESTController {
 	
 	
 	@GetMapping("/{id}")
-	public Evenement findById(@PathVariable Integer id) 
+	public EvenementResponse findById(@PathVariable Integer id) 
 	{
+		
+		EvenementResponse response  = new EvenementResponse();
 		Optional<Evenement> opt = daoEvenement.findById(id);
 		if(opt.isEmpty()) 
 		{
 			return null;
 		}
-		return (Evenement) opt.get();
+		
+		response.fromEvenement(opt.get());
+		return response;
 	}
 	
 	@GetMapping
-	public List<Evenement> findAll() 
+	public List<EvenementResponse> findAll() 
 	{
-		return daoEvenement.findAll();
+		List<EvenementResponse> evenements = new ArrayList<EvenementResponse>();
+		
+		List<Evenement> events = daoEvenement.findAll();
+		
+		for(Evenement e : events)
+		{
+			EvenementResponse response = new EvenementResponse();
+			response.fromEvenement(e);
+			
+			evenements.add(response);
+		}
+		
+		return evenements;
 	}
 	
 	
