@@ -1,0 +1,63 @@
+<div class="card mt-3">
+    <div class="card-header text-white bg-primary">
+        Liste des Emprunts
+    </div>
+    <div class="card-body"> 
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Identifiant</th>
+                    <th>Date d'Emprunt</th>
+                    <th>Client</th>
+                    <th>Jeux de Société</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let e of list()">
+                    <td>{{e.id}}</td>
+                    <td>{{e.dateEmprunt}}</td>
+                    <td>{{e.client}}</td>
+                    <td>{{e.jeuxSociete}}</td>
+                    <td><div class="btn-group btn-group-sm">
+                        <a (click)="edit(e.id)" class="btn btn-primary"><i class="bi bi-pen"></i></a>
+                        <a (click)="remove(e.id)" class="btn btn-danger"><i class="bi bi-trash"></i></a>
+                      </div></td>
+                </tr>
+             
+            </tbody>
+
+        </table>
+    </div>
+    <div class="card-footer">
+        <a (click)="add()" class="btn btn-success btn-lg"><i class="bi bi-plus-lg"></i></a>
+    </div>
+</div>
+
+<div class="card mt-3" *ngIf="empruntForm">
+    <div class="card-header text-white bg-primary">
+        Edition d'un emprunt
+    </div>
+    <div class="card-body"> 
+        <div class="mb-3 mt-3">
+            <label for="id" class="form-label">Identifiant:</label>
+            <input type="number" class="form-control" id="id" name="id" disabled [(ngModel)]="empruntForm.id">
+        </div>
+        <div class="mb-3">
+            <label for="dateEmprunt" class="form-label">Date Emprunt:</label>
+            <input type="text" class="form-control" id="dateEmprunt" name="dateEmprunt" [(ngModel)]="empruntForm.dateEmprunt">
+        </div>
+        <div class="mb-3">
+            <label for="client" class="form-label">Client:</label>
+            <input type="text" class="form-control" id="client" name="client" [(ngModel)]="empruntForm.client">
+        </div>
+        <div class="mb-3">
+            <label for="jeuxSociete" class="form-label">Jeux de Societe:</label>
+            <input type="text" class="form-control" id="jeuxSociete" name="jeuxSociete" [(ngModel)]="empruntForm.jeuxSociete">
+        </div>
+    </div>
+    <div class="card-footer">
+        <a (click)="save()" class="btn btn-success btn-lg"><i class="bi bi-check-lg"></i></a>
+        <a (click)="cancel()" class="btn btn-warning btn-lg mx-2"><i class="bi bi-backspace"></i></a>
+    </div>
+</div>
