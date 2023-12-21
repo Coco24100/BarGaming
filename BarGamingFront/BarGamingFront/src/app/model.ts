@@ -9,3 +9,7 @@ export class Client {
 export class Event {
     constructor(public id?: number, public nom?: string, public date?: string, public horaireDebut?: string, public horaireFin?: string) {}
 }
+
+export class Jeux {
+    constructor(public id?: number, public nom?: string) {};
+}

@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { EmpruntComponent } from './emprunt/emprunt.component';
 import { ClientComponent } from './client/client.component';
 import { EventComponent } from './event/event.component';
+import { JeuxComponent } from './jeux/jeux.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmpruntComponent,
     ClientComponent,
-    EventComponent
+    EventComponent,
+    JeuxComponent
   ],
   imports: [
     BrowserModule,

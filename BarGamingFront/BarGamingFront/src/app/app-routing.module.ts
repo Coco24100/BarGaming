@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { EmpruntComponent } from './emprunt/emprunt.component';
 import { ClientComponent } from './client/client.component';
 import { EventComponent } from './event/event.component';
+import { JeuxComponent } from './jeux/jeux.component';
 
 const routes: Routes = [
   {path: "emprunt", component: EmpruntComponent},
   {path: "client", component: ClientComponent},
-  {path: "event", component: EventComponent}
+  {path: "event", component: EventComponent},
+  {path: "jeux", component: JeuxComponent}
 ];
 
 
