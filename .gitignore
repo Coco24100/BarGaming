@@ -1,6 +1,15 @@
 /.metadata/
 BarGamingBack/.metadata/
 
+
+.classpath
+.project
+.settings/
+target/
+.metadata
+.DS_Store
+Servers/
+
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # Compiled output
