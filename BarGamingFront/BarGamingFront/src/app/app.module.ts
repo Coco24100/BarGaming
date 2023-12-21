@@ -8,6 +8,7 @@ import { EmpruntComponent } from './emprunt/emprunt.component';
 import { ClientComponent } from './client/client.component';
 import { EventComponent } from './event/event.component';
 import { JeuxComponent } from './jeux/jeux.component';
+import { ReservationComponent } from './reservation/reservation.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { JeuxComponent } from './jeux/jeux.component';
     EmpruntComponent,
     ClientComponent,
     EventComponent,
-    JeuxComponent
+    JeuxComponent,
+    ReservationComponent
   ],
   imports: [
     BrowserModule,

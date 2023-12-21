@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Jeux } from '../model';
+import { Jeu } from '../model';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
@@ -9,42 +9,42 @@ import { HttpClient } from '@angular/common/http';
 })
 export class JeuxService {
 
-  Jeux: Array<Jeux> = new Array<Jeux>();
+  jeux: Array<Jeu> = new Array<Jeu>();
 
   constructor(private http: HttpClient) {
     this.load();
   }
 
   load() {
-    let obs: Observable<Jeux[]> = this.http.get<Jeux[]>(environment.apiUrl + "/Jeux");
+    let obs: Observable<Jeu[]> = this.http.get<Jeu[]>(environment.apiUrl + "/jeux");
 
     obs.subscribe(retour => {
-      this.Jeux = retour;
+      this.jeux = retour;
     });
   }
 
-  findAll(): Jeux[] {
-    return this.Jeux;
+  findAll(): Jeu[] {
+    return this.jeux;
   }
 
-  findById(id?: number): Observable<Jeux> {
-    return this.http.get<Jeux>(environment.apiUrl + "/Jeux/"+id);
+  findById(id?: number): Observable<Jeu> {
+    return this.http.get<Jeu>(environment.apiUrl + "/jeux/"+id);
   }
 
-  create(Jeux: Jeux): void {
-    this.http.post<Jeux>(environment.apiUrl + "/Jeux", Jeux).subscribe(resp => {
+  create(jeu: Jeu): void {
+    this.http.post<Jeu>(environment.apiUrl + "/jeux", jeu).subscribe(resp => {
       this.load();
     });
   }
 
-  update(Jeux: Jeux): void {
-    this.http.put<Jeux>(environment.apiUrl + "/Jeux/"+Jeux.id, Jeux).subscribe(resp => {
+  update(jeu: Jeu): void {
+    this.http.put<Jeu>(environment.apiUrl + "/jeux/"+jeu.id, jeu).subscribe(resp => {
       this.load();
     });
   }
 
   delete(id?: number) {
-    this.http.delete<void>(environment.apiUrl + "/Jeux/"+id).subscribe(resp => {
+    this.http.delete<void>(environment.apiUrl + "/jeux/"+id).subscribe(resp => {
       this.load();
     });
   }
