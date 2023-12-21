@@ -15,7 +15,7 @@ export class EmpruntService {
   }
 
   load() {
-    let obs: Observable<Emprunt[]> = this.http.get<Emprunt[]>(environment.apiUrl + "/emprunt");
+    let obs: Observable<Emprunt[]> = this.http.get<Emprunt[]>(environment.apiUrl + "/location");
 
     obs.subscribe(retour => {
       this.emprunts = retour;
@@ -27,23 +27,23 @@ export class EmpruntService {
   }
 
   findById(id?: number): Observable<Emprunt> {
-    return this.http.get<Emprunt>(environment.apiUrl + "/emprunt/"+id);
+    return this.http.get<Emprunt>(environment.apiUrl + "/location/"+id);
   }
 
   create(emprunt: Emprunt): void {
-    this.http.post<Emprunt>(environment.apiUrl + "/emprunt", emprunt).subscribe(resp => {
+    this.http.post<Emprunt>(environment.apiUrl + "/location", emprunt).subscribe(resp => {
       this.load();
     });
   }
 
   update(emprunt: Emprunt): void {
-    this.http.put<Emprunt>(environment.apiUrl + "/emprunt/"+emprunt.id, emprunt).subscribe(resp => {
+    this.http.put<Emprunt>(environment.apiUrl + "/location/"+emprunt.id, emprunt).subscribe(resp => {
       this.load();
     });
   }
 
   delete(id?: number) {
-    this.http.delete<void>(environment.apiUrl + "/emprunt/"+id).subscribe(resp => {
+    this.http.delete<void>(environment.apiUrl + "/location/"+id).subscribe(resp => {
       this.load();
     });
   }
