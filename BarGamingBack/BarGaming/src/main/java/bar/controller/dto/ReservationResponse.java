@@ -13,7 +13,7 @@ public class ReservationResponse {
 	protected Integer id;
 	private ClientResponse client;
 	private LocalDateTime dateReservation;
-	private EvenementResponse evenement;
+	private EventResponse evenement;
 	
 	
 
@@ -26,10 +26,6 @@ public class ReservationResponse {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
-
-
-
 
 
 
@@ -60,13 +56,13 @@ public class ReservationResponse {
 
 
 
-	public EvenementResponse getEvenement() {
+	public EventResponse getEvenement() {
 		return evenement;
 	}
 
 
 
-	public void setEvenement(EvenementResponse evenement) {
+	public void setEvenement(EventResponse evenement) {
 		this.evenement = evenement;
 	}
 

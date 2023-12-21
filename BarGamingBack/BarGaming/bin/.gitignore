@@ -43,3 +43,4 @@ BarGamingFront/BarGamingFront/typings
 .DS_Store
 Thumbs.db
 /target/
+/src/

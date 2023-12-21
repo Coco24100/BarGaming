@@ -44,4 +44,11 @@ BarGamingFront/BarGamingFront/typings
 .DS_Store
 Thumbs.db
 
-BarGamingBack/.metadata/
+.metadata/
+.classpath
+.project
+.settings/
+target/
+.metadata
+.DS_Store
+Servers/
