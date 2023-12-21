@@ -10,6 +10,10 @@ export class Event {
     constructor(public id?: number, public nom?: string, public date?: string, public horaireDebut?: string, public horaireFin?: string) {}
 }
 
-export class Jeux {
+export class Jeu {
     constructor(public id?: number, public nom?: string) {};
+}
+
+export class Reservation {
+    constructor(public id?: number, public client?: string, public dateReservation?: string, public Evenement?: string) {}
 }

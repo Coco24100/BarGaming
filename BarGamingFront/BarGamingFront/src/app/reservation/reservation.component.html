@@ -1,0 +1,63 @@
+<div class="card mt-3">
+    <div class="card-header text-white bg-primary">
+        Liste des Réservations 
+    </div>
+    <div class="card-body"> 
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Identifiant</th>
+                    <th>Client</th>
+                    <th>Date de Réservation</th>
+                    <th>Evenement</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let r of list()">
+                    <td>{{r.id}}</td>
+                    <td>{{r.client}}</td>
+                    <td>{{r.dateReservation}}</td>
+                    <td>{{r.Evenement}}</td>
+                    <td><div class="btn-group btn-group-sm">
+                        <a (click)="edit(r.id)" class="btn btn-primary"><i class="bi bi-pen"></i></a>
+                        <a (click)="remove(r.id)" class="btn btn-danger"><i class="bi bi-trash"></i></a>
+                      </div></td>
+                </tr>
+             
+            </tbody>
+
+        </table>
+    </div>
+    <div class="card-footer">
+        <a (click)="add()" class="btn btn-success btn-lg"><i class="bi bi-plus-lg"></i></a>
+    </div>
+</div>
+
+<div class="card mt-3" *ngIf="reservationForm">
+    <div class="card-header text-white bg-primary">
+        Edition d'une réservation
+    </div>
+    <div class="card-body"> 
+        <div class="mb-3 mt-3">
+            <label for="id" class="form-label">Identifiant:</label>
+            <input type="number" class="form-control" id="id" name="id" disabled [(ngModel)]="reservationForm.id">
+        </div>
+        <div class="mb-3">
+            <label for="client" class="form-label">Client:</label>
+            <input type="text" class="form-control" id="client" name="client" [(ngModel)]="reservationForm.client">
+        </div>
+        <div class="mb-3">
+            <label for="dateReservation" class="form-label">dateReservation:</label>
+            <input type="text" class="form-control" id="dateReservation" name="dateReservation" [(ngModel)]="reservationForm.dateReservation">
+        </div>
+        <div class="mb-3">
+            <label for="evenement" class="form-label">Evenement:</label>
+            <input type="text" class="form-control" id="evenement" name="evenement" [(ngModel)]="reservationForm.Evenement">
+        </div>
+    </div>
+    <div class="card-footer">
+        <a (click)="save()" class="btn btn-success btn-lg"><i class="bi bi-check-lg"></i></a>
+        <a (click)="cancel()" class="btn btn-warning btn-lg mx-2"><i class="bi bi-backspace"></i></a>
+    </div>
+</div>
