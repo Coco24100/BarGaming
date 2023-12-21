@@ -1,5 +1,7 @@
 package bar.controller;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import bar.controller.dto.ClientResponse;
 import bar.dao.IDAOCompte;
 import bar.model.Client;
 import bar.model.Compte;
@@ -30,20 +33,31 @@ public class ClientRESTController {
 	
 	
 	@GetMapping("/{id}")
-	public Client findById(@PathVariable Integer id) 
+	public ClientResponse findById(@PathVariable Integer id) 
 	{
-		Optional<Compte> opt = daoCompte.findById(id);
-		if(opt.isEmpty()) 
-		{
-			return null;
-		}
-		return (Client) opt.get();
+		Client client= (Client) daoCompte.findById(id).get();
+		
+		ClientResponse clientResp = new ClientResponse();
+
+		clientResp.fromClient(client);
+
+		return clientResp;
 	}
 	
 	@GetMapping
-	public List<Client> findAll() 
+	public List<ClientResponse> findAll() 
 	{
-		return daoCompte.findAllClient();
+		List<Client> clients = (List<Client>) daoCompte.findAllClient();
+		
+		List<ClientResponse> clientsResp = new ArrayList<>();
+
+		for (Client client : clients) {
+		ClientResponse clientResp = new ClientResponse();
+			clientResp.fromClient(client);
+			clientsResp.add(clientResp);
+		}
+	
+		return clientsResp;
 	}
 	
 	
