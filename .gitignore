@@ -3,41 +3,41 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
+BarGamingFront/BarGamingFront/dist
+BarGamingFront/BarGamingFront/tmp
+BarGamingFront/BarGamingFront/out-tsc
+BarGamingFront/BarGamingFront/bazel-out
 
 # Node
-/node_modules
-npm-debug.log
-yarn-error.log
+BarGamingFront/BarGamingFront/node_modules
+BarGamingFront/BarGamingFront/npm-debug.log
+BarGamingFront/BarGamingFront/yarn-error.log
 
 # IDEs and editors
-.idea/
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
+.BarGamingFront/BarGamingFront/idea/
+BarGamingFront/BarGamingFront/.project
+BarGamingFront/BarGamingFront/.classpath
+BarGamingFront/BarGamingFront/.c9/
+BarGamingFront/BarGamingFront/*.launch
+BarGamingFront/BarGamingFront/.settings/
+BarGamingFront/BarGamingFront/*.sublime-workspace
 
 # Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
+BarGamingFront/BarGamingFront/.vscode/*
+BarGamingFront/BarGamingFront/!.vscode/settings.json
+BarGamingFront/BarGamingFront/!.vscode/tasks.json
+BarGamingFront/BarGamingFront/!.vscode/launch.json
+BarGamingFront/BarGamingFront/!.vscode/extensions.json
+BarGamingFront/BarGamingFront/.history/*
 
 # Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
+BarGamingFront/BarGamingFront//.angular/cache
+BarGamingFront/BarGamingFront/.sass-cache/
+BarGamingFront/BarGamingFront//connect.lock
+BarGamingFront/BarGamingFront//coverage
+BarGamingFront/BarGamingFront//libpeerconnection.log
+BarGamingFront/BarGamingFront/testem.log
+BarGamingFront/BarGamingFront//typings
 
 # System files
 .DS_Store
