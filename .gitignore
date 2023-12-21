@@ -31,13 +31,13 @@ BarGamingFront/BarGamingFront/!.vscode/extensions.json
 BarGamingFront/BarGamingFront/.history/*
 
 # Miscellaneous
-BarGamingFront/BarGamingFront//.angular/cache
+BarGamingFront/BarGamingFront/.angular/cache
 BarGamingFront/BarGamingFront/.sass-cache/
-BarGamingFront/BarGamingFront//connect.lock
-BarGamingFront/BarGamingFront//coverage
-BarGamingFront/BarGamingFront//libpeerconnection.log
+BarGamingFront/BarGamingFront/connect.lock
+BarGamingFront/BarGamingFront/coverage
+BarGamingFront/BarGamingFront/libpeerconnection.log
 BarGamingFront/BarGamingFront/testem.log
-BarGamingFront/BarGamingFront//typings
+BarGamingFront/BarGamingFront/typings
 
 # System files
 .DS_Store
