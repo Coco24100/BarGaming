@@ -1,5 +1,6 @@
 package bar.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import bar.controller.dto.ReservationResponse;
 import bar.dao.IDAOReservation;
 import bar.model.Reservation;
 import jakarta.validation.Valid;
@@ -28,20 +30,35 @@ public class ReservationRestController {
 	
 	
 	@GetMapping("/{id}")
-	public Reservation findById(@PathVariable Integer id) 
+	public ReservationResponse findById(@PathVariable Integer id) 
 	{
+		ReservationResponse response = new ReservationResponse() ;
 		Optional<Reservation> opt = daoReservation.findById(id);
 		if(opt.isEmpty()) 
 		{
 			return null;
 		}
-		return (Reservation) opt.get();
+		
+		response.fromReservation(opt.get());
+		return response;
 	}
 	
 	@GetMapping
-	public List<Reservation> findAll() 
+	public List<ReservationResponse> findAll() 
 	{
-		return daoReservation.findAll();
+		List<ReservationResponse> reservations = new ArrayList<ReservationResponse>();
+		
+		List<Reservation> res = daoReservation.findAll();
+		
+		for(Reservation r : res)
+		{
+			ReservationResponse response = new ReservationResponse();
+			response.fromReservation(r);
+			
+			reservations.add(response);
+		}
+		
+		return reservations;
 	}
 	
 	

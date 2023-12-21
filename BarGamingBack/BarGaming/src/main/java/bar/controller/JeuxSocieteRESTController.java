@@ -1,5 +1,6 @@
 package bar.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,9 +17,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import bar.controller.dto.JeuxResponse;
+import bar.controller.dto.ReservationResponse;
 import bar.dao.IDAOJeux;
 import bar.model.Jeux;
 import bar.model.JeuxSociete;
+import bar.model.JeuxVideo;
 import jakarta.validation.Valid;
 
 @RestController
@@ -30,20 +34,40 @@ public class JeuxSocieteRESTController {
 	
 	
 	@GetMapping("/{id}")
-	public JeuxSociete findById(@PathVariable Integer id) 
+	public JeuxResponse findById(@PathVariable Integer id) 
 	{
+		JeuxResponse response = new JeuxResponse() ;
+		
 		Optional<Jeux> opt = daoJeux.findById(id);
 		if(opt.isEmpty()) 
 		{
 			return null;
 		}
-		return (JeuxSociete) opt.get();
+		
+		response.fromJeux(opt.get());
+		return response;
 	}
 	
 	@GetMapping
-	public List<JeuxSociete> findAll() 
+	public List<JeuxResponse> findAll() 
 	{
-		return daoJeux.findAllJeuxSociete();
+		
+		List<JeuxResponse> jeux = new ArrayList<JeuxResponse>();
+		
+		List<JeuxSociete> listeJeux = daoJeux.findAllJeuxSociete();
+		
+		for(Jeux j : listeJeux)
+		{
+			
+			JeuxResponse response = new JeuxResponse();
+			response.fromJeux(j);
+			
+			jeux.add(response);
+		}
+		
+		
+		return jeux;
+		
 	}
 	
 	

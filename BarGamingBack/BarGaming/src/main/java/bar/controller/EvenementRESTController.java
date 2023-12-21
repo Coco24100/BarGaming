@@ -22,6 +22,7 @@ import bar.controller.dto.EventResponse;
 import bar.dao.IDAOEvenement;
 import bar.model.Emprunt;
 import bar.model.Evenement;
+import bar.model.Evenement;
 import jakarta.validation.Valid;
 
 @RestController
