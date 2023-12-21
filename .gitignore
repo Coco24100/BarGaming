@@ -42,3 +42,5 @@ BarGamingFront/BarGamingFront/typings
 # System files
 .DS_Store
 Thumbs.db
+
+BarGamingBack/.metadata/

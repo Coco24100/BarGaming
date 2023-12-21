@@ -1,5 +1,6 @@
 package bar.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,7 +17,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import bar.controller.dto.ClientResponse;
+import bar.controller.dto.EmpruntResponse;
 import bar.dao.IDAOEmprunt;
+import bar.model.Client;
 import bar.model.Emprunt;
 import jakarta.validation.Valid;
 
@@ -29,20 +33,31 @@ public class EmpruntRESTController {
 	
 	
 	@GetMapping("/{id}")
-	public Emprunt findById(@PathVariable Integer id) 
+	public EmpruntResponse findById(@PathVariable Integer id) 
 	{
-		Optional<Emprunt> opt = daoEmprunt.findById(id);
-		if(opt.isEmpty()) 
-		{
-			return null;
-		}
-		return (Emprunt) opt.get();
+		Emprunt emprunt = daoEmprunt.findById(id).get();
+		EmpruntResponse empruntResp = new EmpruntResponse();
+
+		empruntResp.fromEmprunt(emprunt);
+
+		return empruntResp;
 	}
 	
 	@GetMapping
-	public List<Emprunt> findAll() 
+	public List<EmpruntResponse> findAll() 
 	{
-		return daoEmprunt.findAll();
+		List<Emprunt> emprunts = daoEmprunt.findAll();
+		
+		List<EmpruntResponse> empruntsResp = new ArrayList<>();
+
+		for (Emprunt emprunt : emprunts) {
+			EmpruntResponse empruntResp = new EmpruntResponse();
+			empruntResp.fromEmprunt(emprunt);
+			empruntsResp.add(empruntResp);
+		}
+	
+		return empruntsResp;
+		
 	}
 	
 	
