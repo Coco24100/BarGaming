@@ -1,9 +1,7 @@
 package bar.controller;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -21,7 +19,6 @@ import org.springframework.web.server.ResponseStatusException;
 import bar.controller.dto.ClientResponse;
 import bar.dao.IDAOCompte;
 import bar.model.Client;
-import bar.model.Compte;
 import jakarta.validation.Valid;
 
 @RestController
