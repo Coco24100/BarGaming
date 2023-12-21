@@ -5,11 +5,15 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmpruntComponent } from './emprunt/emprunt.component';
+import { ClientComponent } from './client/client.component';
+import { EventComponent } from './event/event.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmpruntComponent
+    EmpruntComponent,
+    ClientComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,
