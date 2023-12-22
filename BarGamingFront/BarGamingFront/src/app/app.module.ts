@@ -13,6 +13,8 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { JeuxVideoComponent } from './jeux-video/jeux-video.component';
 import { JeuxSocieteComponent } from './jeux-societe/jeux-societe.component';
+import { AcceuilComponent } from './acceuil/acceuil.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { JeuxSocieteComponent } from './jeux-societe/jeux-societe.component';
     EventComponent,
     JeuxComponent,
     ReservationComponent,
+    AcceuilComponent,
+    AdminComponent
     AccueilComponent,
     NavbarComponent,
     JeuxVideoComponent,
