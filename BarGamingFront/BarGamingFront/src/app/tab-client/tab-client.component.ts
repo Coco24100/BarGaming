@@ -23,24 +23,38 @@ tablHistorique: boolean=false;
 
 
 showInfos(){
-  this.tabInfos = new Client();
+ this.tabInfos = new Client(); 
+ this.tabLocation = false;
+  this.tablHistorique = false;
+  this.tabInscription = false;
+
 //requete pour récuperere id client
 
 // this.clientService.findById(id).subscribe(resp => {
 //   this.tabInfos = resp;
 // });
+
 }
 
 showInscription(){
   this.tabInscription = true;
+  this.tabLocation = false;
+  this.tablHistorique = false;
+  this.tabInfos = undefined;
 }
 
 showLocation(){
   this.tabLocation = true;
+  this.tabInscription = false;
+  this.tablHistorique = false;
+  this.tabInfos = undefined;
 }
 
 showHistorique(){
   this.tablHistorique = true;
+  this.tabLocation = false;
+  this.tabInscription = false;
+  this.tabInfos = undefined;
 }
 
 save() {
