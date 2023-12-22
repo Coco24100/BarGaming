@@ -10,6 +10,7 @@ import { EventComponent } from './event/event.component';
 import { JeuxComponent } from './jeux/jeux.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AccueilComponent } from './accueil/accueil.component';
     EventComponent,
     JeuxComponent,
     ReservationComponent,
-    AccueilComponent
+    AccueilComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
