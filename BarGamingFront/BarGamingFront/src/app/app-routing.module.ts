@@ -12,6 +12,9 @@ import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { TabClientComponent } from './tab-client/tab-client.component';
+import { InscriptionEventComponent } from './inscription-event/inscription-event.component';
+import { EmpruntJeuComponent } from './emprunt-jeu/emprunt-jeu.component';
+
 
 const routes: Routes = [
   {path: "emprunt", component: EmpruntComponent},
@@ -26,6 +29,8 @@ const routes: Routes = [
   {path: "login", component: LoginComponent},
   {path: "inscription", component: InscriptionComponent},
   {path: "tabclient", component: TabClientComponent},
+  {path: "inscription-evenement", component: InscriptionEventComponent},
+  {path: "emprunt-jeu", component: EmpruntJeuComponent},
   {path: "", pathMatch: "full", redirectTo: "accueil"}];
 
 

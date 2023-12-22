@@ -18,7 +18,7 @@
                     <td>{{r.id}}</td>
                     <td>{{r.client}}</td>
                     <td>{{r.dateReservation}}</td>
-                    <td>{{r.Evenement}}</td>
+                    <td>{{r.evenement}}</td>
                     <td><div class="btn-group btn-group-sm">
                         <a (click)="edit(r.id)" class="btn btn-primary"><i class="bi bi-pen"></i></a>
                         <a (click)="remove(r.id)" class="btn btn-danger"><i class="bi bi-trash"></i></a>
@@ -53,7 +53,7 @@
         </div>
         <div class="mb-3">
             <label for="evenement" class="form-label">Evenement:</label>
-            <input type="text" class="form-control" id="evenement" name="evenement" [(ngModel)]="reservationForm.Evenement">
+            <input type="text" class="form-control" id="evenement" name="evenement" [(ngModel)]="reservationForm.evenement">
         </div>
     </div>
     <div class="card-footer">

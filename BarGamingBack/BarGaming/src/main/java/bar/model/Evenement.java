@@ -21,7 +21,7 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name="Evenement")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "type_evenement" ,columnDefinition = "ENUM('tournoi','autre')" )
+@DiscriminatorColumn(name = "type_evenement")// ,columnDefinition = "ENUM('tournoi','autre')" )
 public class Evenement {
 
 	@Id
