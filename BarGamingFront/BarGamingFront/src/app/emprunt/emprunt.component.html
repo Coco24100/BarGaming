@@ -18,7 +18,7 @@
                     <td>{{e.id}}</td>
                     <td>{{e.dateEmprunt}}</td>
                     <td>{{e.client?.id}}</td>
-                    <td>{{e.jeuxSociete?.nom}}</td>
+                    <td>{{e.jeux}}</td>
                     <td><div class="btn-group btn-group-sm">
                         <a (click)="edit(e.id)" class="btn btn-primary"><i class="bi bi-pen"></i></a>
                         <a (click)="remove(e.id)" class="btn btn-danger"><i class="bi bi-trash"></i></a>
@@ -53,10 +53,7 @@
         </div>
         <div class="mb-3">
             <label for="jeux" class="form-label">Jeux:</label>
-<<<<<<< Updated upstream
-            <select class="form-select" id="jeux" name="jeux" [(ngModel)]="empruntForm.jeuxSociete">
-                <option *ngFor="let jeu of jeuxDisponibles" [value]="jeu">{{jeu}}</option>
-=======
+
             <select class="form-select" id="jeux" name="jeux" [(ngModel)]="empruntForm.jeux">
                 <option *ngFor="let jeu of listejeux()" [value]="jeu">{{jeu.nom}}</option>
             </select>

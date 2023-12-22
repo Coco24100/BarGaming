@@ -3,7 +3,7 @@
     <div class="mb-3">
         
         <label for="liste" class="form-label">Liste des evenements:</label>
-        <select class="form-select" id="evenements"  [(ngModel)]="empruntForm.jeuxSociete">
+        <select class="form-select" id="evenements"  [(ngModel)]="empruntForm.jeux">
             <option *ngFor="let u of listeJeux()" [ngValue]="u">{{u.nom}}  </option>
         </select>
     

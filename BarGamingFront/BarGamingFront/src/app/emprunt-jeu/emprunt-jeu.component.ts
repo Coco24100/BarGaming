@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { EmpruntService } from '../emprunt/emprunt.service';
 import { JeuxService } from '../jeux/jeux.service';
-import { Client, Emprunt } from '../model';
-import { JeuxSocieteService } from '../jeux-societe/jeux-societe.service';
+import { Client, Emprunt, Jeu } from '../model';
+
 
 @Component({
   selector: 'app-emprunt-jeu',
@@ -13,14 +13,14 @@ export class EmpruntJeuComponent {
 
 
   
-  constructor(private empruntService: EmpruntService , private jeuxSocieteService : JeuxSocieteService){}
+  constructor(private empruntService: EmpruntService , private jeuxService : JeuxService){}
  
   client = new Client(2,"Johnny","Dodo")
   empruntForm: Emprunt = new Emprunt(undefined,undefined,this.client)
 
   listeJeux()
   {
-    return this.jeuxSocieteService.findAll()
+    return this.jeuxService.findAll()
   }
 
   save() {
