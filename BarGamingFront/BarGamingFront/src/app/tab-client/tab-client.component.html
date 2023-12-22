@@ -55,6 +55,7 @@
                         <th>Date</th>
                         <th>Horaire de Début</th>
                         <th>Horaire de Fin</th>
+                        <th>.....</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -63,12 +64,16 @@
                         <td>{{e.date}}</td>
                         <td>{{e.horaireDebut}}</td>
                         <td>{{e.horaireFin}}</td>
+                        <td><div class="btn-group btn-group-sm">
+                            <a (click)="inscription()"><button type="button" class="btn btn-warning">Je veux participer</button></a> 
+                        </div></td>         
                     </tr>
                 </tbody>
-            <a (click)="inscription()"><button type="button" class="btn btn-warning">Jeux de sociétés</button></a>  
         </table>
+
         </div>
     </div>
+
 </div>
 
 
