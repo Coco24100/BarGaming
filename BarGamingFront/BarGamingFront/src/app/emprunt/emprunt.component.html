@@ -17,8 +17,8 @@
                 <tr *ngFor="let e of list()">
                     <td>{{e.id}}</td>
                     <td>{{e.dateEmprunt}}</td>
-                    <td>{{e.client}}</td>
-                    <td>{{e.jeuxSociete}}</td>
+                    <td>{{e.client?.id}}</td>
+                    <td>{{e.jeuxSociete?.nom}}</td>
                     <td><div class="btn-group btn-group-sm">
                         <a (click)="edit(e.id)" class="btn btn-primary"><i class="bi bi-pen"></i></a>
                         <a (click)="remove(e.id)" class="btn btn-danger"><i class="bi bi-trash"></i></a>
