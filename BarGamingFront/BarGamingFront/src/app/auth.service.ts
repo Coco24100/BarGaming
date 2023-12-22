@@ -7,10 +7,14 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class AuthService {
+  login(username: string, password: string){}
 
+/*
   private Utilisateur?: Utilisateur = undefined;
 
   constructor(private http: HttpClient, private router: Router) { }
+
+  
 
   login(username: string, password: string) {
     return this.http.post<Utilisateur>(environment.apiUrl + `/connexion`, { "login": username, "password": password }).subscribe(resp => {
@@ -43,4 +47,5 @@ export class AuthService {
 
     return undefined;
   }
+  */
 }
