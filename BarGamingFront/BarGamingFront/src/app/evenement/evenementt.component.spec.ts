@@ -5,6 +5,7 @@ import { EvenementComponent } from './evenement.component';
 describe('EvenementComponent', () => {
   let component: EvenementComponent;
   let fixture: ComponentFixture<EvenementComponent>;
+
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [EvenementComponent]
