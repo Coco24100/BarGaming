@@ -14,6 +14,14 @@ export class Jeu {
     constructor(public id?: number, public nom?: string) {};
 }
 
+export class JeuSociete {
+    constructor(public id?: number, public nom?: string) {};
+}
+
+export class JeuVideo {
+    constructor(public id?: number, public nom?: string, public plateforme?: string) {};
+}
+
 export class Reservation {
     constructor(public id?: number, public client?: string, public dateReservation?: string, public Evenement?: string) {}
 }

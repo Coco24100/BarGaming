@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Jeu } from '../model';
+import { JeuSociete } from '../model';
 import { JeuxSocieteService } from './jeux-societe.service';
 
 
@@ -10,17 +10,17 @@ import { JeuxSocieteService } from './jeux-societe.service';
 })
 export class JeuxSocieteComponent {
 
-  jeuxSocieteForm?: Jeu = undefined;
+  jeuxSocieteForm?: JeuSociete = undefined;
 
   constructor(private jeuxSocieteService: JeuxSocieteService) {
   }
 
-  list(): Jeu[] {
+  list(): JeuSociete[] {
     return this.jeuxSocieteService.findAll();
   }
 
   add() {
-    this.jeuxSocieteForm = new Jeu();
+    this.jeuxSocieteForm = new JeuSociete();
   }
 
   edit(id?: number) {
