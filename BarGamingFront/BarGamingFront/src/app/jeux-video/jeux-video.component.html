@@ -46,8 +46,15 @@
             <input type="text" class="form-control" id="nom" name="nom" [(ngModel)]="jeuxVideoForm.nom">
         </div>
         <div class="mb-3">
-            <label for="nom" class="form-label">Plateforme:</label>
-            <input type="text" class="form-control" id="nom" name="nom" [(ngModel)]="jeuxVideoForm.nom">
+            <label for="plateform" class="form-label">Plateforme:</label>
+            <select class="form-select" id="plateforme" name="plateforme" [(ngModel)]="jeuxVideoForm.plateforme">
+                <option value="PC">PC</option>
+                <option value="PS5">PS5</option>
+                <option value="XBOX">XBOX</option>
+                <option value="SWITCH">SWITCH</option>
+                <option value="SEGA">SEGA</option>
+                <option value="GAMEBOYCOLOR">GAMEBOYCOLOR</option>
+            </select>
         </div>
     </div>
     <div class="card-footer">

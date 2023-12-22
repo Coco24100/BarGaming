@@ -1,5 +1,5 @@
 export class Emprunt {
-    constructor(public id?: number, public dateEmprunt?: string, public client?: Client, public jeuxSociete?: string){}
+    constructor(public id?: number, public dateEmprunt?: string, public client?: Client, public jeux?: Jeu){}
 }
 
 export class Client {
@@ -23,7 +23,7 @@ export class JeuVideo {
 }
 
 export class Reservation {
-    constructor(public id?: number, public client?: string, public dateReservation?: string, public Evenement?: string) {}
+    constructor(public id?: number, public client?: Client, public dateReservation?: string, public Evenement?: Event) {}
 }
 
 export class Utilisateur {

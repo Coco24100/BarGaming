@@ -10,7 +10,8 @@ import { EmpruntService } from './emprunt.service';
 export class EmpruntComponent {
 
   empruntForm?: Emprunt = undefined;
-
+  jeuxDisponibles: string[] = [];
+  
   constructor(private empruntService: EmpruntService) {
   }
 
