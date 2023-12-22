@@ -38,7 +38,7 @@ import { EmpruntJeuComponent } from './emprunt-jeu/emprunt-jeu.component';
     JeuxSocieteComponent,
     UtilisateurComponent,
     InscriptionComponent,
-    TabClientComponent
+    TabClientComponent,
     JeuxSocieteComponent,
     InscriptionEventComponent,
     EmpruntJeuComponent

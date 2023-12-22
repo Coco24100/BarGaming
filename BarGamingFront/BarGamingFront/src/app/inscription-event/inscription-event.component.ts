@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { EventService } from '../event/event.service';
+import { EvenementService } from '../evenement/evenement.service';
 import { ReservationService } from '../reservation/reservation.service';
-import { Client, Event, Reservation } from '../model';
+import { Client, Evenement, Reservation } from '../model';
 
 @Component({
   selector: 'app-inscription-event',
@@ -10,7 +10,7 @@ import { Client, Event, Reservation } from '../model';
 })
 export class InscriptionEventComponent {
 
-  constructor(private eventService: EventService, private reservationService: ReservationService) { }
+  constructor(private evenementService: EvenementService, private reservationService: ReservationService) { }
   
   client = new Client(2,"John","Doe")
 
@@ -21,7 +21,7 @@ export class InscriptionEventComponent {
   
 
   listEvent() {
-    return this.eventService.findAll()
+    return this.evenementService.findAll()
   }
 
 
