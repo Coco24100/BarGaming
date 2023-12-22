@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { Emprunt } from '../model';
+import { Component} from '@angular/core';
+import { Emprunt, Jeu } from '../model';
 import { EmpruntService } from './emprunt.service';
+import { JeuxService } from '../jeux/jeux.service';
 
 @Component({
   selector: 'app-emprunt',
@@ -10,9 +11,14 @@ import { EmpruntService } from './emprunt.service';
 export class EmpruntComponent {
 
   empruntForm?: Emprunt = undefined;
-  jeuxDisponibles: string[] = [];
+  jeux: Array<Jeu> = new Array<Jeu>(); // liste de jeux pour menu deroulant
   
-  constructor(private empruntService: EmpruntService) {
+  constructor(private empruntService: EmpruntService, private jeuxService: JeuxService) {
+  }
+
+  //Charge la liste de jeux au moment de l'initialisation du composant
+  listejeux(): Jeu[] {
+   return this.jeuxService.findAll();
   }
 
   list(): Emprunt[] {
