@@ -10,10 +10,10 @@ import { EventComponent } from './event/event.component';
 import { JeuxComponent } from './jeux/jeux.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { JeuxVideoComponent } from './jeux-video/jeux-video.component';
 import { JeuxSocieteComponent } from './jeux-societe/jeux-societe.component';
-import { AcceuilComponent } from './acceuil/acceuil.component';
 import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
@@ -24,8 +24,9 @@ import { AdminComponent } from './admin/admin.component';
     EventComponent,
     JeuxComponent,
     ReservationComponent,
-    AcceuilComponent,
-    AdminComponent
+    AccueilComponent,
+    LoginComponent,
+    AdminComponent,
     AccueilComponent,
     NavbarComponent,
     JeuxVideoComponent,
