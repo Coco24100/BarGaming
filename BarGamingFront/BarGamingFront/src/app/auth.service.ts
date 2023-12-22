@@ -8,7 +8,7 @@ import { Client } from './model';
   providedIn: 'root'
 })
 export class AuthService {
-  login(username: string, password: string){}
+  
 
   private client?: Client = undefined;
 
@@ -47,5 +47,5 @@ export class AuthService {
 
     return undefined;
   }
-  */
+  
 }

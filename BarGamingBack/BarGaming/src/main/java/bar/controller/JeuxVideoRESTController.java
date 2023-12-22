@@ -27,7 +27,7 @@ import bar.model.Jeux;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/api/jeuxvideo")
+@RequestMapping("/api/jeux-video")
 @CrossOrigin(origins = "*" )
 public class JeuxVideoRESTController {
 
