@@ -5,7 +5,7 @@ import { ClientComponent } from './client/client.component';
 import { EventComponent } from './event/event.component';
 import { JeuxComponent } from './jeux/jeux.component';
 import { ReservationComponent } from './reservation/reservation.component';
-import { AcceuilComponent } from './acceuil/acceuil.component';
+import { AccueilComponent } from './accueil/accueil.component'; 
 import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: "event", component: EventComponent},
   {path: "jeux", component: JeuxComponent},
   {path: "reservation", component: ReservationComponent},
-  {path: "accueil", component: AcceuilComponent},
+  {path: "accueil", component: AccueilComponent},
   {path: "admin", component: AdminComponent},
   {path: "", pathMatch: "full", redirectTo: "accueil"}];
 
