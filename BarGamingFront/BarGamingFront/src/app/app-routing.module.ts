@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EmpruntComponent } from './emprunt/emprunt.component';
 import { ClientComponent } from './client/client.component';
-import { EventComponent } from './event/event.component';
+import { EvenementComponent } from './evenement/evenement.component';
 import { JeuxComponent } from './jeux/jeux.component';
 import { JeuxVideoComponent } from './jeux-video/jeux-video.component';
 import { JeuxSocieteComponent } from './jeux-societe/jeux-societe.component';
@@ -10,11 +10,12 @@ import { ReservationComponent } from './reservation/reservation.component';
 import { AccueilComponent } from './accueil/accueil.component'; 
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
+import { InscriptionComponent } from './inscription/inscription.component';
 
 const routes: Routes = [
   {path: "emprunt", component: EmpruntComponent},
   {path: "client", component: ClientComponent},
-  {path: "event", component: EventComponent},
+  {path: "evenement", component: EvenementComponent},
   {path: "jeux", component: JeuxComponent},
   {path: "jeux-video", component: JeuxVideoComponent},
   {path: "jeux-societe", component: JeuxSocieteComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: "accueil", component: AccueilComponent},
   {path: "admin", component: AdminComponent},
   {path: "login", component: LoginComponent},
+  {path: "inscription", component: InscriptionComponent},
   {path: "", pathMatch: "full", redirectTo: "accueil"}];
 
 
