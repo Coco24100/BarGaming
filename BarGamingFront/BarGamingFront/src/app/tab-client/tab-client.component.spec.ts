@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EventComponent } from './event.component';
+import { TabClientComponent } from './tab-client.component';
 
-describe('EventComponent', () => {
-  let component: EventComponent;
-  let fixture: ComponentFixture<EventComponent>;
+describe('TabClientComponent', () => {
+  let component: TabClientComponent;
+  let fixture: ComponentFixture<TabClientComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [EventComponent]
+      declarations: [TabClientComponent]
     });
-    fixture = TestBed.createComponent(EventComponent);
+    fixture = TestBed.createComponent(TabClientComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
