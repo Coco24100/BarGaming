@@ -9,6 +9,7 @@ import { ClientComponent } from './client/client.component';
 import { EventComponent } from './event/event.component';
 import { JeuxComponent } from './jeux/jeux.component';
 import { ReservationComponent } from './reservation/reservation.component';
+import { AcceuilComponent } from './acceuil/acceuil.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ReservationComponent } from './reservation/reservation.component';
     ClientComponent,
     EventComponent,
     JeuxComponent,
-    ReservationComponent
+    ReservationComponent,
+    AcceuilComponent
   ],
   imports: [
     BrowserModule,
