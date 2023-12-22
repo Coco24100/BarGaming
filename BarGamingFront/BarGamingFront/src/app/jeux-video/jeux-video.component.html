@@ -8,6 +8,7 @@
                 <tr>
                     <th>Identifiant</th>
                     <th>Nom</th>
+                    <th>Plateforme</th>
                     <th></th>
                 </tr>
             </thead>
@@ -15,6 +16,7 @@
                 <tr *ngFor="let j of list()">
                     <td>{{j.id}}</td>
                     <td>{{j.nom}}</td>
+                    <td>{{j.plateforme}}</td>
                     <td><div class="btn-group btn-group-sm">
                         <a (click)="edit(j.id)" class="btn btn-primary"><i class="bi bi-pen"></i></a>
                         <a (click)="remove(j.id)" class="btn btn-danger"><i class="bi bi-trash"></i></a>
@@ -32,7 +34,7 @@
 
 <div class="card mt-3" *ngIf="jeuxVideoForm">
     <div class="card-header text-white bg-primary">
-        Edition d'un nouveau jeu
+        Edition d'un nouveau jeu video
     </div>
     <div class="card-body"> 
         <div class="mb-3 mt-3">
@@ -41,6 +43,10 @@
         </div>
         <div class="mb-3">
             <label for="nom" class="form-label">Nom:</label>
+            <input type="text" class="form-control" id="nom" name="nom" [(ngModel)]="jeuxVideoForm.nom">
+        </div>
+        <div class="mb-3">
+            <label for="nom" class="form-label">Plateforme:</label>
             <input type="text" class="form-control" id="nom" name="nom" [(ngModel)]="jeuxVideoForm.nom">
         </div>
     </div>

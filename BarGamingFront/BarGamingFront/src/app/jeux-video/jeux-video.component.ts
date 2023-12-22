@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Jeu } from '../model';
+import { JeuVideo } from '../model';
 import { JeuxVideoService } from './jeux-video.service';
 
 
@@ -10,17 +10,17 @@ import { JeuxVideoService } from './jeux-video.service';
 })
 export class JeuxVideoComponent {
 
-  jeuxVideoForm?: Jeu = undefined;
+  jeuxVideoForm?: JeuVideo = undefined;
 
   constructor(private jeuxVideoService: JeuxVideoService) {
   }
 
-  list(): Jeu[] {
+  list(): JeuVideo[] {
     return this.jeuxVideoService.findAll();
   }
 
   add() {
-    this.jeuxVideoForm = new Jeu();
+    this.jeuxVideoForm = new JeuVideo();
   }
 
   edit(id?: number) {
