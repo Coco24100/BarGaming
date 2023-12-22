@@ -23,7 +23,7 @@ export class JeuVideo {
 }
 
 export class Reservation {
-    constructor(public id?: number, public client?: Client, public dateReservation?: string, public Evenement?: Event) {}
+    constructor(public id?: number, public client?: Client, public dateReservation?: string, public Evenement?: Evenement) {}
 }
 
 export class Utilisateur {
