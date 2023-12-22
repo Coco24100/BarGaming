@@ -11,6 +11,8 @@ import { JeuxComponent } from './jeux/jeux.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { JeuxVideoComponent } from './jeux-video/jeux-video.component';
+import { JeuxSocieteComponent } from './jeux-societe/jeux-societe.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     JeuxComponent,
     ReservationComponent,
     AccueilComponent,
-    NavbarComponent
+    NavbarComponent,
+    JeuxVideoComponent,
+    JeuxSocieteComponent
   ],
   imports: [
     BrowserModule,
