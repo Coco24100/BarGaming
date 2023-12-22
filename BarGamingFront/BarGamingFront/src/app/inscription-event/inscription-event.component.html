@@ -2,10 +2,9 @@
 <div class="card mt-3" >
 <div class="mb-3">
     
-    <label for="liste" class="form-label">Liste des evenements:</label>
-    <select class="form-select" id="reservation" name="reservation" [(ngModel)]="reservationForm">
-        <option></option>
-        <option *ngFor="let u of listEvent()" [value]="u.id">{{u.nom}} {{u.date}} </option>
+    <label for="liste" class="form-label">Jeux:</label>
+    <select class="form-select" id="evenements"  [(ngModel)]="reservationForm.evenement">
+        <option *ngFor="let u of listEvent()" [ngValue]="u">{{u.nom}} {{u.date}} </option>
     </select>
 
     <div class="card-footer">

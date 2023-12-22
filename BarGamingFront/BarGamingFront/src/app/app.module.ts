@@ -16,6 +16,7 @@ import { JeuxVideoComponent } from './jeux-video/jeux-video.component';
 import { JeuxSocieteComponent } from './jeux-societe/jeux-societe.component';
 import { AdminComponent } from './admin/admin.component';
 import { InscriptionEventComponent } from './inscription-event/inscription-event.component';
+import { EmpruntJeuComponent } from './emprunt-jeu/emprunt-jeu.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { InscriptionEventComponent } from './inscription-event/inscription-event
     NavbarComponent,
     JeuxVideoComponent,
     JeuxSocieteComponent,
-    InscriptionEventComponent
+    InscriptionEventComponent,
+    EmpruntJeuComponent
   ],
   imports: [
     BrowserModule,

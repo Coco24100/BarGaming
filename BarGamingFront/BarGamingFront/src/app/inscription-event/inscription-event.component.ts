@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { EventService } from '../event/event.service';
 import { ReservationService } from '../reservation/reservation.service';
-import { Reservation } from '../model';
+import { Client, Event, Reservation } from '../model';
 
 @Component({
   selector: 'app-inscription-event',
@@ -11,18 +11,26 @@ import { Reservation } from '../model';
 export class InscriptionEventComponent {
 
   constructor(private eventService: EventService, private reservationService: ReservationService) { }
-  reservationForm: Reservation = new Reservation(undefined,undefined,undefined,undefined);
+  
+  client = new Client(2,"John","Doe")
 
+
+
+  reservationForm: Reservation = new Reservation(undefined,this.client,undefined,undefined);
+
+  
 
   listEvent() {
     return this.eventService.findAll()
   }
 
-  
+
 
   save() {
 
-    this.reservationForm.dateReservation = Date.now().toString();
+    
+    this.reservationForm.dateReservation = new Date();
+    
     
     this.reservationService.create(this.reservationForm)
 

@@ -12,9 +12,9 @@ public class EmpruntResponse {
 	private Integer id;
 
 	private LocalDate dateEmprunt;
-	
+
 	private ClientResponse client = new ClientResponse();
-	
+
 	private JeuxResponse jeuxSociete = new JeuxResponse();
 
 	public EmpruntResponse() {
@@ -54,16 +54,12 @@ public class EmpruntResponse {
 
 	public void fromEmprunt(Emprunt emprunt) {
 		BeanUtils.copyProperties(emprunt, this);
-		
-		
-		
-		client.fromClient(emprunt.getClient());
+
+		if (emprunt.getClient() != null) {
+			client.fromClient(emprunt.getClient());
+		}
 		jeuxSociete.fromJeux(emprunt.getJeuxSociete());
-		
+
 	}
-
-
-	
-	
 
 }
