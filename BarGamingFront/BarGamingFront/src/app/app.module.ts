@@ -17,6 +17,7 @@ import { JeuxSocieteComponent } from './jeux-societe/jeux-societe.component';
 import { AdminComponent } from './admin/admin.component';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { InscriptionComponent } from './inscription/inscription.component';
+import { TabClientComponent } from './tab-client/tab-client.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { InscriptionComponent } from './inscription/inscription.component';
     JeuxVideoComponent,
     JeuxSocieteComponent,
     UtilisateurComponent,
-    InscriptionComponent
+    InscriptionComponent,
+    TabClientComponent
   ],
   imports: [
     BrowserModule,

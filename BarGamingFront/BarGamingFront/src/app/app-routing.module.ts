@@ -11,6 +11,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
 import { InscriptionComponent } from './inscription/inscription.component';
+import { TabClientComponent } from './tab-client/tab-client.component';
 
 const routes: Routes = [
   {path: "emprunt", component: EmpruntComponent},
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path: "admin", component: AdminComponent},
   {path: "login", component: LoginComponent},
   {path: "inscription", component: InscriptionComponent},
+  {path: "tabclient", component: TabClientComponent},
   {path: "", pathMatch: "full", redirectTo: "accueil"}];
 
 

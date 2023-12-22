@@ -1,0 +1,81 @@
+
+<p>Compte</p>
+<p>Qu’attends tu pour venir réserver ta place au prochain tournoi ou louer le dernier jeu de société à la mode. 
+</p>
+<button type="button" class="btn btn-warning" (click)="showInfos()">Informations</button>
+<button type="button" class="btn btn-warning" (click)="showLocation()">Location de Jeux</button>
+<button type="button" class="btn btn-warning" (click)="showInscription()">Incription Evenements</button>
+<button type="button" class="btn btn-warning" (click)="showHistorique()">Ton historique</button>
+
+
+<div class="card mt-3" *ngIf="tabInfos">
+    <div class="card-header text-white bg-primary">
+       <p>Informations</p>
+    </div>
+    <div class="card-body"> 
+        <div class="mb-3 mt-3">
+            <label for="id" class="form-label">Identifiant:</label>
+            <input type="number" class="form-control" id="id" name="id" disabled [(ngModel)]="tabInfos.id">
+        </div>
+        <div class="mb-3">
+            <label for="nom" class="form-label">Nom:</label>
+            <input type="text" class="form-control" id="nom" name="nom" [(ngModel)]="tabInfos.nom">
+        </div>
+    </div>
+    <div class="card-footer">
+        <a (click)="save()" class="btn btn-success btn-lg"><i class="bi bi-check-lg"></i></a>
+        <a (click)="cancel()" class="btn btn-warning btn-lg mx-2"><i class="bi bi-backspace"></i></a>
+        <a (click)="cloturer()" class="btn btn-warning btn-lg mx-2"><i class="bi bi-backspace"></i>Clorurer le compte</a>
+    </div>
+</div>
+
+
+<div *ngIf="tabLocation">
+
+    <p> Location de jeux</p>
+
+    <a (click)="voirTabJeuSociete()"><button type="button" class="btn btn-warning">Jeux de sociétés</button></a>  
+    <a (click)="voirTabJeuVideo()"><button type="button" class="btn btn-warning">Jeux Vidéos</button></a> 
+
+</div>
+
+
+<div *ngIf="tabInscription">
+
+    <p>Evenements à venir</p>
+
+    <div class="card mt-3">
+        <div class="card-header text-white bg-primary">
+        </div>
+        <div class="card-body"> 
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Date</th>
+                        <th>Horaire de Début</th>
+                        <th>Horaire de Fin</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let e of listEvents()">
+                        <td>{{e.nom}}</td>
+                        <td>{{e.date}}</td>
+                        <td>{{e.horaireDebut}}</td>
+                        <td>{{e.horaireFin}}</td>
+                    </tr>
+                </tbody>
+            <a (click)="inscription()"><button type="button" class="btn btn-warning">Jeux de sociétés</button></a>  
+        </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div *ngIf="tablHistorique">
+
+    <p>Résultats des évènements </p>
+
+</div>
