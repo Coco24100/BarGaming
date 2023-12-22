@@ -28,7 +28,9 @@ public abstract class Compte {
 	private String prenom ;
 	
 	
-	
+	public Compte() {
+		// TODO Auto-generated constructor stub
+	}
 	public Compte(Integer id, String nom, String prenom) {
 		super();
 		this.id = id;
@@ -41,10 +43,6 @@ public abstract class Compte {
 		
 		this.nom = nom;
 		this.prenom = prenom;
-	}
-	
-	public Compte() {
-		// TODO Auto-generated constructor stub
 	}
 	
 	
