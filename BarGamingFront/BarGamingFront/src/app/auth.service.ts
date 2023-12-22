@@ -8,10 +8,13 @@ import { Utilisateur } from './model';
   providedIn: 'root'
 })
 export class AuthService {
+  
 
   private utilisateur?: Utilisateur = undefined;
 
   constructor(private http: HttpClient, private router: Router) { }
+
+  
 
   login(username: string, password: string) {
     return this.http.post<Utilisateur>(environment.apiUrl + `/connexion`, { "login": username, "password": password }).subscribe(resp => {
@@ -44,4 +47,5 @@ export class AuthService {
 
     return undefined;
   }
+  
 }

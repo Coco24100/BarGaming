@@ -54,6 +54,7 @@ public class ReservationRestController {
 		
 		for(Reservation r : res)
 		{
+			System.out.println("        ooooooooOOOOoooooooo           "+r.getId());
 			ReservationResponse response = new ReservationResponse();
 			response.fromReservation(r);
 			

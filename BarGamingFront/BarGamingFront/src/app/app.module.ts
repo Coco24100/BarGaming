@@ -18,6 +18,8 @@ import { AdminComponent } from './admin/admin.component';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { TabClientComponent } from './tab-client/tab-client.component';
+import { InscriptionEventComponent } from './inscription-event/inscription-event.component';
+import { EmpruntJeuComponent } from './emprunt-jeu/emprunt-jeu.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,10 @@ import { TabClientComponent } from './tab-client/tab-client.component';
     JeuxSocieteComponent,
     UtilisateurComponent,
     InscriptionComponent,
-    TabClientComponent
+    TabClientComponent,
+    JeuxSocieteComponent,
+    InscriptionEventComponent,
+    EmpruntJeuComponent
   ],
   imports: [
     BrowserModule,

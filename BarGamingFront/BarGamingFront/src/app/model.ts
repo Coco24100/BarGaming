@@ -1,13 +1,13 @@
 export class Emprunt {
-    constructor(public id?: number, public dateEmprunt?: string, public client?: Client, public jeux?: Jeu){}
+    constructor(public id?: number, public dateEmprunt?: Date, public client?: Client, public jeuxSociete?: JeuSociete){}
 }
 
 export class Client {
-    constructor(public id?: number, public nom?: string, public prenom?: string) {}
+    constructor(public id?: number, public nom?: string, public prenom?: string) {};
 }
 
 export class Evenement {
-    constructor(public id?: number, public nom?: string, public date?: string, public horaireDebut?: string, public horaireFin?: string) {}
+    constructor(public id?: number, public nom?: string, public date?: Date, public horaireDebut?: string, public horaireFin?: string) {}
 }
 
 export class Jeu {
@@ -23,7 +23,7 @@ export class JeuVideo {
 }
 
 export class Reservation {
-    constructor(public id?: number, public client?: Client, public dateReservation?: string, public Evenement?: Evenement) {}
+    constructor(public id?: number, public client?: Client, public dateReservation?: Date, public evenement?: Evenement) {};
 }
 
 export class Utilisateur {
