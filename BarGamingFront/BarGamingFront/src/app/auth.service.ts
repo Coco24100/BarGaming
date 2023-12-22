@@ -2,28 +2,28 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
-import { Client } from './model';
+import { Utilisateur } from './model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  private client?: Client = undefined;
+  private utilisateur?: Utilisateur = undefined;
 
   constructor(private http: HttpClient, private router: Router) { }
 
   login(username: string, password: string) {
-    return this.http.post<Client>(environment.apiUrl + `/connexion`, { "login": username, "password": password }).subscribe(resp => {
-      this.client = resp;
-      localStorage.setItem("user", JSON.stringify(this.client));
+    return this.http.post<Utilisateur>(environment.apiUrl + `/connexion`, { "login": username, "password": password }).subscribe(resp => {
+      this.utilisateur = resp;
+      localStorage.setItem("user", JSON.stringify(this.utilisateur));
 
       this.router.navigate(["/accueil"]);
     });
   }
 
   logout() {
-    this.client = undefined;
+    this.utilisateur = undefined;
     localStorage.removeItem("user");
   }
 
@@ -31,14 +31,14 @@ export class AuthService {
     return this.getClient() != undefined;
   }
 
-  getClient(): Client | undefined{
-    if(this.client) {
-      return this.client;
+  getClient(): Utilisateur | undefined{
+    if(this.utilisateur) {
+      return this.utilisateur;
     } else {
       const user = localStorage.getItem("user")
       if(user) {
-        this.client = JSON.parse(user);
-        return this.client;
+        this.utilisateur = JSON.parse(user);
+        return this.utilisateur;
       }
     }
 

@@ -15,6 +15,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { JeuxVideoComponent } from './jeux-video/jeux-video.component';
 import { JeuxSocieteComponent } from './jeux-societe/jeux-societe.component';
 import { AdminComponent } from './admin/admin.component';
+import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AdminComponent } from './admin/admin.component';
     AccueilComponent,
     NavbarComponent,
     JeuxVideoComponent,
-    JeuxSocieteComponent
+    JeuxSocieteComponent,
+    UtilisateurComponent
   ],
   imports: [
     BrowserModule,

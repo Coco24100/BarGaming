@@ -25,3 +25,9 @@ export class JeuVideo {
 export class Reservation {
     constructor(public id?: number, public client?: string, public dateReservation?: string, public Evenement?: string) {}
 }
+
+export class Utilisateur {
+    constructor(public id?: number, public username?: string, public password?: string, public nom?: string, public prenom?: string, public roles?: string[]) {
+
+    }
+}
