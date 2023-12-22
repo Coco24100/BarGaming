@@ -14,10 +14,10 @@ export class AuthInterceptor implements HttpInterceptor {
   constructor(private authService: AuthService) {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    const utilisateur = this.authService.getUtilisateur();
-    if(utilisateur) {
+    const client = this.authService.getClient();
+    if(client) {
 
-      const b64 = btoa(utilisateur.username + ":" + utilisateur.password); 
+      const b64 = btoa(client.nom + ":" + client.nom); 
 
       request = request.clone({
           setHeaders: { 
