@@ -7,6 +7,7 @@ import { JeuxComponent } from './jeux/jeux.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { AccueilComponent } from './accueil/accueil.component'; 
 import { AdminComponent } from './admin/admin.component';
+import { AccueilComponent } from './accueil/accueil.component';
 
 const routes: Routes = [
   {path: "emprunt", component: EmpruntComponent},
