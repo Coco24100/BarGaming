@@ -18,7 +18,7 @@ export class EmpruntJeuComponent {
   client = new Client(2,"Johnny","Dodo")
   empruntForm: Emprunt = new Emprunt(undefined,undefined,this.client)
 
-  listeJeu()
+  listeJeux()
   {
     return this.jeuxSocieteService.findAll()
   }

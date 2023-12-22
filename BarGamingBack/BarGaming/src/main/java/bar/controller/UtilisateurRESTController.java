@@ -28,6 +28,7 @@ import jakarta.validation.Valid;
 @RestController
 @RequestMapping("/api")
 public class UtilisateurRESTController {
+	/*
 
 	private IDAOUtilisateur daoUtilisateur;
 
@@ -106,5 +107,6 @@ public class UtilisateurRESTController {
 
 		return utilisateur;
 	}
+	*/
 }
 
