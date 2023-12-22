@@ -9,6 +9,7 @@ import { JeuxSocieteComponent } from './jeux-societe/jeux-societe.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { AccueilComponent } from './accueil/accueil.component'; 
 import { AdminComponent } from './admin/admin.component';
+import { InscriptionEventComponent } from './inscription-event/inscription-event.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: "reservation", component: ReservationComponent},
   {path: "accueil", component: AccueilComponent},
   {path: "admin", component: AdminComponent},
+  {path: "inscription", component: InscriptionEventComponent},
   {path: "", pathMatch: "full", redirectTo: "accueil"}];
 
 

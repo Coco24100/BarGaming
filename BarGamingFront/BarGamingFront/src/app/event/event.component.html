@@ -51,15 +51,15 @@
         </div>
         <div class="mb-3">
             <label for="date" class="form-label">Date:</label>
-            <input type="text" class="form-control" id="date" name="date" [(ngModel)]="eventForm.date">
+            <input type="date" class="form-control" id="date" name="date" [(ngModel)]="eventForm.date">
         </div>
         <div class="mb-3">
             <label for="horaireDebut" class="form-label">Horaire de début:</label>
-            <input type="text" class="form-control" id="horaireDebut" name="horaireDebut" [(ngModel)]="eventForm.horaireDebut">
+            <input type="time" class="form-control" id="horaireDebut" name="horaireDebut" [(ngModel)]="eventForm.horaireDebut">
         </div>
         <div class="mb-3 mt-3">
             <label for="horaireFin" class="form-label">Horaire de fin:</label>
-            <input type="text" class="form-control" id="horaireFin" name="horaireFin" disabled [(ngModel)]="eventForm.horaireFin">
+            <input type="time" class="form-control" id="horaireFin" name="horaireFin"  [(ngModel)]="eventForm.horaireFin">
         </div>
     </div>
     <div class="card-footer">
