@@ -14,6 +14,7 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { TabClientComponent } from './tab-client/tab-client.component';
 import { InscriptionEventComponent } from './inscription-event/inscription-event.component';
 import { EmpruntJeuComponent } from './emprunt-jeu/emprunt-jeu.component';
+import { MenusComponent } from './menus/menus.component';
 
 
 const routes: Routes = [
@@ -31,6 +32,7 @@ const routes: Routes = [
   {path: "tabclient", component: TabClientComponent},
   {path: "inscription-evenement", component: InscriptionEventComponent},
   {path: "emprunt-jeu", component: EmpruntJeuComponent},
+  {path: "menu", component: MenusComponent},
   {path: "", pathMatch: "full", redirectTo: "accueil"}];
 
 
