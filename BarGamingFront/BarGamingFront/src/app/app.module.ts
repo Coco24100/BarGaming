@@ -20,6 +20,7 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { TabClientComponent } from './tab-client/tab-client.component';
 import { InscriptionEventComponent } from './inscription-event/inscription-event.component';
 import { EmpruntJeuComponent } from './emprunt-jeu/emprunt-jeu.component';
+import { MenusComponent } from './menus/menus.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { EmpruntJeuComponent } from './emprunt-jeu/emprunt-jeu.component';
     TabClientComponent,
     JeuxSocieteComponent,
     InscriptionEventComponent,
-    EmpruntJeuComponent
+    EmpruntJeuComponent,
+    MenusComponent
   ],
   imports: [
     BrowserModule,

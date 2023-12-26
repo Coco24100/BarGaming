@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { Client, Evenement } from '../model';
+import { Client, Evenement, Utilisateur } from '../model';
 import { ClientService } from '../client/client.service';
 import { Router } from '@angular/router';
 import { EvenementService } from '../evenement/evenement.service';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-tab-client',
@@ -11,7 +12,7 @@ import { EvenementService } from '../evenement/evenement.service';
 })
 export class TabClientComponent {
 
-constructor(private clientService:ClientService, private router:Router, private eventService:EvenementService) {
+constructor(private clientService:ClientService, private router:Router, private eventService:EvenementService, private authService:AuthService) {
  
 
 }
@@ -20,7 +21,7 @@ tabInfos?:Client = undefined;
 tabLocation: boolean = false;
 tabInscription: boolean = false;
 tablHistorique: boolean=false;
-
+utilisateur? : Utilisateur = new Utilisateur();
 
 showInfos(){
  this.tabInfos = new Client(); 
@@ -28,9 +29,8 @@ showInfos(){
   this.tablHistorique = false;
   this.tabInscription = false;
 
-//requete pour récuperere id client
-
-// this.clientService.findById(id).subscribe(resp => {
+  this.utilisateur = this.authService.getClient();
+// this.clientService.findByNomPrenom(utilisateur.nom,utilisateur.prenom ).subscribe(resp => {
 //   this.tabInfos = resp;
 // });
 
@@ -73,7 +73,7 @@ cloturer(){
 }
 
 voirTabJeuSociete(){
-this.router.navigate(["/"]);
+this.router.navigate(["/emprunt-jeu"]);
 }
 
 voirTabJeuVideo(){
@@ -86,7 +86,7 @@ return this.eventService.findAll();
 }
 
 inscription(){
-  this.router.navigate(["/"]);
+  this.router.navigate(["/inscription-evenement"]);
 }
 
 
