@@ -50,9 +50,9 @@
 .btn {
     background-color: #ffb700ab;
     color:#000;
-    font-size: large; /* Taille de la police */
-    border: none; /* Pas de bordure */
+    font-size: large; 
+    border: none; 
     border-radius: 0%;
-    padding: 10px 20px; /* Espacement intérieur du bouton */
+    padding: 10px 20px; 
     font-family: Angerpoise Lampshade;
 }
