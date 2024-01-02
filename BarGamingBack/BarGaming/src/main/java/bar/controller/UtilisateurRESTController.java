@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import bar.controller.dto.ConnexionRequest;
+import bar.controller.dto.InscriptionRequest;
 import bar.dao.IDAOCompte;
-//import quest.controller.dto.ConnexionRequest;
-//import quest.controller.dto.InscriptionRequest;
 import bar.dao.IDAOUtilisateur;
 import bar.model.Compte;
 import bar.model.Roles;
@@ -28,7 +28,6 @@ import jakarta.validation.Valid;
 @RestController
 @RequestMapping("/api")
 public class UtilisateurRESTController {
-	/*
 
 	private IDAOUtilisateur daoUtilisateur;
 
@@ -107,6 +106,6 @@ public class UtilisateurRESTController {
 
 		return utilisateur;
 	}
-	*/
+
 }
 
