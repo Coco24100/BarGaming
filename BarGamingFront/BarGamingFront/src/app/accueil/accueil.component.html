@@ -4,12 +4,12 @@
 
 <body>
 <header>
-<div id="logo"><img src=".\assets\Images\Logo.png" alt="logo" width="100" height="100"></div>
+<div id="logo"><img src=".\assets\Images\Logo.png" alt="logo" width="200" height="200"></div>
 <div id="titre"><p> CYBERDUCK BAR</p> </div>
 </header>
 
 <div class="activities"> 
-    <h2> Nos activités</h2>
+    <h1 class="sousTitre"> Nos activités</h1>
 
     <div class="row row-cols-1 row-cols-md-4 g-4">
         <div class="col">
@@ -48,19 +48,20 @@
 </div>
 
 <div class="description">
-    <p> Bienvenue chez CyberDuck Bar, l'ultime oasis de divertissement à la point de la technologie dans votre ville ! Exploité par une équipe de quatre gérants provenant tout droit d'un futur moins radieux, notre bar à thème gaming révolutionne l'expérience sociale. 
+<h1 class="sousTitre">CyberDuck Bar </h1>
+  <p> Bienvenue chez CyberDuck Bar, l'ultime oasis de divertissement à la point de la technologie dans votre ville ! Exploité par une équipe de quatre gérants provenant tout droit d'un futur moins radieux, notre bar à thème gaming révolutionne l'expérience sociale. 
         Plonge dans l'atmosphère futuriste immersive, où les néons éclatent et la technologie fusionne avec le divertissement. Notre espace propose une large gamme de jeux vidéos et de jeux de sociétés, des classiques aux dernières sorties, pour satisfaire les gamers en quête d'adrénaline.
         Participe aux tournoi d'e-sport où vos compétences virtuelles vont se traduire en triomphes réels. Mais viens aussi juste boire un verre entre amis, participer à un blind-test ou juste regarder un match. 
-        Rejoins-nous pour une expérience de divertissement immersive.
-    </p>
+      Rejoins-nous pour une expérience de divertissement immersive.
+  </p>
 </div>
 
 <div class="details"> 
 <div class="adresseHoraire">
-    <h4> Adresse </h4> 
+    <h4 class="sousTitre"> Adresse </h4> 
       <p> 6 Rue Rougemont 75000 Paris </p> <br/>
 
-    <h4>Horaires </h4>
+    <h4 class="sousTitre">Horaires </h4>
     <p> Mardi : 11h23 à 18h52  <br/>
      Mercredi : 15h58 à 22h12 <br/>
      Jeudi : 19h08 à 02h46 <br/>
@@ -79,7 +80,7 @@
 <footer>
 <p> Mentions Légales</p>
 <p>Contact</p>
-<p> Qui nous sommes</p>
+<p (click)="goQuiSommesNous()" class="lien-main"> Qui nous sommes</p>
 <i class="bi bi-facebook"></i>
 <i class="bi bi-instagram"></i>
 </footer>
