@@ -10,7 +10,7 @@ header{
   
   #logo
   {
-    width:40%;
+    width:30%;
     display:flex;
     justify-content:center;
     align-items:flex-start;
@@ -18,7 +18,8 @@ header{
   
   #titre
   {
-    width:60%;
+    font-family: 'cyberCity';
+    width:70%;
     text-transform:uppercase;
     font-size:60px;
     color: #f1f374;
@@ -31,6 +32,7 @@ body {
     background-color: #000;
     min-height: 100%;
     margin: 0;
+    font-family: 'terminalGrotesque';
 }
 
 .activities{
@@ -42,8 +44,13 @@ body {
 
 }
 
+.sousTitre{
+    font-family: 'angerpoise';
+ 
+}
 .description{
     display:flex;
+    flex-direction: column;
     background-color: #13566D;
     color: #ffffff ;
     font-size:20px;
@@ -72,6 +79,7 @@ body {
 
 footer
 {
+    font-family: 'angerpoise';
   background-color:#042435;
   color: #ffffff;
   height:10%;
@@ -82,3 +90,6 @@ footer
 
 }
 
+.lien-main {
+    cursor: pointer;
+}

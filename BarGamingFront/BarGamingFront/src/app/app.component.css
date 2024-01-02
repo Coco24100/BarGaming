@@ -7,3 +7,18 @@ body {
     min-height: 100vh; /* Hauteur minimale du corps égale à 100% de la hauteur de la fenêtre */
  
   }
+
+@font-face {
+    font-family: 'cyberCity';
+    src: url('src\assets\police\Cyber_City.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'angerpoise';
+    src: url('src\assets\police\angerpoise_lampshade.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'terminalGrotesque';
+    src: url('src\assets\police\terminal-grotesque.ttf') format('truetype');
+}
