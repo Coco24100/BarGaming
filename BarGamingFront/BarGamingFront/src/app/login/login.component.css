@@ -15,12 +15,14 @@
     width: 100%;
     font-size: x-large;
     text-align: center;
+    font-family: Angerpoise Lampshade;
 }
 
 .connexion {
     color: #FFF;
     font-size: xx-large;
     text-align: center;
+    font-family: Angerpoise Lampshade;
 }
 
 .text {
@@ -52,4 +54,5 @@
     border: none; /* Pas de bordure */
     border-radius: 0%;
     padding: 10px 20px; /* Espacement intérieur du bouton */
+    font-family: Angerpoise Lampshade;
 }
