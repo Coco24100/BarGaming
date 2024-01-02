@@ -49,7 +49,9 @@
         </div>
         <div class="mb-3">
             <label for="client" class="form-label">Client:</label>
-            <input type="text" class="form-control" id="client" name="client" [(ngModel)]="empruntForm.client">
+            <select class="form-select" id="client" name="client" [(ngModel)]="empruntForm.client">
+                <option *ngFor="let client of listeclients()" [value]="client">{{client.nom}} {{client.prenom}}</option>
+            </select>
         </div>
         <div class="mb-3">
             <label for="jeux" class="form-label">Jeux:</label>
