@@ -1,7 +1,9 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Angerpoise Lampshade', sans-serif;
+    color: #E3D139; 
+    font-family: Terminal Grotesque; 
     background-color: #000; /* Couleur de fond noire */
+    min-height: 100vh; /* Hauteur minimale du corps égale à 100% de la hauteur de la fenêtre */
  
   }
