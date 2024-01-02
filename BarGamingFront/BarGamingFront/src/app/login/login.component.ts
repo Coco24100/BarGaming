@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit{
     this.passwordCtrl=this.formBuilder.control("", [Validators.required, Validators.minLength(5)]);
 
     this.loginForm= this.formBuilder.group({
-      usermane: this.usernameCtrl,
+      username: this.usernameCtrl,
       password: this.passwordCtrl
     })
   }

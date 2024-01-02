@@ -3,6 +3,7 @@ package bar.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorColumn;
+import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,7 +15,8 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name="compte")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="type_compte",columnDefinition = "ENUM('admin','client')")
+@DiscriminatorColumn(name="type_compte")
+@DiscriminatorValue("compte")
 public class Compte {
 
 	@Id
