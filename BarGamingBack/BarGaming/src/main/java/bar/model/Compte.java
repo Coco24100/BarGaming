@@ -15,7 +15,7 @@ import jakarta.persistence.Table;
 @Table(name="compte")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name="type_compte",columnDefinition = "ENUM('admin','client')")
-public abstract class Compte {
+public class Compte {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
