@@ -27,7 +27,7 @@ import bar.model.Evenement;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/api/event")
+@RequestMapping("/api/evenement")
 @CrossOrigin(origins = "*" )
 public class EvenementRESTController {
 
