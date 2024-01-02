@@ -14,7 +14,7 @@ import jakarta.persistence.Table;
 @Table(name="jeux")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name="type_jeu",columnDefinition = "ENUM('societe','video')")
-public abstract class Jeux {
+public class Jeux {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

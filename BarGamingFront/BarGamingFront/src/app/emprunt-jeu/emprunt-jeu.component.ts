@@ -25,7 +25,7 @@ export class EmpruntJeuComponent {
 
   save() {
 
-      if (this.empruntForm.jeux) {
+      if (this.empruntForm.jeu) {
         this.empruntForm.client = this.client;
         this.empruntForm.dateEmprunt = new Date();
 
