@@ -21,6 +21,7 @@ import { TabClientComponent } from './tab-client/tab-client.component';
 import { InscriptionEventComponent } from './inscription-event/inscription-event.component';
 import { EmpruntJeuComponent } from './emprunt-jeu/emprunt-jeu.component';
 import { MenusComponent } from './menus/menus.component';
+import { QuiSommesNousComponent } from './qui-sommes-nous/qui-sommes-nous.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { MenusComponent } from './menus/menus.component';
     InscriptionEventComponent,
     EmpruntJeuComponent,
     MenusComponent,
+    QuiSommesNousComponent,
   ],
   imports: [
     BrowserModule,
