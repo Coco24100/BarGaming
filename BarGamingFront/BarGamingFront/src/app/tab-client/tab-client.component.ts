@@ -77,7 +77,7 @@ this.router.navigate(["/emprunt-jeu"]);
 }
 
 voirTabJeuVideo(){
-this.router.navigate(["/"]);
+this.router.navigate(["/emprunt-jeu"]);
 
 }
 

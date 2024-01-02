@@ -45,7 +45,9 @@
         </div>
         <div class="mb-3">
             <label for="client" class="form-label">Client:</label>
-            <input type="text" class="form-control" id="client" name="client" [(ngModel)]="reservationForm.client">
+            <select class="form-select" id="client" name="client" [(ngModel)]="reservationForm.client">
+                <option *ngFor="let client of listeclients()" [value]="client">{{client.nom}} {{client.prenom}}</option>
+            </select>
         </div>
         <div class="mb-3">
             <label for="dateReservation" class="form-label">dateReservation:</label>
@@ -53,7 +55,9 @@
         </div>
         <div class="mb-3">
             <label for="evenement" class="form-label">Evenement:</label>
-            <input type="text" class="form-control" id="evenement" name="evenement" [(ngModel)]="reservationForm.evenement">
+            <select class="form-select" id="evenement" name="evenement" [(ngModel)]="reservationForm.evenement">
+                <option *ngFor="let event of listeevents()" [value]="event">{{event.nom}} {{event.date}}</option>
+            </select>
         </div>
     </div>
     <div class="card-footer">

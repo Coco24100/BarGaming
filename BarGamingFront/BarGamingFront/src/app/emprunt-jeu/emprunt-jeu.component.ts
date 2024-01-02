@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { EmpruntService } from '../emprunt/emprunt.service';
 import { JeuxService } from '../jeux/jeux.service';
-import { Client, Emprunt } from '../model';
-import { JeuxSocieteService } from '../jeux-societe/jeux-societe.service';
+import { Client, Emprunt, Jeu } from '../model';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-emprunt-jeu',
@@ -12,27 +13,37 @@ import { JeuxSocieteService } from '../jeux-societe/jeux-societe.service';
 export class EmpruntJeuComponent {
 
 
-  
-  constructor(private empruntService: EmpruntService , private jeuxSocieteService : JeuxSocieteService){}
- 
-  client = new Client(2,"Johnny","Dodo")
-  empruntForm: Emprunt = new Emprunt(undefined,undefined,this.client)
 
-  listeJeux()
-  {
-    return this.jeuxSocieteService.findAll()
+  constructor(private empruntService: EmpruntService, private jeuxService: JeuxService ,private router:Router) { }
+
+  client = new Client(2, "Johnny", "Dodo")
+  empruntForm: Emprunt = new Emprunt(undefined, undefined, this.client)
+
+  listeJeux() {
+    return this.jeuxService.findAll()
   }
 
   save() {
-    
-    this.empruntForm.dateEmprunt = new Date();
 
-    this.empruntService.create(this.empruntForm)
+      if (this.empruntForm.jeux) {
+        this.empruntForm.client = this.client;
+        this.empruntForm.dateEmprunt = new Date();
 
+        this.empruntService.create(this.empruntForm)
+      }
     
+
+    this.cancel()
+
+    this.router.navigate(["/tabclient"]);
+
   }
 
-  cancel() { }
+  cancel() {
+     this.empruntForm = new Emprunt(undefined, undefined, this.client)
+     this.router.navigate(["/tabclient"]);
+
+  }
 
 
 

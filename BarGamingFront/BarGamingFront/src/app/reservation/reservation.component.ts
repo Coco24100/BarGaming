@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ReservationService } from './reservation.service';
-import { Reservation } from '../model';
+import { Client, Evenement, Reservation } from '../model';
+import { ClientService } from '../client/client.service';
+import { EvenementService } from '../evenement/evenement.service';
 
 @Component({
   selector: 'app-reservation',
@@ -10,13 +12,25 @@ import { Reservation } from '../model';
 export class ReservationComponent {
   
   reservationForm?: Reservation = undefined;
+  clients: Array<Client> = new Array<Client>(); // liste de clients pour menu deroulant
+  events: Array<Evenement> = new Array<Evenement>(); // liste de events pour menu deroulant
 
-  constructor(private reservationService: ReservationService) {
+  constructor(private reservationService: ReservationService, private clientService: ClientService, private evenementService: EvenementService) {
   }
 
   list(): Reservation[] {
     return this.reservationService.findAll();
   }
+
+    //Charge la liste de clients au moment de l'initialisation du composant
+    listeclients(): Client[] {
+      return this.clientService.findAll();
+     }
+
+      //Charge la liste d'events au moment de l'initialisation du composant
+    listeevents(): Evenement[] {
+      return this.evenementService.findAll();
+     }
 
   add() {
     this.reservationForm = new Reservation();

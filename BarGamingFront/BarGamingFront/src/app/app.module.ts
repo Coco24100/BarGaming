@@ -43,7 +43,7 @@ import { MenusComponent } from './menus/menus.component';
     JeuxSocieteComponent,
     InscriptionEventComponent,
     EmpruntJeuComponent,
-    MenusComponent
+    MenusComponent,
   ],
   imports: [
     BrowserModule,
