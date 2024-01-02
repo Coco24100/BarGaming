@@ -29,21 +29,21 @@ public class Emprunt {
 	
 	@JoinColumn
 	@ManyToOne
-	private JeuxSociete jeuxSociete;
+	private Jeux jeu;
 
-	public Emprunt(LocalDate dateEmprunt, Client client, JeuxSociete jeuxSociete) {
+	public Emprunt(LocalDate dateEmprunt, Client client, Jeux jeu) {
 		super();
 		this.dateEmprunt = dateEmprunt;
 		this.client = client;
-		this.jeuxSociete = jeuxSociete;
+		this.jeu = jeu;
 	}
 
-	public Emprunt(Integer id, LocalDate dateEmprunt, Client client, JeuxSociete jeuxSociete) {
+	public Emprunt(Integer id, LocalDate dateEmprunt, Client client, Jeux jeu) {
 		super();
 		this.id = id;
 		this.dateEmprunt = dateEmprunt;
 		this.client = client;
-		this.jeuxSociete = jeuxSociete;
+		this.jeu = jeu;
 	}
 
 	public Emprunt() {
@@ -74,12 +74,12 @@ public class Emprunt {
 		this.client = client;
 	}
 
-	public JeuxSociete getJeuxSociete() {
-		return jeuxSociete;
+	public Jeux getJeu() {
+		return jeu;
 	}
 
-	public void setJeuxSociete(JeuxSociete jeuxSociete) {
-		this.jeuxSociete = jeuxSociete;
+	public void setJeu(Jeux jeu) {
+		this.jeu = jeu;
 	}
 
 }

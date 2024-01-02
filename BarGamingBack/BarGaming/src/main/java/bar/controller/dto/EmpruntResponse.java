@@ -15,7 +15,7 @@ public class EmpruntResponse {
 
 	private ClientResponse client = new ClientResponse();
 
-	private JeuxResponse jeuxSociete = new JeuxResponse();
+	private JeuxResponse jeu = new JeuxResponse();
 
 	public EmpruntResponse() {
 	}
@@ -44,12 +44,12 @@ public class EmpruntResponse {
 		this.client = client;
 	}
 
-	public JeuxResponse getJeuxSociete() {
-		return jeuxSociete;
+	public JeuxResponse getJeu() {
+		return jeu;
 	}
 
-	public void setJeuxSociete(JeuxResponse jeuxSociete) {
-		this.jeuxSociete = jeuxSociete;
+	public void setJeu(JeuxResponse jeu) {
+		this.jeu = jeu;
 	}
 
 	public void fromEmprunt(Emprunt emprunt) {
@@ -58,8 +58,9 @@ public class EmpruntResponse {
 		if (emprunt.getClient() != null) {
 			client.fromClient(emprunt.getClient());
 		}
-		jeuxSociete.fromJeux(emprunt.getJeuxSociete());
-
+		if(emprunt.getJeu() != null) {
+		jeu.fromJeux(emprunt.getJeu());
+		}
 	}
 
 }
