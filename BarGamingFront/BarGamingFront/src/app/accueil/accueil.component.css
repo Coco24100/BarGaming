@@ -1,51 +1,84 @@
-.body {
-    background: #000; 
+
+header{
+    height: 200px;
+    display:flex;
+    background-image: url(src\assets\Images\banniere1.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+ }
+  
+  #logo
+  {
+    width:40%;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+  }
+  
+  #titre
+  {
+    width:60%;
+    text-transform:uppercase;
+    font-size:60px;
+    color: #f1f374;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+  }
+  
+body {
+    background-color: #000;
+    min-height: 100%;
+    margin: 0;
 }
 
-.logo {
-width: 262px;
-height: 249px;
+.activities{
+    background-color: #000;
+    color: #f1f374;
+    font-size:20px;
+    padding: 20px;
+    margin-bottom: 40px;
 
-fill: url(http://www.wifeo.com/image_design_v3/images_sav/7/7changer-adresse-image1398093857.png), lightgray -13.698px -24.007px / 100% 111.966% no-repeat;
-stroke-width: 1px;
-stroke: #000;
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 }
 
-.nav {
-width: 100%;
-height: 20%;
-
-background: #000;
+.description{
+    display:flex;
+    background-color: #13566D;
+    color: #ffffff ;
+    font-size:20px;
+    padding: 20px;
 }
 
-.navbar {
-    color: #E3D139;
-text-align: right;
-font-family: Angerpoise Lampshade;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-display: block;
+.details{
+    background-color: #13566D;
+    color: #ffffff ;
+    display:flex;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-size:20px;
+
 }
 
-.nombar {
-    color: #FFEC4A;
-font-family: Cyber City;
-font-size: 60px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+.adresseHoraire{
+    width:40%;
+    justify-content: flex-start;
 }
 
-.text {
-    color: #E3D139;
-font-family: Angerpoise Lampshade;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+.map{
+    width:60%;
+    justify-content:flex-end;
 }
 
+footer
+{
+  background-color:#042435;
+  color: #ffffff;
+  height:10%;
+  display:flex;
+  justify-content: space-around; 
+  align-items: center; 
+  font-size:20px;
+
+}
 
