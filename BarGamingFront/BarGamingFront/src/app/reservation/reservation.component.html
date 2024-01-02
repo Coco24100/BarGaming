@@ -46,7 +46,7 @@
         <div class="mb-3">
             <label for="client" class="form-label">Client:</label>
             <select class="form-select" id="client" name="client" [(ngModel)]="reservationForm.client">
-                <option *ngFor="let client of listeclients()" [value]="client">{{client.nom}} {{client.prenom}}</option>
+                <option *ngFor="let client of listeclients()" [ngValue]="client">{{client.nom}} {{client.prenom}}</option>
             </select>
         </div>
         <div class="mb-3">
@@ -56,7 +56,7 @@
         <div class="mb-3">
             <label for="evenement" class="form-label">Evenement:</label>
             <select class="form-select" id="evenement" name="evenement" [(ngModel)]="reservationForm.evenement">
-                <option *ngFor="let event of listeevents()" [value]="event">{{event.nom}} {{event.date}}</option>
+                <option *ngFor="let event of listeevents()" [ngValue]="event">{{event.nom}} {{event.date}}</option>
             </select>
         </div>
     </div>
