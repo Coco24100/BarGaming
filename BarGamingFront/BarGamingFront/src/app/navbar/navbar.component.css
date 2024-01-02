@@ -1,0 +1,28 @@
+.navbar {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    font-family: Angerpoise Lampshade;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  .nav-item {
+    color: #E3D139;
+  }
+  
+  .nav-item a {
+    text-decoration: none;
+    color: #E3D139;
+  }
+  
+  .nav-item a:hover {
+    text-decoration: underline;
+  }
+
+  .nav-item.active {
+    text-decoration: underline;
+  }

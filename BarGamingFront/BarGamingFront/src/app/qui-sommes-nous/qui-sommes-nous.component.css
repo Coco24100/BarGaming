@@ -6,7 +6,6 @@ body {
   }
   
   header {
-    background-color: #E3D139;
     display: flex;
     justify-content: space-between;
     padding: 20px;
@@ -18,7 +17,7 @@ body {
   }
   
   .navbar {
-    /* Ajoutez des styles de navigation selon vos besoins */
+    background-color: #FFEC4A;
   }
   
   .banner img {
@@ -49,7 +48,7 @@ body {
   .team-presentation {
     background-color: #13566D;
     color: #FFF;
-    padding: 20px;
+    padding: 100px;
   }
   
   .team-member {
