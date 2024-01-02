@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { EmpruntService } from '../emprunt/emprunt.service';
 import { JeuxService } from '../jeux/jeux.service';
 import { Client, Emprunt, Jeu } from '../model';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class EmpruntJeuComponent {
 
 
 
-  constructor(private empruntService: EmpruntService, private jeuxService: JeuxService) { }
+  constructor(private empruntService: EmpruntService, private jeuxService: JeuxService ,private router:Router) { }
 
   client = new Client(2, "Johnny", "Dodo")
   empruntForm: Emprunt = new Emprunt(undefined, undefined, this.client)
@@ -34,10 +35,15 @@ export class EmpruntJeuComponent {
 
     this.cancel()
 
+    this.router.navigate(["/tabclient"]);
 
   }
 
-  cancel() { this.empruntForm = new Emprunt(undefined, undefined, this.client)}
+  cancel() {
+     this.empruntForm = new Emprunt(undefined, undefined, this.client)
+     this.router.navigate(["/tabclient"]);
+
+  }
 
 
 
