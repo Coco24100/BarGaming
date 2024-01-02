@@ -12,27 +12,32 @@ import { Client, Emprunt, Jeu } from '../model';
 export class EmpruntJeuComponent {
 
 
-  
-  constructor(private empruntService: EmpruntService , private jeuxService : JeuxService){}
- 
-  client = new Client(2,"Johnny","Dodo")
-  empruntForm: Emprunt = new Emprunt(undefined,undefined,this.client)
 
-  listeJeux()
-  {
+  constructor(private empruntService: EmpruntService, private jeuxService: JeuxService) { }
+
+  client = new Client(2, "Johnny", "Dodo")
+  empruntForm: Emprunt = new Emprunt(undefined, undefined, this.client)
+
+  listeJeux() {
     return this.jeuxService.findAll()
   }
 
   save() {
-    
-    this.empruntForm.dateEmprunt = new Date();
 
-    this.empruntService.create(this.empruntForm)
+      if (this.empruntForm.jeux) {
+        this.empruntForm.client = this.client;
+        this.empruntForm.dateEmprunt = new Date();
 
+        this.empruntService.create(this.empruntForm)
+      }
     
+
+    this.cancel()
+
+
   }
 
-  cancel() { }
+  cancel() { this.empruntForm = new Emprunt(undefined, undefined, this.client)}
 
 
 
