@@ -1,0 +1,55 @@
+.body {
+    background: url('../../assets/Images/FondConnexion.png');
+    background-size: cover;
+    width: 100%;  /* 50% de la largeur de la fenêtre */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-header {
+    background-color: #ffb700ab;
+    color: #000;
+    width: 100%;
+    font-size: x-large;
+    text-align: center;
+}
+
+.connexion {
+    color: #FFF;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.text {
+    color: #FFF;
+    font-size: large;
+    text-align: center;  
+    font-family: Terminal Grotesque;
+}
+
+.card-body{
+ background-color:  #13566d6c;
+}
+
+.mb-3 {
+    color: #FFF;
+    font-family: Terminal Grotesque;
+    font-size: large;
+}
+
+.card-footer {
+    background-color:  #13566d6c;
+    text-align: center;
+}
+
+.btn {
+    background-color: #ffb700ab;
+    color:#000;
+    font-size: large; /* Taille de la police */
+    border: none; /* Pas de bordure */
+    border-radius: 0%;
+    padding: 10px 20px; /* Espacement intérieur du bouton */
+}

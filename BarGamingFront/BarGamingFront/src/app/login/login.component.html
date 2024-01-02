@@ -1,24 +1,26 @@
-<div class="card mt-3">
+<div class="body">
     <form [formGroup]="loginForm" (ngSubmit)="connexion()">
-    <div class="card-header text-white bg-primary">
+    <div class="card-header">
         Connexion
     </div>
     <div class="card-body"> 
-        
-        <div class="mb-3 mt-3">
-            <label for="username" class="form-label">Identifiant:</label>
+        <div class="connexion">Connecte-toi à ton compte cyberduckien</div>
+        <div class="text">Les jeux, les cadeaux, mais surtout les supers soirées seront à toi</div>
+        <hr>
+        <div class="mb-3">
+            <label for="username" class="form-label">IDENTIFIANT :</label>
             <input type="text" class="form-control" id="username" name="username" formControlName="username">
             <span class="text-danger" *ngIf="usernameCtrl.dirty && usernameCtrl.hasError('required')">L'identifiant est obligatoire</span>
         </div>
         <div class="mb-3">
-            <label for="password" class="form-label">Password:</label>
+            <label for="password" class="form-label">MOT DE PASSE :</label>
             <input type="password" class="form-control" id="password" name="password" formControlName="password">
             <span class="text-danger" *ngIf="passwordCtrl.dirty && passwordCtrl.hasError('required')">Le mot passe est obligatoire</span>
             <span class="text-danger" *ngIf="passwordCtrl.dirty && passwordCtrl.hasError('minlength')">Le mot passe doit avoir au moins 5 caractères</span>
         </div>
     </div>
     <div class="card-footer">
-        <button type="submit" [disabled]="loginForm.invalid" class="btn btn-success btn-lg"><i class="bi bi-check-lg"></i></button>
+        <button type="submit" [disabled]="loginForm.invalid" class="btn btn-success btn-lg"> SE CONNECTER </button>
     </div>
     </form>
 </div>
