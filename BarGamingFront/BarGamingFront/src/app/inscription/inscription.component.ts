@@ -17,6 +17,10 @@ export class InscriptionComponent implements OnInit{
   usernameCtrl!: FormControl;
   passwordCtrl!: FormControl;
 
+  infoEvents: boolean = false;
+  bonPlans: boolean = false;
+  conditionsAcceptees: boolean = false;
+
   constructor(private utilisateurService: UtilisateurService, private formBuilder: FormBuilder, private router: Router) {
 
   }

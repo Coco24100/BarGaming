@@ -1,36 +1,52 @@
-<div class="card mt-3">
+<div class="body">
     <form [formGroup]="inscriptionForm" (ngSubmit)="inscription()">
-    <div class="card-header text-white bg-primary">
-        Connexion
+    <div class="card-header">
+        Inscription
     </div>
     <div class="card-body"> 
+        <div class="connexion">Crée ton compte Cyberduckien</div>
+        <div class="text">Ce compte permet de t’inscrire aux événements, d’accéder à la location des jeux de sociétés du bar et voir ton historique de tournois !</div>
         <div class="mb-3 mt-3">
-            <label for="nom" class="form-label">Nom:</label>
+            <label for="nom" class="form-label">NOM :</label>
             <input type="text" class="form-control" id="nom" name="nom" formControlName="nom">
             <span class="text-danger" *ngIf="nomCtrl.dirty && nomCtrl.hasError('required')">Le nom est obligatoire</span>
         </div>
         <div class="mb-3 mt-3">
-            <label for="prenom" class="form-label">Prénom:</label>
+            <label for="prenom" class="form-label">PRENOM :</label>
             <input type="text" class="form-control" id="prenom" name="prenom" formControlName="prenom">
         </div>
         <div class="mb-3 mt-3">
-            <label for="email" class="form-label">email:</label>
+            <label for="email" class="form-label">EMAIL :</label>
             <input type="email" class="form-control" id="email" name="email" formControlName="email">
         </div>
         <div class="mb-3 mt-3">
-            <label for="username" class="form-label">Identifiant:</label>
+            <label for="username" class="form-label">IDENTIFIANT :</label>
             <input type="text" class="form-control" id="username" name="username" formControlName="username">
             <span class="text-danger" *ngIf="usernameCtrl.dirty && usernameCtrl.hasError('required')">L'identifiant est obligatoire</span>
         </div>
         <div class="mb-3">
-            <label for="password" class="form-label">Password:</label>
+            <label for="password" class="form-label">MOT DE PASSE :</label>
             <input type="password" class="form-control" id="password" name="password" formControlName="password">
             <span class="text-danger" *ngIf="passwordCtrl.dirty && passwordCtrl.hasError('required')">Le mot passe est obligatoire</span>
             <span class="text-danger" *ngIf="passwordCtrl.dirty && passwordCtrl.hasError('minlength')">Le mot passe doit avoir au moins 5 caractères</span>
         </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="infoEvents" [(ngModel)]="infoEvents">
+            <label class="form-check-label" for="infoEvents">J’aimerais être tenu(e) au courant des événements de mon bar</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="bonPlans" [(ngModel)]="bonPlans">
+            <label class="form-check-label" for="bonPlans">J’aimerais recevoir les bon plans de CyberDuck Bar et de ses partenaires</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="conditionsAcceptees" [(ngModel)]="conditionsAcceptees" required>
+            <label class="form-check-label" for="conditionsAcceptees">J’accepte les conditions d’utilisation ainsi que la politique de confidentialité</label>
+        </div>
     </div>
+    
     <div class="card-footer">
-        <button type="submit" [disabled]="inscriptionForm.invalid" class="btn btn-success btn-lg"><i class="bi bi-check-lg"></i></button>
+        <button type="submit" [disabled]="!conditionsAcceptees && inscriptionForm.invalid" class="btn btn-success btn-lg">VALIDER</button>
     </div>
+   
     </form>
 </div>
