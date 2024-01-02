@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Angerpoise Lampshade', sans-serif;
+    background-color: #000; /* Couleur de fond noire */
+  }
+  
+  header {
+    background-color: #E3D139;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .logo img {
+    width: 262px;
+    height: 249px;
+  }
+  
+  .navbar {
+    /* Ajoutez des styles de navigation selon vos besoins */
+  }
+  
+  .banner img {
+    width: 1981px;
+    height: 623px;
+  }
+  
+  .banner h1 {
+    color: #FFEC4A;
+    font-family: 'Cyber City', sans-serif;
+    font-size: 80px;
+  }
+  
+  .black-bg {
+    background-color: #000;
+    color: #E3D139;
+    padding: 20px;
+  }
+  
+  .yellow-triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 83px 0 83px 2005.556px;
+    border-color: transparent transparent transparent #FFEA30;
+  }
+  
+  .team-presentation {
+    background-color: #13566D;
+    color: #FFF;
+    padding: 20px;
+  }
+  
+  .team-member {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .team-member img {
+    width: 332px;
+    height: 330px;
+  }
+  
+  .team-member .text {
+    margin-left: 20px;
+  }
+  
+  footer {
+    width: 100%;
+    background-color: #042435;
+    padding: 20px;
+    color: #E3D139;
+  }
+  
+  .legal-info {
+    display: flex;
+    justify-content: space-between;
+  }
