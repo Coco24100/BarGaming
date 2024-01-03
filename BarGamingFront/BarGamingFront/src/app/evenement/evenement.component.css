@@ -1,0 +1,163 @@
+header{
+    height: 300px;
+    display:flex;
+    background-image: url(src\assets\Images\Event.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+ }
+  
+  #logo
+  {
+    width:30%;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+  }
+  
+  #titre
+  {
+    /*font-family: 'cyberCity';
+    width:70%;
+    text-transform:uppercase;
+    font-size:60px;
+    color: #f1f374;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;*/
+
+    -webkit-text-stroke: 1px #00efff;
+    color: #ffeb4a;
+    font-family: "cyberCity";
+    font-size: 60px;
+    font-weight: 400;
+    text-shadow: 0px 4px 4px #00000040;
+    white-space: nowrap;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+  }
+  
+body {
+    background-color: #000;
+    min-height: 100%;
+    margin: 0;
+    font-family: 'terminalGrotesque';
+}
+
+  .yellow-triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 83px 0 83px 2005.556px;
+    border-color: transparent transparent transparent #FFEA30;
+  }
+
+  .evenements {
+    color: #ffeb4a;
+    font-family: 'angerpoise';
+    font-size: 40px;
+    font-weight: 400;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    white-space: nowrap;
+  }
+
+  .ListEvenements {
+    background-color: #13566D;
+    color: #FFF;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.evenement-container {
+    display: flex;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.date-heure {
+    flex: 1;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    font-size: larger;
+}
+
+.event1 {
+    flex: 10;
+    background: url(src\assets\Images\Valorant.webp) center/cover no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 20px;
+}
+
+.event1 p {
+    color: #ffeb4a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-family: 'angerpoise';
+}
+
+.event2 {
+    flex: 10;
+    background: url(src\assets\Images\MurderParty.jpg) center/cover no-repeat;
+    background-size: cover;
+    background-position-y: -220px;
+    position: relative;
+    padding: 20px;
+}
+
+.event2 p {
+    color: #ffeb4a;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    font-size: xx-large;
+    font-family: 'angerpoise';
+}
+
+.event3 {
+    flex: 10;
+    background: url(src\assets\Images\MarioKart.webp) center/cover no-repeat;
+    background-size:relative;
+    background-position-y: -300px;
+    position: relative;
+    padding: 20px;
+}
+
+.event3 p {
+    color: #ffeb4a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-family: 'angerpoise';
+}
+
+.event4 {
+    flex: 10;
+    background: url(src\assets\Images\BlindTest.jpeg) center/cover no-repeat;
+    background-size: cover;
+    background-position-y: -350px;
+    position: relative;
+    padding: 20px;
+}
+
+.event4 p {
+    color: #ffeb4a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-family: 'angerpoise';
+}
+
+.ListEvenements:not(:last-child) {
+    margin-bottom: -150px;
+}

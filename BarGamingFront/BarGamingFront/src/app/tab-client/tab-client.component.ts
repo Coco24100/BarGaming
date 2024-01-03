@@ -29,7 +29,7 @@ showInfos(){
   this.tablHistorique = false;
   this.tabInscription = false;
 
-  this.utilisateur = this.authService.getClient();
+  this.utilisateur = this.authService.getCompte();
 // this.clientService.findByNomPrenom(utilisateur.nom,utilisateur.prenom ).subscribe(resp => {
 //   this.tabInfos = resp;
 // });
