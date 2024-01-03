@@ -21,6 +21,7 @@ export class NavbarComponent {
   isAdmin() {
 
     return this.authService.isAdmin()
+    
   }
 
   isClient() {

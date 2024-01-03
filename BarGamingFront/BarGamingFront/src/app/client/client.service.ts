@@ -47,7 +47,7 @@ export class ClientService {
   }
 
   delete(id?: number) {
-    this.http.delete<void>(environment.apiUrl + "/compte/client/"+id).subscribe(resp => {
+    this.http.delete<void>(environment.apiUrl + "/compte/"+id).subscribe(resp => {
       this.load();
       this.clientsUpdatedSubject.next();
     });
