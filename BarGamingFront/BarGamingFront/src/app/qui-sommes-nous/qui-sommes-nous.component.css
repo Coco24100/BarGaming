@@ -17,10 +17,8 @@ body {
   
   #logo
   {
-    width:30%;
-    display:flex;
-    justify-content:flex-start;
-    align-items:flex-start;
+    margin-top: 20px;
+    margin-left: 40px;
   }
   
   #titre
@@ -37,7 +35,7 @@ body {
       -5px -5px 10px #00033e,
       5px -5px 10px #00033e;
       margin-top: 100px;
-      margin-left: -200px;
+      margin-left: 200px;
   }
 
 
@@ -89,14 +87,3 @@ body {
     margin-left: 20px;
   }
   
-  footer {
-    width: 100%;
-    background-color: #042435;
-    padding: 20px;
-    color: #FFEA30;
-  }
-  
-  .legal-info {
-    display: flex;
-    justify-content: space-between;
-  }

@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #000; /* Couleur de fond noire */
-    min-height: 100vh; /* Hauteur minimale du corps égale à 100% de la hauteur de la fenêtre */
+    min-height: 100%; /* Hauteur minimale du corps égale à 100% de la hauteur de la fenêtre */
 
   }
 

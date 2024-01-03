@@ -1,6 +1,8 @@
 .body {
-    background: url('../../assets/Images/FondConnexion.png');
+    background: url('../../assets/Images/banniere4.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     width: 100%;  /* 50% de la largeur de la fenêtre */
     height: 100vh;
     display: flex;
