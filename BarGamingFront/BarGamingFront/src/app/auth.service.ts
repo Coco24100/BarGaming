@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
-import { Utilisateur } from './model';
+import { Compte } from './model';
 
 @Injectable({
   providedIn: 'root'
@@ -10,23 +10,23 @@ import { Utilisateur } from './model';
 export class AuthService {
   
 
-  private utilisateur?: Utilisateur = undefined;
+  private compte?: Compte = undefined;
 
   constructor(private http: HttpClient, private router: Router) { }
 
   
 
   login(username: string, password: string) {
-    return this.http.post<Utilisateur>(environment.apiUrl + `/connexion`, { "login": username, "password": password }).subscribe(resp => {
-      this.utilisateur = resp;
-      localStorage.setItem("user", JSON.stringify(this.utilisateur));
+    return this.http.post<Compte>(environment.apiUrl + `/connexion`, { "login": username, "password": password }).subscribe(resp => {
+      this.compte = resp;
+      localStorage.setItem("user", JSON.stringify(this.compte));
 
       this.router.navigate(["/accueil"]);
     });
   }
 
   logout() {
-    this.utilisateur = undefined;
+    this.compte = undefined;
     localStorage.removeItem("user");
   }
 
@@ -34,14 +34,14 @@ export class AuthService {
     return this.getClient() != undefined;
   }
 
-  getClient(): Utilisateur | undefined{
-    if(this.utilisateur) {
-      return this.utilisateur;
+  getClient(): Compte | undefined{
+    if(this.compte) {
+      return this.compte;
     } else {
       const user = localStorage.getItem("user")
       if(user) {
-        this.utilisateur = JSON.parse(user);
-        return this.utilisateur;
+        this.compte = JSON.parse(user);
+        return this.compte;
       }
     }
 

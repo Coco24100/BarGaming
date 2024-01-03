@@ -22,7 +22,7 @@ import bar.dao.IDAOCompte;
 import bar.model.Client;
 import jakarta.validation.Valid;
 
-@RestController
+/*@RestController
 @RequestMapping("/api/client")
 @CrossOrigin(origins = "*" )
 public class ClientRESTController {
@@ -87,4 +87,4 @@ public class ClientRESTController {
 	}
 	
 	
-}
+}*/
