@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
-import { Utilisateur } from '../model';
-import { UtilisateurService } from './utilisateur.service';
+import { Compte } from '../model';
+import { CompteService } from './compte.service';
 
 @Component({
-  selector: 'app-utilisateur',
-  templateUrl: './utilisateur.component.html',
-  styleUrls: ['./utilisateur.component.css']
+  selector: 'app-compte',
+  templateUrl: './compte.component.html',
+  styleUrls: ['./compte.component.css']
 })
-export class UtilisateurComponent implements OnInit {
+export class CompteComponent implements OnInit {
   userForm!: FormGroup;
 
   idCtrl!: FormControl;
@@ -20,9 +20,9 @@ export class UtilisateurComponent implements OnInit {
 
   showForm: boolean = false;
 
-  utilisateurs$!: Observable<Utilisateur[]>;
+  comptes$!: Observable<Compte[]>;
 
-  constructor(private userService: UtilisateurService, private formBuilder: FormBuilder) {
+  constructor(private compteService: CompteService, private formBuilder: FormBuilder) {
     this.load();
   }
 
@@ -43,11 +43,11 @@ export class UtilisateurComponent implements OnInit {
   }
 
   load() {
-    this.utilisateurs$ = this.userService.findAll();
+    this.comptes$ = this.compteService.findAll();
   }
 
   list() {
-    return this.utilisateurs$;
+    return this.comptes$;
   }
 
   add() {
@@ -56,19 +56,19 @@ export class UtilisateurComponent implements OnInit {
   }
 
   edit(id?: number) {
-    this.userService.findById(id).subscribe(resp => {
+    this.compteService.findById(id).subscribe(resp => {
       this.userForm.patchValue(resp);
       this.showForm = true;
     });
   }
 
   save() {
-    this.userService.save(this.userForm.value).subscribe(resp => this.load());
+    this.compteService.save(this.userForm.value).subscribe(resp => this.load());
     this.cancel();
   }
 
   remove(id?: number) {
-    this.userService.delete(id).subscribe(resp => this.load());
+    this.compteService.delete(id).subscribe(resp => this.load());
   }
 
   cancel() {

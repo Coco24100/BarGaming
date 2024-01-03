@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Client, Evenement, Utilisateur } from '../model';
+import { Client, Evenement, Compte } from '../model';
 import { ClientService } from '../client/client.service';
 import { Router } from '@angular/router';
 import { EvenementService } from '../evenement/evenement.service';
@@ -21,7 +21,7 @@ tabInfos?:Client = undefined;
 tabLocation: boolean = false;
 tabInscription: boolean = false;
 tablHistorique: boolean=false;
-utilisateur? : Utilisateur = new Utilisateur();
+utilisateur? : Compte = new Compte();
 
 showInfos(){
  this.tabInfos = new Client(); 
