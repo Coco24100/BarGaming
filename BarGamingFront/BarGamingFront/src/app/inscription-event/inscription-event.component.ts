@@ -3,6 +3,7 @@ import { EvenementService } from '../evenement/evenement.service';
 import { ReservationService } from '../reservation/reservation.service';
 import { Client, Evenement, Reservation } from '../model';
 import { AuthService } from '../auth.service';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-inscription-event',
@@ -11,7 +12,7 @@ import { AuthService } from '../auth.service';
 })
 export class InscriptionEventComponent {
 
-  constructor(private evenementService: EvenementService, private reservationService: ReservationService , private authService : AuthService) { }
+  constructor(private evenementService: EvenementService, private reservationService: ReservationService , private authService : AuthService , private router : Router) { }
   
   client = this.authService.getCompte()
 
@@ -33,10 +34,16 @@ export class InscriptionEventComponent {
     
     this.reservationService.create(this.reservationForm)
 
+    this.router.navigate(['/tabclient'])
+    alert("votre inscription a bien été enregistrée")
+
     
   }
 
-  cancel() { }
+  cancel() {
+
+    this.router.navigate(['/tabclient'])
+   }
 
 
 

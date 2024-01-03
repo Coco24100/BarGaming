@@ -7,15 +7,13 @@ export class Evenement {
 }
 
 export class Jeu {
-    constructor(public id?: number, public nom?: string) {};
+    constructor(public id?: number, public nom?: string , public plateforme?: string) {};
 }
 
-export class JeuSociete {
-    constructor(public id?: number, public nom?: string) {};
+export class JeuSociete extends Jeu {
+    
 }
-
-export class JeuVideo {
-    constructor(public id?: number, public nom?: string, public plateforme?: string) {};
+export class JeuVideo extends Jeu {
 }
 
 export class Reservation {

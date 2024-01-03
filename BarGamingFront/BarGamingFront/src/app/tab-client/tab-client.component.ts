@@ -72,6 +72,13 @@ save() {
   }
 
 cloturer(){
+  if(confirm("Voulez vous vraiment supprimer votre compte ?"))
+  {
+    this.authService.logout()
+    this.clientService.delete(this.tabInfos?.id)
+    alert("Votre Compte à bien été supprimé")
+  }
+
 
 }
 

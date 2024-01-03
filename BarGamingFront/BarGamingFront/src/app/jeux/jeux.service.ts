@@ -32,6 +32,7 @@ export class JeuxService {
   }
 
   create(jeu: Jeu): void {
+    
     this.http.post<Jeu>(environment.apiUrl + "/jeux", jeu).subscribe(resp => {
       this.load();
     });

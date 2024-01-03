@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotBlank;
 @Entity
 @Table(name="compte")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="type_compte",columnDefinition = "ENUM('Client','Admin')")
+@DiscriminatorColumn(name="type_compte",columnDefinition = "ENUM('client','admin')")
 public class Compte {
 
 	@Id

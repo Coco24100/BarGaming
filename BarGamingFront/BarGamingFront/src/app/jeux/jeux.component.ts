@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Jeu } from '../model';
 import { JeuxService } from './jeux.service';
+import { JeuxSocieteService } from '../jeux-societe/jeux-societe.service';
+import { JeuxVideoService } from '../jeux-video/jeux-video.service';
 
 
 @Component({
@@ -12,7 +14,7 @@ export class JeuxComponent {
 
   jeuxForm?: Jeu = undefined;
 
-  constructor(private jeuxService: JeuxService) {
+  constructor(private jeuxService : JeuxService ,private jeuxSocieteService: JeuxSocieteService , private jeuxVideoService : JeuxVideoService) {
   }
 
   list(): Jeu[] {
@@ -34,7 +36,14 @@ export class JeuxComponent {
       if(this.jeuxForm.id) {
         this.jeuxService.update(this.jeuxForm);
       } else {
-        this.jeuxService.create(this.jeuxForm);
+        if(this.jeuxForm.plateforme != undefined)
+            {
+              this.jeuxVideoService.create(this.jeuxForm);
+            }
+        else
+            {
+              this.jeuxSocieteService.create(this.jeuxForm)
+            }
       }
     }
 

@@ -21,6 +21,7 @@ export class NavbarComponent {
   isAdmin() {
 
     return this.authService.isAdmin()
+    
   }
 
   isClient() {
@@ -34,7 +35,7 @@ export class NavbarComponent {
       return compte.username + ": " + compte.type
     }
 
-    return "" ;
+    return "bobobobobo" ;
   }
 
 }
