@@ -3,14 +3,14 @@
 
 <body>
 <header>
-<div id="logo"><img src=".\assets\Images\Logo.png" alt="logo" width="200" height="200"></div>
+<div id="logo"><img src=".\assets\Images\logo.png" alt="logo" width="200" height="200"></div>
 <div id="titre"><p> CYBERDUCK BAR</p> </div>
 </header>
 
 <div class="evenements"> Liste des Evénements </div>   
 <div class="yellow-triangle"></div>
 
-<ng-container *ngIf="!isAdminUser()">
+<ng-container *ngIf="isClientUser()">
 <section class="ListEvenements">
     <div class="evenement-container">
         <div class="date-heure">

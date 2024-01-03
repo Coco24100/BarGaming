@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { EvenementService } from './evenement.service';
 import { Evenement } from '../model';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-evenement',
@@ -10,8 +11,8 @@ import { Evenement } from '../model';
 export class EvenementComponent {
 
   evenementForm?: Evenement = undefined;
-isAdminUser():boolean { return true;}
-  constructor(private evenementService: EvenementService) {
+
+  constructor(private evenementService: EvenementService, private authService: AuthService) {
   }
 
   list(): Evenement[] {
@@ -46,5 +47,13 @@ isAdminUser():boolean { return true;}
 
   cancel() {
     this.evenementForm = undefined;
+  }
+
+  isAdminUser(): boolean {
+    return this.authService.isAdmin();
+  }
+
+  isClientUser(): boolean {
+    return this.authService.isClient();
   }
 }
