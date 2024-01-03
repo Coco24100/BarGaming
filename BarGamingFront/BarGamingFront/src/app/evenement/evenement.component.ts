@@ -10,7 +10,7 @@ import { Evenement } from '../model';
 export class EvenementComponent {
 
   evenementForm?: Evenement = undefined;
-
+isAdminUser():boolean { return true;}
   constructor(private evenementService: EvenementService) {
   }
 
