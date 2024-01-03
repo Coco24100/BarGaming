@@ -8,11 +8,6 @@ import { Router } from '@angular/router';
 })
 export class AccueilComponent  { 
 
-  constructor(private router: Router) {
-  }
 
-goQuiSommesNous(){
-  this.router.navigate(["/qui-sommes-nous"])
-}
 
 }
