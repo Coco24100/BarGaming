@@ -17,7 +17,7 @@ constructor(private clientService:ClientService, private router:Router, private 
 
 }
 
-tabInfos?:Client = undefined;
+tabInfos?:Client = this.authService.getCompte();
 tabLocation: boolean = false;
 tabInscription: boolean = false;
 tablHistorique: boolean=false;
@@ -69,6 +69,13 @@ save() {
   }
 
 cloturer(){
+  if(confirm("Voulez vous vraiment supprimer votre compte ?"))
+  {
+    this.authService.logout()
+    this.clientService.delete(this.tabInfos?.id)
+    alert("Votre Compte à bien été supprimé")
+  }
+
 
 }
 

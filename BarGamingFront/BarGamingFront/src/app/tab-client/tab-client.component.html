@@ -21,12 +21,30 @@
             <label for="nom" class="form-label">Nom:</label>
             <input type="text" class="form-control" id="nom" name="nom" [(ngModel)]="tabInfos.nom">
         </div>
+        <div class="mb-3">
+            <label for="nom" class="form-label">prenom:</label>
+            <input type="text" class="form-control" id="nom" name="nom" [(ngModel)]="tabInfos.prenom">
+        </div>
+        <!--
+        <div class="mb-3">
+            <label for="nom" class="form-label">email:</label>
+            <input type="text" class="form-control" id="nom" name="nom" [(ngModel)]="tabInfos.email">
+        </div>
+        -->
+        <div class="mb-3">
+            <label for="nom" class="form-label">Username:</label>
+            <input type="text" class="form-control" id="nom" name="nom" [(ngModel)]="tabInfos.username">
+        </div>
     </div>
+
+
     <div class="card-footer">
         <a (click)="save()" class="btn btn-success btn-lg"><i class="bi bi-check-lg"></i></a>
         <a (click)="cancel()" class="btn btn-warning btn-lg mx-2"><i class="bi bi-backspace"></i></a>
         <a (click)="cloturer()" class="btn btn-warning btn-lg mx-2"><i class="bi bi-backspace"></i>Clorurer le compte</a>
     </div>
+
+
 </div>
 
 
