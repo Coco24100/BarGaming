@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
-import { Compte } from './model';
+import { Admin, Client, Compte } from './model';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,7 @@ import { Compte } from './model';
 export class AuthService {
   
 
-  private compte?: Compte = undefined;
+  private compte? : Compte
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -18,7 +18,13 @@ export class AuthService {
 
   login(username: string, password: string) {
     return this.http.post<Compte>(environment.apiUrl + `/connexion`, { "login": username, "password": password }).subscribe(resp => {
-      this.compte = resp;
+      //this.compte = resp;
+
+      if(resp.type === "client")
+        {this.compte =  resp as Client;}
+      if(resp.type === "admin")
+        {this.compte =  resp as Admin;}
+
       localStorage.setItem("user", JSON.stringify(this.compte));
 
       this.router.navigate(["/accueil"]);
@@ -31,10 +37,28 @@ export class AuthService {
   }
 
   isLogged(): boolean {
-    return this.getClient() != undefined;
+    return this.getCompte() != undefined;
   }
 
-  getClient(): Compte | undefined{
+  isAdmin() : boolean{
+
+    if(this.isLogged())
+    {
+      return ( this.getCompte()?.type === "admin"  )
+    }
+    return false
+  }
+
+  isClient() : boolean{
+
+    if(this.isLogged())
+    {
+      return ( this.getCompte()?.type === "client"  )
+    }
+    return false
+  }
+
+  getCompte(): Compte | undefined{
     if(this.compte) {
       return this.compte;
     } else {
