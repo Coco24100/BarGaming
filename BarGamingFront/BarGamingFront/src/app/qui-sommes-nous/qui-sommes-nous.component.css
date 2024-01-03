@@ -28,7 +28,7 @@ body {
     font-family: 'cyberCity';
     width:70%;
     font-size:60px;
-    color:#E3D139;
+    color:#FFEA30;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #00F0FF;
     text-shadow:
@@ -60,7 +60,7 @@ body {
   
   .black-bg {
     background-color: #000;
-    color: #E3D139;
+    color: #FFEA30;
     padding: 80px;
   }
   
@@ -93,7 +93,7 @@ body {
     width: 100%;
     background-color: #042435;
     padding: 20px;
-    color: #E3D139;
+    color: #FFEA30;
   }
   
   .legal-info {
