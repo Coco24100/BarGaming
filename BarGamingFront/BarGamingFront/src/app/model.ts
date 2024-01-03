@@ -2,10 +2,6 @@ export class Emprunt {
     constructor(public id?: number, public dateEmprunt?: Date, public client?: Client, public jeu?: Jeu){}
 }
 
-export class Client {
-    constructor(public id?: number, public nom?: string, public prenom?: string) {};
-}
-
 export class Evenement {
     constructor(public id?: number, public nom?: string, public date?: Date, public horaireDebut?: string, public horaireFin?: string) {}
 }
@@ -31,3 +27,7 @@ export class Compte {
 
     }
 }
+
+export class Client extends Compte {}
+
+export class Admin extends Compte {}
