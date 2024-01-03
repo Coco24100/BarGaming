@@ -22,7 +22,7 @@ header{
     width:70%;
     text-transform:uppercase;
     font-size:60px;
-    color: #f1f374;
+    color: #FFEA30;
     display:flex;
     justify-content:flex-start;
     align-items:center;
@@ -37,7 +37,7 @@ body {
 
 .activities{
     background-color: #000;
-    color: #f1f374;
+    color: #FFEA30;
     font-size:20px;
     padding: 20px;
     margin-bottom: 40px;
