@@ -26,3 +26,7 @@
   .nav-item.active {
     text-decoration: underline;
   }
+
+  #info-compte{
+    color :#0dcaf0 ; 
+  }

@@ -3,54 +3,59 @@
         <a class="nav-link" [routerLink]="['accueil']" routerLinkActive="active">Accueil</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" [routerLink]="['client']" routerLinkActive="active">Liste Client</a>
+        <a class="nav-link" [routerLink]="['client']" routerLinkActive="active" *ngIf="isAdmin()" >Liste Client</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" [routerLink]="['reservation']" routerLinkActive="active">Liste Reservation</a>
+        <a class="nav-link" [routerLink]="['reservation']" routerLinkActive="active" *ngIf="isAdmin()">Liste Reservation</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" [routerLink]="['emprunt']" routerLinkActive="active">Liste Location</a>
-    </li>
-
-    <li class="nav-item">
-        <a class="nav-link" [routerLink]="['emprunt-jeu']" routerLinkActive="active">Client : Location Jeu</a>
+        <a class="nav-link" [routerLink]="['emprunt']" routerLinkActive="active" *ngIf="isAdmin()">Liste Location</a>
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" [routerLink]="['evenement']" routerLinkActive="active">Liste Evenement</a>
+        <a class="nav-link" [routerLink]="['emprunt-jeu']" routerLinkActive="active" *ngIf="isClient()">Client : Location Jeu</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" [routerLink]="['evenement']" routerLinkActive="active" *ngIf="isAdmin()">Liste Evenement</a>
     </li>
 
 
     <li class="nav-item">
-        <a class="nav-link" [routerLink]="['jeux']" routerLinkActive="active">Liste Jeux</a>
+        <a class="nav-link" [routerLink]="['jeux']" routerLinkActive="active" *ngIf="isAdmin()">Liste Jeux</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" [routerLink]="['jeux-societe']" routerLinkActive="active">Liste JeuxSociete</a>
-    </li>
-
-    <li class="nav-item">
-        <a class="nav-link" [routerLink]="['jeux-video']" routerLinkActive="active">Liste JeuxVideo</a>
+        <a class="nav-link" [routerLink]="['jeux-societe']" routerLinkActive="active" *ngIf="isAdmin()">Liste JeuxSociete</a>
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" [routerLink]="['login']" routerLinkActive="active">Connexion</a>
+        <a class="nav-link" [routerLink]="['jeux-video']" routerLinkActive="active" *ngIf="isAdmin()">Liste JeuxVideo</a>
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" [routerLink]="['inscription']" routerLinkActive="active">Inscription</a>
+        <a class="nav-link" [routerLink]="['login']" routerLinkActive="active" *ngIf="!isLogged()">Connexion</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" [routerLink]="['inscription']" routerLinkActive="active" *ngIf="!isLogged()">Inscription</a>
     </li>
     
     
     <li class="nav-item">
-        <a class="nav-link" [routerLink]="['menu']" routerLinkActive="active">Menu</a>
+        <a class="nav-link" [routerLink]="['menu']" routerLinkActive="active" *ngIf="isAdmin()">Menu</a>
+    </li>
+
+
+    <li class="nav-item" *ngIf="isLogged()">
+        <a class="nav-link" (click)="logout()">Déconnexion</a>
     </li>
 
     <li class="nav-item">
         <a class="nav-link" [routerLink]="['qui-sommes-nous']" routerLinkActive="active">Qui sommes nous</a>
     </li>
 
-    <!-- <li>
-        <span>{{showUtilisateur()}}</span>
-    </li> -->
+     <li>
+        <span id="info-compte" >{{showCompte()}}</span>
+    </li> 
 
 </ul>

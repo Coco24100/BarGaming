@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { EvenementService } from '../evenement/evenement.service';
 import { ReservationService } from '../reservation/reservation.service';
 import { Client, Evenement, Reservation } from '../model';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-inscription-event',
@@ -10,11 +11,9 @@ import { Client, Evenement, Reservation } from '../model';
 })
 export class InscriptionEventComponent {
 
-  constructor(private evenementService: EvenementService, private reservationService: ReservationService) { }
+  constructor(private evenementService: EvenementService, private reservationService: ReservationService , private authService : AuthService) { }
   
-  client = new Client(2,"John","Doe")
-
-
+  client = this.authService.getCompte()
 
   reservationForm: Reservation = new Reservation(undefined,this.client,undefined,undefined);
 

@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import bar.controller.dto.ConnexionRequest;
-import bar.controller.dto.InscriptionRequest;
 import bar.dao.IDAOCompte;
 import bar.model.Admin;
 import bar.model.Client;
