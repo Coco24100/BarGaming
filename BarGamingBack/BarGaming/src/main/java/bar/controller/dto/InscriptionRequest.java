@@ -2,7 +2,7 @@ package bar.controller.dto;
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
-
+/*
 public class InscriptionRequest {
 
 	@NotEmpty
@@ -65,4 +65,4 @@ public class InscriptionRequest {
 		this.password = password;
 	}
 	
-}
+}*/

@@ -22,7 +22,7 @@ import bar.model.Admin;
 import bar.model.Compte;
 import jakarta.validation.Valid;
 
-
+/*
 @RestController
 @RequestMapping("/api/admin")
 @CrossOrigin(origins = "*" )
@@ -76,4 +76,4 @@ public class AdminRestController {
 		daoCompte.deleteById(id);
 	}
 	
-}
+} */

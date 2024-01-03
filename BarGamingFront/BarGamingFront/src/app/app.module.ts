@@ -15,7 +15,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { JeuxVideoComponent } from './jeux-video/jeux-video.component';
 import { JeuxSocieteComponent } from './jeux-societe/jeux-societe.component';
 import { AdminComponent } from './admin/admin.component';
-import { UtilisateurComponent } from './utilisateur/utilisateur.component';
+import { CompteComponent } from './compte/compte.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { TabClientComponent } from './tab-client/tab-client.component';
 import { InscriptionEventComponent } from './inscription-event/inscription-event.component';
@@ -38,7 +38,7 @@ import { QuiSommesNousComponent } from './qui-sommes-nous/qui-sommes-nous.compon
     NavbarComponent,
     JeuxVideoComponent,
     JeuxSocieteComponent,
-    UtilisateurComponent,
+    CompteComponent,
     InscriptionComponent,
     TabClientComponent,
     JeuxSocieteComponent,
