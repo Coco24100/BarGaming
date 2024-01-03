@@ -1,15 +1,26 @@
+<head>
+</head>
 
-<p>Compte</p>
-<p>Qu’attends tu pour venir réserver ta place au prochain tournoi ou louer le dernier jeu de société à la mode. 
+<body>
+<header [ngClass]="activeClass">
+<div id="logo"><img src=".\assets\Images\logo.png" alt="logo" width="200" height="200"></div>
+<div id="titre"><p> cyberduck bar</p> </div>
+</header>
+
+
+
+<div class="compte">Compte </div>
+<p class="soustitre">Qu’attends tu pour venir réserver ta place au prochain tournoi ou louer le dernier jeu de société à la mode. 
 </p>
-<button type="button" class="btn btn-warning" (click)="showInfos()">Informations</button>
+<div class="yellow-triangle"></div>
+<div class="button"><button type="button" class="btn btn-warning" (click)="showInfos()">Informations</button>
 <button type="button" class="btn btn-warning" (click)="showLocation()">Location de Jeux</button>
 <button type="button" class="btn btn-warning" (click)="showInscription()">Incription Evenements</button>
-<button type="button" class="btn btn-warning" (click)="showHistorique()">Ton historique</button>
+<button type="button" class="btn btn-warning" (click)="showHistorique()">Ton historique</button> </div>
 
-
-<div class="card mt-3" *ngIf="tabInfos">
-    <div class="card-header text-white bg-primary">
+<div class="corps">
+<div *ngIf="tabInfos">
+    <div class="card-header">
        <p>Informations</p>
     </div>
     <div class="card-body"> 
@@ -21,6 +32,22 @@
             <label for="nom" class="form-label">Nom:</label>
             <input type="text" class="form-control" id="nom" name="nom" [(ngModel)]="tabInfos.nom">
         </div>
+        <div class="mb-3">
+            <label for="prenom" class="form-label">Prenom:</label>
+            <input type="text" class="form-control" id="prenom" name="prenom" [(ngModel)]="tabInfos.prenom">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="text" class="form-control" id="email" name="email" [(ngModel)]="tabInfos.email">
+        </div>
+        <div class="mb-3">
+            <label for="username" class="form-label">Username:</label>
+            <input type="text" class="form-control" id="username" name="username" [(ngModel)]="tabInfos.username">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password:</label>
+            <input type="text" class="form-control" id="password" name="password" [(ngModel)]="tabInfos.password">
+        </div>
     </div>
     <div class="card-footer">
         <a (click)="save()" class="btn btn-success btn-lg"><i class="bi bi-check-lg"></i></a>
@@ -28,18 +55,20 @@
         <a (click)="cloturer()" class="btn btn-warning btn-lg mx-2"><i class="bi bi-backspace"></i>Clorurer le compte</a>
     </div>
 </div>
+</div>
 
-
+<div class="corps">
 <div *ngIf="tabLocation">
-
+    
     <p> Location de jeux</p>
 
     <a (click)="voirTabJeuSociete()"><button type="button" class="btn btn-warning">Jeux de sociétés</button></a>  
     <a (click)="voirTabJeuVideo()"><button type="button" class="btn btn-warning">Jeux Vidéos</button></a> 
-
+</div>
 </div>
 
 
+<div class="corps">
 <div *ngIf="tabInscription">
 
     <p>Evenements à venir</p>
@@ -75,12 +104,13 @@
     </div>
 
 </div>
+</div>
 
 
-
-
+<div class="corps">
 <div *ngIf="tablHistorique">
 
     <p>Résultats des évènements </p>
 
+</div>
 </div>

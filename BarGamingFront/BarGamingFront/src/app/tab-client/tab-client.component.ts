@@ -16,7 +16,7 @@ constructor(private clientService:ClientService, private router:Router, private 
  
 
 }
-
+activeClass: string = 'header-info';
 tabInfos?:Client = undefined;
 tabLocation: boolean = false;
 tabInscription: boolean = false;
@@ -28,7 +28,7 @@ showInfos(){
  this.tabLocation = false;
   this.tablHistorique = false;
   this.tabInscription = false;
-
+  this.activeClass = 'header-info';
   this.utilisateur = this.authService.getCompte();
 // this.clientService.findByNomPrenom(utilisateur.nom,utilisateur.prenom ).subscribe(resp => {
 //   this.tabInfos = resp;
@@ -41,6 +41,7 @@ showInscription(){
   this.tabLocation = false;
   this.tablHistorique = false;
   this.tabInfos = undefined;
+  this.activeClass = 'header-location';
 }
 
 showLocation(){
@@ -48,6 +49,7 @@ showLocation(){
   this.tabInscription = false;
   this.tablHistorique = false;
   this.tabInfos = undefined;
+  this.activeClass = 'header-inscription';
 }
 
 showHistorique(){
@@ -55,6 +57,7 @@ showHistorique(){
   this.tabLocation = false;
   this.tabInscription = false;
   this.tabInfos = undefined;
+  this.activeClass = 'header-historique';
 }
 
 save() {
