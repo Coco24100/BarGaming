@@ -34,10 +34,12 @@ export class AuthService {
   logout() {
     this.compte = undefined;
     localStorage.removeItem("user");
+    this.router.navigate(['accueil'])
   }
 
   isLogged(): boolean {
     return this.getCompte() != undefined;
+    console.log(this.getCompte())
   }
 
   isAdmin() : boolean{
