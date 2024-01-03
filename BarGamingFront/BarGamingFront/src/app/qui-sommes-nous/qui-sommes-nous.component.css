@@ -1,45 +1,72 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Angerpoise Lampshade', sans-serif;
+    font-family: 'terminalGrotesque';
+    font-size: 20px;
     background-color: #000; /* Couleur de fond noire */
   }
+
+  header{
+    height: 500px;
+    display:flex;
+    background-image: url(src\assets\Images\banniere1.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+ }
   
-  header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+  #logo
+  {
+    width:30%;
+    display:flex;
+    justify-content:flex-start;
+    align-items:flex-start;
   }
   
-  .logo img {
-    width: 262px;
-    height: 249px;
+  #titre
+  {
+    font-family: 'cyberCity';
+    width:70%;
+    font-size:60px;
+    color:#E3D139;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #00F0FF;
+    text-shadow:
+      5px 5px 10px #00033e,
+      -5px 5px 10px #00033e,
+      -5px -5px 10px #00033e,
+      5px -5px 10px #00033e;
+      margin-top: 100px;
+      margin-left: -200px;
   }
-  
-  .banner img {
-    width: 1981px;
-    height: 623px;
+
+
+  .content h2 {
+    font-family: 'angerpoise', sans-serif;
+    font-size: 40px;
   }
-  
-  .banner h1 {
-    color: #FFEC4A;
-    font-family: 'Cyber City', sans-serif;
-    font-size: 80px;
+
+  .team-presentation h2 {
+    font-family: 'angerpoise', sans-serif;
+    font-size: 40px;
   }
+
+  .team-member h3 {
+    font-family: 'angerpoise', sans-serif;
+    font-size: 30px;
+  }
+
+
   
   .black-bg {
     background-color: #000;
     color: #E3D139;
-    padding: 20px;
+    padding: 80px;
   }
   
-  .yellow-triangle {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 83px 0 83px 2005.556px;
-    border-color: transparent transparent transparent #FFEA30;
-  }
+  #polygon {
+    height: 39px;
+  } 
   
   .team-presentation {
     background-color: #13566D;
