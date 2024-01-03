@@ -1,6 +1,6 @@
 
 header{
-    height: 200px;
+    height: 500px;
     display:flex;
     background-image: url(src\assets\Images\banniere1.jpg); 
     background-repeat: no-repeat;
@@ -10,28 +10,33 @@ header{
   
   #logo
   {
-    width:30%;
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
+    margin-top: 20px;
+    margin-left: 40px;
   }
   
   #titre
   {
     font-family: 'cyberCity';
     width:70%;
-    text-transform:uppercase;
     font-size:60px;
-    color: #FFEA30;
-    display:flex;
-    justify-content:flex-start;
-    align-items:center;
+    color:#FFEA30;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #00F0FF;
+    text-shadow:
+      5px 5px 10px #00033e,
+      -5px 5px 10px #00033e,
+      -5px -5px 10px #00033e,
+      5px -5px 10px #00033e;
+      margin-top: 100px;
+      margin-left: 200px;
   }
+
   
 body {
     background-color: #000;
     min-height: 100%;
     margin: 0;
+    padding: 0;
     font-family: 'terminalGrotesque';
 }
 
@@ -41,8 +46,30 @@ body {
     font-size:20px;
     padding: 20px;
     margin-bottom: 40px;
+    padding-top: 60px;
+    
+}
+
+.activite {
+    display:flex;
+    justify-content:space-around;
 
 }
+
+.sousactivities{
+    background-color: #13566D;
+    color:#FFEA30;
+    width:20%;
+    font-size:20px;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+
+}
+.sousactivities img{
+    mix-blend-mode: hard-light;
+}
+
 
 .sousTitre{
     font-family: 'angerpoise';
@@ -52,18 +79,25 @@ body {
     display:flex;
     flex-direction: column;
     background-color: #13566D;
-    color: #ffffff ;
+    color: #FFFFFF ;
     font-size:20px;
-    padding: 20px;
+    padding: 60px;
+    margin-top: 40px;
 }
+
+#polygon {
+    height: 39px;
+  } 
 
 .details{
     background-color: #13566D;
-    color: #ffffff ;
+    color: #FFFFFF ;
     display:flex;
     margin-bottom: 10px;
-    padding: 20px;
+    padding-left: 60px;
+    padding-bottom: 60px;
     font-size:20px;
+
 
 }
 
@@ -77,18 +111,6 @@ body {
     justify-content:flex-end;
 }
 
-footer
-{
-    font-family: 'angerpoise';
-  background-color:#042435;
-  color: #ffffff;
-  height:10%;
-  display:flex;
-  justify-content: space-around; 
-  align-items: center; 
-  font-size:20px;
-
-}
 
 .lien-main {
     cursor: pointer;
