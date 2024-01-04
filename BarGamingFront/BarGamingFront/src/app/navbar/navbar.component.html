@@ -7,6 +7,9 @@
         <a class="nav-link" [routerLink]="['menu']" routerLinkActive="active" >Menu</a>
     </li>
 
+<li class="nav-item">
+        <a class="nav-link" [routerLink]="['qui-sommes-nous']" routerLinkActive="active">Qui sommes nous</a>
+    </li>
     <!-- <li class="nav-item">
         <a class="nav-link" [routerLink]="['emprunt-jeu']" routerLinkActive="active" *ngIf="isClient()">Louer un Jeu</a>
     </li> -->
@@ -39,9 +42,7 @@
         <a class="nav-link" (click)="logout()">Déconnexion</a>
     </li>
 
-    <!--<li class="nav-item">
-        <a class="nav-link" [routerLink]="['qui-sommes-nous']" routerLinkActive="active">Qui sommes nous</a>
-    </li>-->
+    
 
      <li>
         <span id="info-compte" >{{showCompte()}}</span>
