@@ -54,6 +54,9 @@ public class Compte {
 	@Column(nullable = false, length = 50)
 	private String prenom ;
 	
+	@Column()
+	private String email ;
+	
 	/*@ElementCollection(fetch = FetchType.EAGER)
 	@JoinTable(name = "compte_roles", joinColumns = @JoinColumn(name = "users_id"))
 	@Column(name = "role", nullable = false)

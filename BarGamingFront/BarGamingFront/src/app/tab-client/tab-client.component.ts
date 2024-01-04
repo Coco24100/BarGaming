@@ -21,7 +21,6 @@ tabInfos?:Client = undefined;
 tabLocation: boolean = false;
 tabInscription: boolean = false;
 tablHistorique: boolean=false;
-utilisateur? : Compte = new Compte();
 
 showInfos(){
  this.tabInfos = new Client(); 
@@ -29,11 +28,7 @@ showInfos(){
   this.tablHistorique = false;
   this.tabInscription = false;
   this.activeClass = 'header-info';
-  this.utilisateur = this.authService.getCompte();
-// this.clientService.findByNomPrenom(utilisateur.nom,utilisateur.prenom ).subscribe(resp => {
-//   this.tabInfos = resp;
-// });
-
+  this.tabInfos = this.authService.getCompte();
 }
 
 showInscription(){
