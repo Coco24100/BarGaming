@@ -1,8 +1,16 @@
+<head>
+</head>
 
-<div class="card mt-3">
-    <div class="card-header text-white bg-primary">
-        Liste des Clients
-    </div>
+<body>
+<header>
+<div id="logo"><img src=".\assets\Images\logo.png" alt="logo" width="200" height="200"></div>
+<div id="titre"><p> cyberduck bar</p> </div>
+</header>
+
+<div class="clients"> Liste des Clients </div>   
+<div id="polygon"><img src=".\assets\Images\polygon.png" alt="polygon" width=100%></div>
+
+
     <div class="card-body"> 
         <table class="table table-striped">
             <thead>
@@ -19,8 +27,8 @@
                     <td>{{c.nom}}</td>
                     <td>{{c.prenom}}</td>
                     <td><div class="btn-group btn-group-sm">
-                        <a (click)="edit(c.id)" class="btn btn-primary"><i class="bi bi-pen"></i></a>
-                        <a (click)="remove(c.id)" class="btn btn-danger"><i class="bi bi-trash"></i></a>
+                        <a (click)="edit(c.id)" class="btn btn-primary"><i class="bi bi-pen"></i>Modifier</a>
+                        <a (click)="remove(c.id)" class="btn btn-danger"><i class="bi bi-trash"></i>Supprimer</a>
                       </div></td>
                 </tr>
              
@@ -29,12 +37,12 @@
         </table>
     </div>
     <div class="card-footer">
-        <a (click)="add()" class="btn btn-success btn-lg"><i class="bi bi-plus-lg"></i></a>
+        <a (click)="add()" class="btn btn-success btn-lg"><i class="bi bi-plus-lg"></i>Ajouter Client</a>
     </div>
-</div>
 
-<div class="card mt-3" *ngIf="clientForm">
-    <div class="card-header text-white bg-primary">
+
+<div *ngIf="clientForm">
+    <div class="card-header">
         Edition d'un client
     </div>
     <div class="card-body"> 
@@ -52,7 +60,7 @@
         </div>
     </div>
     <div class="card-footer">
-        <a (click)="save()" class="btn btn-success btn-lg"><i class="bi bi-check-lg"></i></a>
-        <a (click)="cancel()" class="btn btn-warning btn-lg mx-2"><i class="bi bi-backspace"></i></a>
+        <a (click)="save()" class="btn btn-success btn-lg"><i class="bi bi-check-lg"></i>Ajouter</a>
+        <a (click)="cancel()" class="btn btn-warning btn-lg mx-2"><i class="bi bi-backspace"></i>Annuler</a>
     </div>
 </div>

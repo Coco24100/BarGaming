@@ -22,6 +22,7 @@ import { InscriptionEventComponent } from './inscription-event/inscription-event
 import { EmpruntJeuComponent } from './emprunt-jeu/emprunt-jeu.component';
 import { MenusComponent } from './menus/menus.component';
 import { QuiSommesNousComponent } from './qui-sommes-nous/qui-sommes-nous.component';
+import { Error404Component } from './error404/error404.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { QuiSommesNousComponent } from './qui-sommes-nous/qui-sommes-nous.compon
     EmpruntJeuComponent,
     MenusComponent,
     QuiSommesNousComponent,
+    Error404Component,
   ],
   imports: [
     BrowserModule,

@@ -15,6 +15,8 @@ export class AppComponent {
 goQuiSommesNous(){
   this.router.navigate(["/qui-sommes-nous"])
 }
-
+goError404() {
+  this.router.navigate(["/error404"])
+}
 
 }
