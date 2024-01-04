@@ -76,3 +76,19 @@ body {
       font-size: x-large;
       border-radius: 0;
   }
+
+  .button {
+    display: flex;
+    width: 100%;
+  }
+  .button button {
+    flex: 1;
+    width: 25%;
+    margin: 5px;
+    border: none; 
+    border-radius: 0%;
+    font-size: xx-large;
+    background-color: #FFEA30;
+    color:#000;
+    font-family: Angerpoise Lampshade;
+  }

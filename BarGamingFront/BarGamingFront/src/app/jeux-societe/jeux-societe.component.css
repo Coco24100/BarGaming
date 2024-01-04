@@ -61,7 +61,10 @@ body {
     background-color: #13566D;
     color: #ffeb4a;
     font-family: 'terminalGrotesque';
+    text-align: center;
+    width: 100%;
 }
+
 
 .card-header {
     color: #FFEA30;
