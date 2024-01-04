@@ -50,6 +50,7 @@ export class EmpruntComponent {
         this.empruntService.create(this.empruntForm);
       }
     }
+    this.listejeux();
 
     this.cancel();
   }

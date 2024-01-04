@@ -57,10 +57,15 @@
 
         <div class="mb-3">
             <label for="nom" class="form-label">Plateforme:</label>
-            <input type="text" class="form-control" id="nom" name="nom" [(ngModel)]="jeuxForm.plateforme">
+            <select type ='text' class="form-control" id="nom" name="nom" [(ngModel)]="jeuxForm.plateforme">
+            <option value="PS5">PS5</option>
+            <option value="PC">PC</option>
+            <option value="XBOX">XBOX</option>
+            <option value="SWITCH">SWITCH</option>
+            <option value="SEGA">SEGA</option>
+            <option value="GAMEBOYCOLOR">GAMEBOYCOLOR</option>
+            </select>
         </div>
-
-
     </div>
 
     <div class="card-footer">

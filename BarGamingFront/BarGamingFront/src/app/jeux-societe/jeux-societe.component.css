@@ -18,16 +18,7 @@ header{
   
   #titre
   {
-    /*font-family: 'cyberCity';
-    width:70%;
-    text-transform:uppercase;
-    font-size:60px;
-    color: #f1f374;
-    display:flex;
-    justify-content:flex-start;
-    align-items:center;*/
-
-    -webkit-text-stroke: 1px #00efff;
+      -webkit-text-stroke: 1px #00efff;
     color: #ffeb4a;
     font-family: "cyberCity";
     font-size: 60px;
