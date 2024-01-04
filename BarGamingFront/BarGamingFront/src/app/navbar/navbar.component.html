@@ -4,18 +4,21 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" [routerLink]="['emprunt-jeu']" routerLinkActive="active" *ngIf="isClient()">Louer un Jeu</a>
+        <a class="nav-link" [routerLink]="['menu']" routerLinkActive="active" >Menu</a>
     </li>
+
+    <!-- <li class="nav-item">
+        <a class="nav-link" [routerLink]="['emprunt-jeu']" routerLinkActive="active" *ngIf="isClient()">Louer un Jeu</a>
+    </li> -->
+
     <li class="nav-item">
-        <a class="nav-link" [routerLink]="['evenement']" routerLinkActive="active" *ngIf="isClient()">Les évènements en cours</a>
+        <a class="nav-link" [routerLink]="['evenement']" routerLinkActive="active" *ngIf="isClient()">Evènements</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" [routerLink]="['tabclient']" routerLinkActive="active" *ngIf="isClient()">Tableau de bord</a>
     </li>
 
-    <li class="nav-item">
-        <a class="nav-link" [routerLink]="['menu']" routerLinkActive="active" *ngIf="isClient()">Menu</a>
-    </li>
+
 
     <li class="nav-item">
         <a class="nav-link" [routerLink]="['admin']" routerLinkActive="active" *ngIf="isAdmin()">Tableau de bord Admin</a>
@@ -36,9 +39,9 @@
         <a class="nav-link" (click)="logout()">Déconnexion</a>
     </li>
 
-    <li class="nav-item">
+    <!--<li class="nav-item">
         <a class="nav-link" [routerLink]="['qui-sommes-nous']" routerLinkActive="active">Qui sommes nous</a>
-    </li>
+    </li>-->
 
      <li>
         <span id="info-compte" >{{showCompte()}}</span>

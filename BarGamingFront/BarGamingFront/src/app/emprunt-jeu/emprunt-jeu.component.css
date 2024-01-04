@@ -39,21 +39,23 @@ body {
       margin-left: 200px;
   }
 
-.mb-3 {
+  .emprunts {
     color: #FFEA30;
-    font-family: 'terminalGrotesque';
-    font-size: x-large;
-}
+    font-family: 'angerpoise';
+    font-size: 40px;
+    font-weight: 400;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    white-space: nowrap;
+    padding: 40px;
+    }
+  
+    .corps {
+      padding: 100px;
+      background-color: #13566D;
+    }
 
-.corps {
-    background-image: url(src\assets\Images\jeux.jpg);
-    color: #FFF;
-    padding: 100px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
-    background-position-y: -220px;
-  }
 
   .form-label {
     color: #FFEA30;

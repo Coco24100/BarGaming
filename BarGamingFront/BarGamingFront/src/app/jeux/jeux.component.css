@@ -63,6 +63,11 @@ body {
     font-family: 'terminalGrotesque';
 }
 
+.corps {
+  padding: 40px;
+  background-color: #13566D;
+}
+
 .card-header {
     color: #FFEA30;
     width: 100%;

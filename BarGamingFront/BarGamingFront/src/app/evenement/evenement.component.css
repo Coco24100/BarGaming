@@ -53,12 +53,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .evenement-container {
     display: flex;
     width: 80%;
     margin-bottom: 20px;
+    padding: 40px;
 }
 
 
@@ -82,10 +84,17 @@ body {
 .event1 p {
     color: #FFEA30;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     font-size: xx-large;
     font-family: 'angerpoise';
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #00F0FF;
+    text-shadow:
+      5px 5px 10px #00033e,
+      -5px 5px 10px #00033e,
+      -5px -5px 10px #00033e,
+      5px -5px 10px #00033e;
 }
 
 .event2 {
@@ -104,11 +113,19 @@ body {
     align-items: left;
     font-size: xx-large;
     font-family: 'angerpoise';
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #00F0FF;
+    text-shadow:
+      5px 5px 10px #00033e,
+      -5px 5px 10px #00033e,
+      -5px -5px 10px #00033e,
+      5px -5px 10px #00033e;
+
 }
 
 .event3 {
     flex: 10;
-    background: url(src\assets\Images\MarioKart.webp) center/cover no-repeat;
+    background: url(src\assets\Images\MarioKart.jpg) center/cover no-repeat;
     background-size:relative;
     background-position: center 50%;
     position: relative;
@@ -118,10 +135,17 @@ body {
 .event3 p {
     color: #FFEA30;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     font-size: xx-large;
     font-family: 'angerpoise';
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #00F0FF;
+    text-shadow:
+      5px 5px 10px #00033e,
+      -5px 5px 10px #00033e,
+      -5px -5px 10px #00033e,
+      5px -5px 10px #00033e;
 }
 
 .event4 {
@@ -134,12 +158,19 @@ body {
 }
 
 .event4 p {
-    color:#FFEA30;
+    color: #FFEA30;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     font-size: xx-large;
     font-family: 'angerpoise';
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #00F0FF;
+    text-shadow:
+      5px 5px 10px #00033e,
+      -5px 5px 10px #00033e,
+      -5px -5px 10px #00033e,
+      5px -5px 10px #00033e;
 }
 
 .ListEvenements:not(:last-child) {
