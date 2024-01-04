@@ -23,6 +23,7 @@ import { EmpruntJeuComponent } from './emprunt-jeu/emprunt-jeu.component';
 import { MenusComponent } from './menus/menus.component';
 import { QuiSommesNousComponent } from './qui-sommes-nous/qui-sommes-nous.component';
 import { Error404Component } from './error404/error404.component';
+import { ButtonInscriptionPipe } from './tab-client/button-inscription.pipe';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { Error404Component } from './error404/error404.component';
     MenusComponent,
     QuiSommesNousComponent,
     Error404Component,
+    ButtonInscriptionPipe,
   ],
   imports: [
     BrowserModule,
