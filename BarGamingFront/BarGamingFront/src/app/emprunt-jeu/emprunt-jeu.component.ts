@@ -20,6 +20,7 @@ export class EmpruntJeuComponent {
   client = this.authService.getCompte() ;
 
   empruntForm: Emprunt = new Emprunt(undefined, undefined, this.client)
+  tabLocation: boolean = false;
 
   listeJeux() {
     return this.jeuxService.findAll()
@@ -47,6 +48,15 @@ export class EmpruntJeuComponent {
 
   }
 
-
-
+  showLocation() {
+    this.tabLocation = true;
+  }
+  voirTabJeuSociete() {
+    this.router.navigate(["/jeux-societe"]);
+  }
+  
+  voirTabJeuVideo() {
+    this.router.navigate(["/jeux-video"]);
+  
+  }
 }
