@@ -1,19 +1,30 @@
+<body>
 
-<div class="card mt-3" >
-<div class="mb-3">
+    <header>
+      <div id="logo"><img src=".\assets\Images\logo.png" alt="logo" width="200" height="200"></div>
+      <div id="titre"><p>cyberduck bar</p> </div>
+    </header>
+
+    <div class="evenements"> S'incrire à un évenement </div>   
+   
+    <div id="polygon"><img src=".\assets\Images\polygon.png" alt="polygon" width=100%></div>
+
+<div class="corps" >
+    <div class="mb-3">
+        
+        <label for="liste" class="form-label">Evenement disponible:</label>
+        <select class="form-select" id="evenements"  [(ngModel)]="reservationForm.evenement">
+            <option *ngFor="let u of listEvent()" [ngValue]="u">{{u.nom}} {{u.date}} </option>
+        </select>
     
-    <label for="liste" class="form-label">Evenement disponible:</label>
-    <select class="form-select" id="evenements"  [(ngModel)]="reservationForm.evenement">
-        <option *ngFor="let u of listEvent()" [ngValue]="u">{{u.nom}} {{u.date}} </option>
-    </select>
-
-    <div class="card-footer">
-        <a (click)="save()" class="btn btn-success btn-lg"><i class="bi bi-check-lg"></i></a>
-        <a (click)="cancel()" class="btn btn-warning btn-lg mx-2"><i class="bi bi-backspace"></i></a>
+        <div class="card-footer">
+            <a (click)="save()" class="btn btn-success btn-lg">Choisir cet event</a>
+            <a (click)="cancel()" class="btn btn-warning btn-lg mx-2">Annuler</a>
+        </div>
+    
+    </div>
+    
+    
+    
     </div>
 
-</div>
-
-
-
-</div>

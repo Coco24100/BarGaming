@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'terminalGrotesque';
+    font-size: 20px;
+    background-color: #000; /* Couleur de fond noire */
+  }
+  
+  header{
+      height: 500px;
+      display:flex;
+      background-image: url(src\assets\Images\Event.jpg); 
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-position: center;
+   }
+  
+    #logo
+    {
+      margin-top: 20px;
+      margin-left: 40px;
+    }
+    
+    #titre
+    {
+      font-family: 'cyberCity';
+      width:70%;
+      font-size:60px;
+      color:#FFEA30;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #00F0FF;
+      text-shadow:
+        5px 5px 10px #00033e,
+        -5px 5px 10px #00033e,
+        -5px -5px 10px #00033e,
+        5px -5px 10px #00033e;
+        margin-top: 100px;
+        margin-left: 200px;
+    }
+  
+  .content h2 {
+    font-family: 'angerpoise', sans-serif;
+    font-size: 40px;
+  }
+  
+  .black-bg {
+    background-color: #000;
+    color: #FFEA30;
+    padding: 80px;
+  }
+  
+    .button {
+      display: flex;
+      width: 100%;
+    }
+    .button button {
+      flex: 1;
+      width: 25%;
+      margin: 5px;
+      border: none; 
+      border-radius: 0%;
+      font-size: xx-large;
+      background-color: #FFEA30;
+      color:#000;
+      font-family: Angerpoise Lampshade;
+    }
+  
+    .corps {
+      background-color: #13566D;
+      color: #FFF;
+      padding: 80px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
+  
+    .evenements {
+        color: #ffeb4a;
+        font-family: 'angerpoise';
+        font-size: 40px;
+        font-weight: 400;
+        padding: 40px;
+    
+      }
+    .card-header {
+      color: #FFEA30;
+      width: 100%;
+      padding: 30px;
+      font-size: x-large;
+      text-align: center;
+      font-family: 'angerpoise';
+      font-size: 50px;
+  }
+  .mb-3 {
+      color: #FFEA30;
+      font-family: Terminal Grotesque;
+      font-size: x-large;
+  }
+
+  .form-label{
+    color: #FFEA30;
+      font-family: Angerpoise Lampshade;
+      font-size: x-large;
+
+  }
+  .btn-success {
+    color: #FFEA30;
+      font-family: Angerpoise Lampshade;
+      font-size: x-large;
+
+  }
+  
+  .btn-warning {
+    color: #000000;
+      font-family: Angerpoise Lampshade;
+      font-size: x-large;
+
+  }
+  
+  .btn-danger {
+    color: #FFEA30;
+      font-family: Angerpoise Lampshade;
+      font-size: x-large;
+  
+  }
+  
+  .table th {
+    color: #FFEA30;
+    background-color: #000;
+  }
+  .table td {
+    color: #FFEA30;
+    background-color: #000;
+  }
+  
+  
+  
+  .form-control {
+    background-color: #000;
+    color:#FFEA30
+  }
+  
+  #polygon {
+      height: 39px;
+    } 
+  

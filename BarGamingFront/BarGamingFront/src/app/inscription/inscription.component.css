@@ -62,3 +62,24 @@
 .form-check-input,
 .form-check-label {
     color: white; }
+
+    /* Media Queries for Responsive Design */
+
+@media screen and (max-width: 767px) {
+    /* Add styles for small screens */
+    .card-body {
+        padding: 10px; /* Adjust padding for small screens */
+    }
+    .btn {
+        font-size: medium; /* Adjust button font size for small screens */
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    /* Add styles for medium screens */
+    .body {
+        background-size: contain; /* Adjust background size for medium screens */
+    }
+}
+
+/* Add more media queries as needed for larger screens */
