@@ -40,7 +40,7 @@ body {
 
 .mb-3 {
     color: #FFEA30;
-    font-family: Terminal Grotesque;
+    font-family: 'terminalGrotesque';
     font-size: x-large;
 }
 
@@ -65,14 +65,14 @@ body {
 
   .btn-success {
     color: #FFEA30;
-      font-family: Angerpoise Lampshade;
+    font-family: 'angerpoise';
       font-size: x-large;
       border-radius: 0;
   }
   
   .btn-warning {
     color: #000000;
-      font-family: Angerpoise Lampshade;
+    font-family: 'angerpoise';
       font-size: x-large;
       border-radius: 0;
   }
