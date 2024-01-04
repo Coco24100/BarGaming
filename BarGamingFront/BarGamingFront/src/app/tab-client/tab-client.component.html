@@ -8,25 +8,27 @@
 </header>
 
 
-
-<div class="compte"> Bienvenue dans votre tableau de bord</div>
-<p class="soustitre">Qu'attends tu pour venir réserver ta place au prochain tournoi ou louer le dernier jeu de société à la mode. 
-</p>
-
-
-
-<div class="button">
-<button type="button" class="btn btn-warning" (click)="showInfos()">Informations</button>
-<button type="button" class="btn btn-warning" (click)="showLocation()">Location de Jeux</button>
-<button type="button" class="btn btn-warning" (click)="showInscription()">Incription Evenements</button>
-<button type="button" class="btn btn-warning" (click)="showHistorique()">Ton historique</button> </div>
-
-
+<section class="content">
+    <!-- Texte jaune sur fond noir -->
+    <div class="black-bg">
+      <h2>Bienvenue dans votre tableau de bord</h2>
+      <p>Qu'attends tu pour venir réserver ta place au prochain tournoi ou louer le dernier jeu de société à la mode. 
+    </p>
+    </div>
+  </section>
 
       <!-- Triangle jaune -->
       <div id="polygon"><img src=".\assets\Images\polygon.png" alt="polygon" width=100%></div>
-      
+  
 <div class="corps">
+
+    <div class="button">
+        <button type="button" class="btn btn-warning" (click)="showInfos()">Informations</button>
+        <button type="button" class="btn btn-warning" (click)="showLocation()">Location de Jeux</button>
+        <button type="button" class="btn btn-warning" (click)="showInscription()">Incription Evenements</button>
+        <button type="button" class="btn btn-warning" (click)="showHistorique()">Ton historique</button> </div>
+        
+
 <div *ngIf="tabInfos">
     <div class="card-header">
        <p>Informations Clients</p>
@@ -63,7 +65,7 @@
 </div>
 
 <div *ngIf="tabLocation">
-    <h1 class="compte"> Location de jeux</h1>
+    <h1 class="card-header"> Location de jeux</h1>
 
 <div class="button" >
     <button type="button" class="btn btn-warning" (click)="voirTabJeuSociete()">Jeux de sociétés</button>
@@ -102,7 +104,7 @@
     </div>
 </div>
 
-<div class="compte" *ngIf="tablHistorique">
+<div class="card-header" *ngIf="tablHistorique">
     <p>Résultats des évènements </p>
 
 </div>
