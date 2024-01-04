@@ -39,7 +39,7 @@ body {
 }
 
   .evenements {
-    color: #ffeb4a;
+    color: #FFEA30;
     font-family: 'angerpoise';
     font-size: 40px;
     font-weight: 400;
@@ -49,7 +49,7 @@ body {
   .ListEvenements {
     background-color: #13566D;
     color: #FFF;
-    padding: 100px;
+    padding: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,6 +60,7 @@ body {
     width: 80%;
     margin-bottom: 20px;
 }
+
 
 .date-heure {
     flex: 1;
@@ -79,7 +80,7 @@ body {
 }
 
 .event1 p {
-    color: #ffeb4a;
+    color: #FFEA30;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,7 +98,7 @@ body {
 }
 
 .event2 p {
-    color: #ffeb4a;
+    color: #FFEA30;
     display: flex;
     justify-content: left;
     align-items: left;
@@ -115,7 +116,7 @@ body {
 }
 
 .event3 p {
-    color: #ffeb4a;
+    color: #FFEA30;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,7 +134,7 @@ body {
 }
 
 .event4 p {
-    color: #ffeb4a;
+    color:#FFEA30;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,9 +146,14 @@ body {
     margin-bottom: -150px;
 }
 
+.card-body {
+    padding: 40px;
+    background-color: #13566D;
+  }
+
 .card-body th, td {
     background-color: #13566D;
-    color: #ffeb4a;
+    color: #FFEA30;
     font-family: 'terminalGrotesque';
 }
 
