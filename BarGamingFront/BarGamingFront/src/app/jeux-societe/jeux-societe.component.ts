@@ -83,6 +83,7 @@ export class JeuxSocieteComponent {
     this.cancel()
 
     this.router.navigate(["/emprunt-jeu"]);
+    alert("votre location du jeu a bien été enregistrée");
     }
 
     cancelEmprunt() {

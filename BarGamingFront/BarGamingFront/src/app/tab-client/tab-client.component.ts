@@ -79,11 +79,11 @@ cloturer() {
 }
 
 voirTabJeuSociete() {
-  this.router.navigate(["/emprunt-jeu"]);
+  this.router.navigate(["/jeux-societe"]);
 }
 
 voirTabJeuVideo() {
-  this.router.navigate(["/emprunt-jeu"]);
+  this.router.navigate(["/jeux-video"]);
 
 }
 
