@@ -35,7 +35,7 @@ export class NavbarComponent {
       return compte.username + ": " + compte.type
     }
 
-    return "bobobobobo" ;
+    return "" ;
   }
 
 }

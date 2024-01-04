@@ -12,57 +12,53 @@ import { AuthService } from '../auth.service';
 })
 export class TabClientComponent {
 
-constructor(private clientService:ClientService, private router:Router, private eventService:EvenementService, private authService:AuthService) {
- 
+  constructor(private clientService: ClientService, private router: Router, private eventService: EvenementService, private authService: AuthService) {
 
-}
-activeClass: string = 'header-info';
-tabInfos?:Client = undefined;
-tabLocation: boolean = false;
-tabInscription: boolean = false;
-tablHistorique: boolean=false;
-utilisateur? : Compte = new Compte();
 
-showInfos(){
- this.tabInfos = new Client(); 
- this.tabLocation = false;
-  this.tablHistorique = false;
-  this.tabInscription = false;
-  this.activeClass = 'header-info';
-  this.utilisateur = this.authService.getCompte();
-// this.clientService.findByNomPrenom(utilisateur.nom,utilisateur.prenom ).subscribe(resp => {
-//   this.tabInfos = resp;
-// });
+  }
+  activeClass: string = 'header-info';
+  tabInfos?: Client = undefined;
+  tabLocation: boolean = false;
+  tabInscription: boolean = false;
+  tablHistorique: boolean = false;
 
-}
+  showInfos() {
+    
+    this.tabInfos = this.authService.getCompte();
+    this.tabLocation = false;
+    this.tablHistorique = false;
+    this.tabInscription = false;
+    this.activeClass = 'header-info';
 
-showInscription(){
-  this.tabInscription = true;
-  this.tabLocation = false;
-  this.tablHistorique = false;
-  this.tabInfos = undefined;
-  this.activeClass = 'header-location';
-}
+  }
 
-showLocation(){
-  this.tabLocation = true;
-  this.tabInscription = false;
-  this.tablHistorique = false;
-  this.tabInfos = undefined;
-  this.activeClass = 'header-inscription';
-}
+  showInscription() {
+    this.tabInscription = true;
+    this.tabLocation = false;
+    this.tablHistorique = false;
+    this.tabInfos = undefined;
+    this.activeClass = 'header-location';
+  }
 
-showHistorique(){
-  this.tablHistorique = true;
-  this.tabLocation = false;
-  this.tabInscription = false;
-  this.tabInfos = undefined;
-  this.activeClass = 'header-historique';
-}
+  showLocation() {
+    this.tabLocation = true;
+    this.tabInscription = false;
+    this.tablHistorique = false;
+    this.tabInfos = undefined;
+    this.activeClass = 'header-inscription';
+  }
 
-save() {
-    if(this.tabInfos) {
-  this.clientService.update(this.tabInfos); 
+  showHistorique() {
+    this.tablHistorique = true;
+    this.tabLocation = false;
+    this.tabInscription = false;
+    this.tabInfos = undefined;
+    this.activeClass = 'header-historique';
+  }
+
+  save() {
+    if (this.tabInfos) {
+      this.clientService.update(this.tabInfos);
     }
     this.cancel();
   }
@@ -71,33 +67,32 @@ save() {
     this.tabInfos = undefined;
   }
 
-cloturer(){
-  if(confirm("Voulez vous vraiment supprimer votre compte ?"))
-  {
-    this.authService.logout()
-    this.clientService.delete(this.tabInfos?.id)
-    alert("Votre Compte à bien été supprimé")
+  cloturer() {
+    if (confirm("Voulez vous vraiment supprimer votre compte ?")) {
+      this.authService.logout()
+      this.clientService.delete(this.tabInfos?.id)
+      alert("Votre Compte à bien été supprimé")
+    }
+
+
   }
 
+  voirTabJeuSociete() {
+    this.router.navigate(["/emprunt-jeu"]);
+  }
 
-}
+  voirTabJeuVideo() {
+    this.router.navigate(["/emprunt-jeu"]);
 
-voirTabJeuSociete(){
-this.router.navigate(["/emprunt-jeu"]);
-}
+  }
 
-voirTabJeuVideo(){
-this.router.navigate(["/emprunt-jeu"]);
+  listEvents(): Evenement[] {
+    return this.eventService.findAll();
+  }
 
-}
-
-listEvents(): Evenement[]{
-return this.eventService.findAll();
-}
-
-inscription(){
-  this.router.navigate(["/inscription-evenement"]);
-}
+  inscription() {
+    this.router.navigate(["/inscription-evenement"]);
+  }
 
 
 
