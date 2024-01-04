@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
-import { JeuVideo } from '../model';
+import { Emprunt, JeuVideo } from '../model';
 import { JeuxVideoService } from './jeux-video.service';
+import { AuthService } from '../auth.service';
+import { JeuxService } from '../jeux/jeux.service';
+import { EmpruntService } from '../emprunt/emprunt.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,10 +13,12 @@ import { JeuxVideoService } from './jeux-video.service';
   styleUrls: ['./jeux-video.component.css']
 })
 export class JeuxVideoComponent {
-
+  client = this.authService.getCompte();
   jeuxVideoForm?: JeuVideo = undefined;
+  empruntForm: Emprunt = new Emprunt(undefined,undefined, this.client);
+  showEmpruntSection: boolean = false;
 
-  constructor(private jeuxVideoService: JeuxVideoService) {
+  constructor(private jeuxVideoService: JeuxVideoService, private authService: AuthService, private router: Router, private jeuxService: JeuxService, private empruntService: EmpruntService) {
   }
 
   list(): JeuVideo[] {
@@ -48,4 +54,40 @@ export class JeuxVideoComponent {
   cancel() {
     this.jeuxVideoForm = undefined;
   }
+
+  isAdminUser(): boolean {
+    return this.authService.isAdmin();
+  }
+
+  isClientUser(): boolean {
+    return this.authService.isClient();
+  }
+
+  Emprunt() {
+    this.showEmpruntSection = true;
+  }
+
+    listeJeux() {
+      return this.jeuxVideoService.findAll()
+    }
+
+    saveEmprunt() {
+      if (this.empruntForm.jeu) {
+        this.empruntForm.client = this.client;
+        this.empruntForm.dateEmprunt = new Date();
+
+        this.empruntService.create(this.empruntForm)
+      }
+    
+
+    this.cancel()
+
+    this.router.navigate(["/emprunt-jeu"]);
+    }
+
+    cancelEmprunt() {
+      this.empruntForm = new Emprunt(undefined, undefined, this.client);
+      this.showEmpruntSection = false;
+      this.router.navigate(["/jeux-video"]);
+    }
 }
