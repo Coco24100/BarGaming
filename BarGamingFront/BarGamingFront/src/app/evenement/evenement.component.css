@@ -76,6 +76,7 @@ body {
     flex: 10;
     background: url(src\assets\Images\Valorant.webp) center/cover no-repeat;
     background-size: cover;
+    background-position: center 50%;
     position: relative;
     padding: 20px;
 }
@@ -93,7 +94,7 @@ body {
     flex: 10;
     background: url(src\assets\Images\MurderParty.jpg) center/cover no-repeat;
     background-size: cover;
-    background-position-y: -220px;
+    background-position: center 50%;
     position: relative;
     padding: 20px;
 }
@@ -111,7 +112,7 @@ body {
     flex: 10;
     background: url(src\assets\Images\MarioKart.webp) center/cover no-repeat;
     background-size:relative;
-    background-position-y: -300px;
+    background-position: center 50%;
     position: relative;
     padding: 20px;
 }
@@ -129,7 +130,7 @@ body {
     flex: 10;
     background: url(src\assets\Images\BlindTest.jpeg) center/cover no-repeat;
     background-size: cover;
-    background-position-y: -350px;
+    background-position: center 50%;
     position: relative;
     padding: 20px;
 }
