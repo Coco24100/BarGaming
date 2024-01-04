@@ -43,10 +43,7 @@ body {
     font-family: 'angerpoise';
     font-size: 40px;
     font-weight: 400;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    white-space: nowrap;
+    padding: 40px;
   }
 
   .ListEvenements {

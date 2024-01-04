@@ -3,6 +3,7 @@ import { Jeu } from '../model';
 import { JeuxService } from './jeux.service';
 import { JeuxSocieteService } from '../jeux-societe/jeux-societe.service';
 import { JeuxVideoService } from '../jeux-video/jeux-video.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class JeuxComponent {
 
   jeuxForm?: Jeu = undefined;
 
-  constructor(private jeuxService : JeuxService ,private jeuxSocieteService: JeuxSocieteService , private jeuxVideoService : JeuxVideoService) {
+  constructor(private jeuxService : JeuxService ,private jeuxSocieteService: JeuxSocieteService , private jeuxVideoService : JeuxVideoService,private router: Router) {
   }
 
   list(): Jeu[] {
@@ -45,10 +46,10 @@ export class JeuxComponent {
               this.jeuxSocieteService.create(this.jeuxForm)
             }
       }
-    }
+    }  
 
     this.cancel();
-  }
+    }
 
   remove(id?: number) {
    this.jeuxService.delete(id);
@@ -57,4 +58,7 @@ export class JeuxComponent {
   cancel() {
     this.jeuxForm = undefined;
   }
+
+
+
 }

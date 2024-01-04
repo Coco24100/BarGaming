@@ -3,13 +3,15 @@ package bar.model;
 import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 
 
 @Entity
 @DiscriminatorValue("video")
 public class JeuxVideo extends Jeux{
 
-	@Column
+	@Enumerated(EnumType.STRING)
 	private Plateforme plateforme;
 
 	public Plateforme getPlateforme() {
