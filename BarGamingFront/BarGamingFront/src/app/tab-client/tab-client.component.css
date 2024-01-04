@@ -116,7 +116,53 @@ header{
     font-size: 50px;
 }
 .mb-3 {
-    color: #FFF;
+    color: #FFEA30;
     font-family: Terminal Grotesque;
-    font-size: large;
+    font-size: x-large;
+}
+
+.btn-success {
+  color: #FFEA30;
+    font-family: Angerpoise Lampshade;
+    font-size: x-large;
+    border-radius: 0;
+}
+
+.btn-warning {
+  color: #000000;
+    font-family: Angerpoise Lampshade;
+    font-size: x-large;
+    border-radius: 0;
+}
+
+.btn-danger {
+  color: #FFEA30;
+    font-family: Angerpoise Lampshade;
+    font-size: x-large;
+    border-radius: 0;
+}
+
+.table th {
+  color: #FFEA30;
+  background-color: #000;
+}
+.table td {
+  color: #FFEA30;
+  background-color: #000;
+}
+
+.compte p{
+  color: #ffeb4a;
+  font-family: 'angerpoise';
+  font-size: 40px;
+  font-weight: 400;
+  display:flex;
+  justify-content:left;
+  align-items:center;
+  white-space: nowrap;
+}
+
+.form-control {
+  background-color: #000;
+  color:#FFEA30
 }

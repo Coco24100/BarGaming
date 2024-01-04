@@ -16,10 +16,14 @@
         <a class="nav-link" [routerLink]="['emprunt-jeu']" routerLinkActive="active" *ngIf="isClient()">Louer un Jeu</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" [routerLink]="['inscription-evenement']" routerLinkActive="active" *ngIf="isClient()">S'inscrire à un evenement</a>
+        <a class="nav-link" [routerLink]="['evenement']" routerLinkActive="active" *ngIf="isClient()">Les évènements en cours</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" [routerLink]="['tabclient']" routerLinkActive="active" *ngIf="isClient()">Tableau de bord</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" [routerLink]="['menu']" routerLinkActive="active" *ngIf="isClient()">Menu</a>
     </li>
 
     <li class="nav-item">
@@ -51,6 +55,7 @@
         <a class="nav-link" [routerLink]="['menu']" routerLinkActive="active" *ngIf="isAdmin()">Menu</a>
     </li>
 
+   
 
     <li class="nav-item" *ngIf="isLogged()" >
         <a class="nav-link" (click)="logout()">Déconnexion</a>

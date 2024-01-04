@@ -1,0 +1,92 @@
+header{
+    height: 300px;
+    display:flex;
+    background-image: url(src\assets\Images\Reservation.jpeg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+ }
+  
+  #logo
+  {
+    width:30%;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+  }
+  
+  #titre
+  {
+    /*font-family: 'cyberCity';
+    width:70%;
+    text-transform:uppercase;
+    font-size:60px;
+    color: #f1f374;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;*/
+
+    -webkit-text-stroke: 1px #00efff;
+    color: #ffeb4a;
+    font-family: "cyberCity";
+    font-size: 60px;
+    font-weight: 400;
+    text-shadow: 0px 4px 4px #00000040;
+    white-space: nowrap;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+  }
+  
+body {
+    background-color: #000;
+    min-height: 100%;
+    margin: 0;
+    font-family: 'terminalGrotesque';
+}
+
+.reservations {
+    color: #ffeb4a;
+    font-family: 'angerpoise';
+    font-size: 40px;
+    font-weight: 400;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    white-space: nowrap;
+  }
+
+  .card-body th, td {
+    background-color: #13566D;
+    color: #ffeb4a;
+    font-family: 'terminalGrotesque';
+}
+
+.card-header {
+    color: #FFEA30;
+    width: 100%;
+    font-size: x-large;
+    text-align: center;
+    font-family: 'angerpoise';
+    font-size: 50px;
+}
+
+.mb-3 {
+    color: #FFEA30;
+    font-family: Terminal Grotesque;
+    font-size: x-large;
+}
+
+.btn-success {
+    color: #FFEA30;
+      font-family: Angerpoise Lampshade;
+      font-size: x-large;
+      border-radius: 0;
+  }
+  
+  .btn-warning {
+    color: #000000;
+      font-family: Angerpoise Lampshade;
+      font-size: x-large;
+      border-radius: 0;
+  }

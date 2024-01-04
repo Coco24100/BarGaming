@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'terminalGrotesque';
+    font-size: 20px;
+    background-color: #000; /* Couleur de fond noire */
+  }
+
+  header{
+    height: 500px;
+    display:flex;
+    background-image: url(src\assets\Images\banniere1.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+ }
+  
+  #logo
+  {
+    margin-top: 20px;
+    margin-left: 40px;
+  }
+  
+  #titre
+  {
+    font-family: 'cyberCity';
+    width:70%;
+    font-size:60px;
+    color:#FFEA30;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #00F0FF;
+    text-shadow:
+      5px 5px 10px #00033e,
+      -5px 5px 10px #00033e,
+      -5px -5px 10px #00033e,
+      5px -5px 10px #00033e;
+      margin-top: 100px;
+      margin-left: 200px;
+  }
+
+.mb-3 {
+    color: #FFEA30;
+    font-family: Terminal Grotesque;
+    font-size: x-large;
+}
+
+.corps {
+    background-image: url(src\assets\Images\jeux.jpg);
+    color: #FFF;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    background-position-y: -220px;
+  }
+
+  .form-label {
+    color: #FFEA30;
+    width: 100%;
+    font-size: x-large;
+    text-align: center;
+    font-family: 'angerpoise';
+    font-size: 50px;
+  }
+
+  .btn-success {
+    color: #FFEA30;
+      font-family: Angerpoise Lampshade;
+      font-size: x-large;
+      border-radius: 0;
+  }
+  
+  .btn-warning {
+    color: #000000;
+      font-family: Angerpoise Lampshade;
+      font-size: x-large;
+      border-radius: 0;
+  }

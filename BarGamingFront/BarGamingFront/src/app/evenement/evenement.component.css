@@ -161,3 +161,41 @@ body {
 .ListEvenements:not(:last-child) {
     margin-bottom: -150px;
 }
+
+.card-body th, td {
+    background-color: #13566D;
+    color: #ffeb4a;
+    font-family: 'terminalGrotesque';
+}
+
+.card-header {
+    color: #FFEA30;
+    width: 100%;
+    font-size: x-large;
+    text-align: center;
+    font-family: 'angerpoise';
+    font-size: 50px;
+}
+.mb-3 {
+    color: #FFEA30;
+    font-family: Terminal Grotesque;
+    font-size: x-large;
+}
+.form-control {
+    background-color: #000;
+    color:#FFEA30
+  }
+ 
+  .btn-success {
+    color: #FFEA30;
+      font-family: Angerpoise Lampshade;
+      font-size: x-large;
+      border-radius: 0;
+  }
+  
+  .btn-warning {
+    color: #000000;
+      font-family: Angerpoise Lampshade;
+      font-size: x-large;
+      border-radius: 0;
+  }

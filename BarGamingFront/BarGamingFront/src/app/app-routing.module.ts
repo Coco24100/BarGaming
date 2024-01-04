@@ -16,6 +16,7 @@ import { InscriptionEventComponent } from './inscription-event/inscription-event
 import { EmpruntJeuComponent } from './emprunt-jeu/emprunt-jeu.component';
 import { MenusComponent } from './menus/menus.component';
 import { QuiSommesNousComponent } from './qui-sommes-nous/qui-sommes-nous.component';
+import { Error404Component } from './error404/error404.component';
 
 
 const routes: Routes = [
@@ -35,7 +36,8 @@ const routes: Routes = [
   {path: "emprunt-jeu", component: EmpruntJeuComponent},
   {path: "menu", component: MenusComponent},
   {path: "qui-sommes-nous", component: QuiSommesNousComponent},
-  {path: "", pathMatch: "full", redirectTo: "accueil"}];
+  {path: "", pathMatch: "full", redirectTo: "accueil"},
+  {path: 'error404', component: Error404Component }];
 
 
 @NgModule({
