@@ -1,93 +1,40 @@
+<head>
+</head>
 
-<div class="row">
+<body>
+<header>
+<div id="logo"><img src=".\assets\Images\logo.png" alt="logo" width="200" height="200"></div>
+<div id="titre"><p> cyberduck bar</p> </div>
+</header>
 
-    <div class="col-sm-4">
-      <div class="card">
-        <div class="card-body">
-            <h5 class="card-title">Inventaire des Jeux</h5>
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <div class="card-footer">
-                <a (click)="goJeux()" class="btn btn-primary">J'y vais !</a>
-                <small class="text-muted">Last updated 3 mins ago (voir si besoin)</small>
-              </div>        
-            </div>
-      </div>
-    </div>
 
-    <div class="col-sm-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Gestion des jeux de sociétés</h5>
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <div class="card-footer">
-                <a (click)="goJeuxSocietes()" class="btn btn-primary">J'y vais !</a>
-                <small class="text-muted">Last updated 3 mins ago (voir si besoin)</small>
-              </div>          
-            </div>
-        </div>
-      </div>
 
-    <div class="col-sm-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Gestion des jeux de vidéos</h5>
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <div class="card-footer">
-                <a (click)="goJeuxVideos()" class="btn btn-primary">J'y vais !</a>
-                <small class="text-muted">Last updated 3 mins ago (voir si besoin)</small>      
-            </div>          
-        </div>
-        </div>
-      </div>
+<div class="compte"> Bienvenue dans votre tableau de bord</div>
+<p class="soustitre">C'est dans ce lieu sacré que se passe toute la gestion du bar. </p>
 
+
+
+
+<div class="button">
+<button type="button" class="btn btn-warning" (click)="goJeux()">Inventaire des Jeux</button>
+<button type="button" class="btn btn-warning" (click)="goJeuxSocietes()">Gestion des jeux de sociétés</button>
+<button type="button" class="btn btn-warning" (click)="goJeuxVideos()">Gestion des jeux vidéos</button> </div>
+<br>
+<div class="button">
+<button type="button" class="btn btn-warning" (click)="goEvenements()">Gestion des évènements</button> 
+<button type="button" class="btn btn-warning" (click)="goEmprunts()">Gestion des emprunts</button> 
+<button type="button" class="btn btn-warning" (click)="goClients()">Gestions des clients</button> 
 </div>
-
-
-<div class="row">
-
-    <div class="col-sm-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Gestion des évènements</h5>
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <div class="card-footer">
-                <a (click)="goEvenements()" class="btn btn-primary">J'y vais !</a>
-                <small class="text-muted">Last updated 3 mins ago (voir si besoin)</small>      
-            </div>          
-        </div>
-        </div>
-      </div>
-
-      <div class="col-sm-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Gestion des emprunts</h5>
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <div class="card-footer">
-                <a (click)="goEmprunts()" class="btn btn-primary">J'y vais !</a>
-                <small class="text-muted">Last updated 3 mins ago (voir si besoin)</small>      
-            </div>          
-        </div>
-        </div>
-    </div>
-
-    <div class="col-sm-4">
-        <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Gestion des clients</h5>
-              <img class="card-img-top" src="..." alt="Card image cap">
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <div class="card-footer">
-                  <a (click)="goClients()" class="btn btn-primary">J'y vais !</a>
-                  <small class="text-muted">Last updated 3 mins ago (voir si besoin)</small>      
-              </div>          
-          </div>
-          </div>
-     </div>
+<br>
+<div class="button">
+  <button type="button" class="btn btn-warning" (click)="goReservation()">Gestion des reservations</button>
 </div>
+<br>
+<div id="polygon"><img src=".\assets\Images\polygon.png" alt="polygon" width=100%></div>
+
     
+<div class="corps">
+</div>
+
+
+</body>
