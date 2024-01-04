@@ -4,7 +4,7 @@
     background-size: cover;
     background-position: center;
     width: 100%;  /* 50% de la largeur de la fenêtre */
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

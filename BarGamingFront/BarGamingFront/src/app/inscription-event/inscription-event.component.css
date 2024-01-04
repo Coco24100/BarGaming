@@ -4,6 +4,7 @@ body {
     font-family: 'terminalGrotesque';
     font-size: 20px;
     background-color: #000; /* Couleur de fond noire */
+    min-height: 100vh;
   }
   
   header{
