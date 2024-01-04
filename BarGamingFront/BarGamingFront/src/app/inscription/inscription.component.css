@@ -17,21 +17,21 @@
     width: 100%;
     font-size: x-large;
     text-align: center;
-    font-family: Angerpoise Lampshade;
+    font-family: 'angerpoise';
 }
 
 .connexion {
     color: #FFF;
     font-size: xx-large;
     text-align: center;
-    font-family: Angerpoise Lampshade;
+    font-family: 'angerpoise';
 }
 
 .text {
     color: #FFF;
     font-size: large;
     text-align: center;  
-    font-family: Terminal Grotesque;
+    font-family: 'terminalGrotesque';
 }
 
 .card-body{
@@ -40,7 +40,7 @@
 
 .mb-3 {
     color: #FFF;
-    font-family: Terminal Grotesque;
+    font-family: 'terminalGrotesque';
     font-size: large;
 }
 
@@ -56,7 +56,7 @@
     border: none; 
     border-radius: 0%;
     padding: 10px 20px; 
-    font-family: Angerpoise Lampshade;
+    font-family: 'angerpoise';
 }
 
 .form-check-input,

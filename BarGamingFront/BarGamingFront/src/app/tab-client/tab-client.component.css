@@ -62,7 +62,7 @@ header{
     font-size: xx-large;
     background-color: #FFEA30;
     color:#000;
-    font-family: Angerpoise Lampshade;
+    font-family: 'angerpoise';
   }
 
   .corps {
@@ -85,28 +85,28 @@ header{
 }
 .mb-3 {
     color: #FFEA30;
-    font-family: Terminal Grotesque;
+    font-family: 'terminalGrotesque';
     font-size: x-large;
 }
 
 .btn-success {
   color: #FFEA30;
-    font-family: Angerpoise Lampshade;
-    font-size: x-large;
+  font-family: 'angerpoise';
+  font-size: x-large;
     border-radius: 0;
 }
 
 .btn-warning {
   color: #000000;
-    font-family: Angerpoise Lampshade;
-    font-size: x-large;
+  font-family: 'angerpoise';
+  font-size: x-large;
     border-radius: 0;
 }
 
 .btn-danger {
   color: #FFEA30;
-    font-family: Angerpoise Lampshade;
-    font-size: x-large;
+  font-family: 'angerpoise';
+  font-size: x-large;
     border-radius: 0;
 }
 

@@ -62,7 +62,7 @@ body {
       font-size: xx-large;
       background-color: #FFEA30;
       color:#000;
-      font-family: Angerpoise Lampshade;
+      font-family: 'angerpoise';
     }
   
     .corps {
@@ -93,34 +93,34 @@ body {
   }
   .mb-3 {
       color: #FFEA30;
-      font-family: Terminal Grotesque;
+      font-family: 'terminalGrotesque';
       font-size: x-large;
   }
 
   .form-label{
     color: #FFEA30;
-      font-family: Angerpoise Lampshade;
-      font-size: x-large;
+    font-family: 'angerpoise';
+    font-size: x-large;
 
   }
   .btn-success {
     color: #FFEA30;
-      font-family: Angerpoise Lampshade;
-      font-size: x-large;
+    font-family: 'angerpoise';
+    font-size: x-large;
 
   }
   
   .btn-warning {
     color: #000000;
-      font-family: Angerpoise Lampshade;
-      font-size: x-large;
+    font-family: 'angerpoise';
+    font-size: x-large;
 
   }
   
   .btn-danger {
     color: #FFEA30;
-      font-family: Angerpoise Lampshade;
-      font-size: x-large;
+    font-family: 'angerpoise';
+    font-size: x-large;
   
   }
   
