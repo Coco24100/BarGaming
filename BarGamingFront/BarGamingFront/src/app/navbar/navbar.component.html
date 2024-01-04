@@ -2,15 +2,6 @@
     <li class="nav-item">
         <a class="nav-link" [routerLink]="['accueil']" routerLinkActive="active">Accueil</a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link" [routerLink]="['client']" routerLinkActive="active" *ngIf="isAdmin()" >Liste Client</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" [routerLink]="['reservation']" routerLinkActive="active" *ngIf="isAdmin()">Liste Reservation</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" [routerLink]="['emprunt']" routerLinkActive="active" *ngIf="isAdmin()">Liste Location</a>
-    </li>
 
     <li class="nav-item">
         <a class="nav-link" [routerLink]="['emprunt-jeu']" routerLinkActive="active" *ngIf="isClient()">Louer un Jeu</a>
@@ -27,19 +18,7 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" [routerLink]="['evenement']" routerLinkActive="active" *ngIf="isAdmin()">Liste Evenement</a>
-    </li>
-
-
-    <li class="nav-item">
-        <a class="nav-link" [routerLink]="['jeux']" routerLinkActive="active" *ngIf="isAdmin()">Liste Jeux</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" [routerLink]="['jeux-societe']" routerLinkActive="active" *ngIf="isAdmin()">Liste JeuxSociete</a>
-    </li>
-
-    <li class="nav-item">
-        <a class="nav-link" [routerLink]="['jeux-video']" routerLinkActive="active" *ngIf="isAdmin()">Liste JeuxVideo</a>
+        <a class="nav-link" [routerLink]="['admin']" routerLinkActive="active" *ngIf="isAdmin()">Tableau de bord Admin</a>
     </li>
 
     <li class="nav-item">
@@ -50,10 +29,6 @@
         <a class="nav-link" [routerLink]="['inscription']" routerLinkActive="active" *ngIf="!isLogged()">Inscription</a>
     </li>
     
-    
-    <li class="nav-item">
-        <a class="nav-link" [routerLink]="['menu']" routerLinkActive="active" *ngIf="isAdmin()">Menu</a>
-    </li>
 
    
 

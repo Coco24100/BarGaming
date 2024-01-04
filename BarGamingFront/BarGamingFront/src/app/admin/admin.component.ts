@@ -15,13 +15,13 @@ goJeux(){
     this.router.navigate(['/jeux']);}
 
 goJeuxSocietes(){
-  this.router.navigate(['/jeuxsociétés']);}
+  this.router.navigate(['/jeux-societe']);}
 
 goJeuxVideos(){
-    this.router.navigate(['/jeuxsociétés']);}
+    this.router.navigate(['/jeux-video']);}
 
 goEvenements(){
-      this.router.navigate(['/event']);}
+      this.router.navigate(['/evenement']);}
 
 goEmprunts(){
         this.router.navigate(['/emprunt']);}
@@ -29,7 +29,8 @@ goEmprunts(){
 goClients(){
           this.router.navigate(['/client']);}
 
-
+goReservation(){
+          this.router.navigate(['/reservation']);}
 
 
 }
