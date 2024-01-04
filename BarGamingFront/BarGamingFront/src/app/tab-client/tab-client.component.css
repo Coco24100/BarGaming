@@ -1,5 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'terminalGrotesque';
+  font-size: 20px;
+  background-color: #000; /* Couleur de fond noire */
+}
+
 header{
-    height: 300px;
+    height: 500px;
     display:flex;
     background-image: url(src\assets\Images\Informations.jpg); 
     background-repeat: no-repeat;
@@ -7,80 +15,39 @@ header{
     background-position: center;
  }
 
- .header-info {
-    background-image: url(src\assets\Images\Informations.jpg);
-}
-
-.header-location {
-    background-image: url(src\assets\Images\LocJeu.webp);
-}
-
-.header-inscription {
-    background-image: url(src\assets\Images\Inscript.webp);
-}
-
-.header-historique {
-    background-image: url(src\assets\Images\Historique.webp);
-}
-  
   #logo
   {
-    width:30%;
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
+    margin-top: 20px;
+    margin-left: 40px;
   }
   
   #titre
   {
-    -webkit-text-stroke: 1px #00efff;
-    color: #ffeb4a;
-    font-family: "cyberCity";
-    font-size: 60px;
-    font-weight: 400;
-    text-shadow: 0px 4px 4px #00000040;
-    white-space: nowrap;
-    display:flex;
-    justify-content:flex-start;
-    align-items:center;
+    font-family: 'cyberCity';
+    width:70%;
+    font-size:60px;
+    color:#FFEA30;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #00F0FF;
+    text-shadow:
+      5px 5px 10px #00033e,
+      -5px 5px 10px #00033e,
+      -5px -5px 10px #00033e,
+      5px -5px 10px #00033e;
+      margin-top: 100px;
+      margin-left: 200px;
   }
 
-  body {
-    background-color: #000;
-    min-height: 100%;
-    margin: 0;
-    font-family: 'terminalGrotesque';
+.content h2 {
+  font-family: 'angerpoise', sans-serif;
+  font-size: 40px;
 }
 
-.yellow-triangle {
-    width: 100%;
-    height: 20px;
-    border-style: solid;
-    border-width: 83px 0 83px 2005.556px;
-    border-color: transparent transparent transparent #FFEA30;
-  }
-
-  .compte {
-    color: #ffeb4a;
-    font-family: 'angerpoise';
-    font-size: 40px;
-    font-weight: 400;
-    display:flex;
-    justify-content:left;
-    align-items:center;
-    white-space: nowrap;
-  }
-
-  .soustitre {
-    color: #ffeb4a;
-    font-family: 'terminalGrotesque';
-    font-size: 20px;
-    font-weight: 400;
-    display:flex;
-    justify-content:Left;
-    align-items:center;
-    white-space: nowrap;
-  }
+.black-bg {
+  background-color: #000;
+  color: #FFEA30;
+  padding: 80px;
+}
 
   .button {
     display: flex;
@@ -101,7 +68,7 @@ header{
   .corps {
     background-color: #13566D;
     color: #FFF;
-    padding: 100px;
+    padding: 80px;
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
@@ -110,6 +77,7 @@ header{
   .card-header {
     color: #FFEA30;
     width: 100%;
+    padding: 30px;
     font-size: x-large;
     text-align: center;
     font-family: 'angerpoise';
@@ -151,16 +119,7 @@ header{
   background-color: #000;
 }
 
-.compte p{
-  color: #ffeb4a;
-  font-family: 'angerpoise';
-  font-size: 40px;
-  font-weight: 400;
-  display:flex;
-  justify-content:left;
-  align-items:center;
-  white-space: nowrap;
-}
+
 
 .form-control {
   background-color: #000;
