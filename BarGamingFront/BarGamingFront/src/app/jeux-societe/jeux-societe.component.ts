@@ -15,7 +15,7 @@ import { EmpruntService } from '../emprunt/emprunt.service';
 export class JeuxSocieteComponent {
   client = this.authService.getCompte() ;
   jeuxSocieteForm?: JeuSociete = undefined;
-  empruntForm: Emprunt = new Emprunt(undefined, undefined, this.client)
+  empruntForm: Emprunt = new Emprunt(undefined, undefined, this.client);
   showEmpruntSection: boolean = false;
 
   constructor(private jeuxSocieteService: JeuxSocieteService, private authService: AuthService, private router: Router, private jeuxService: JeuxService, private empruntService: EmpruntService) {
@@ -86,7 +86,8 @@ export class JeuxSocieteComponent {
     }
 
     cancelEmprunt() {
-      this.empruntForm = new Emprunt(undefined, undefined, this.client)
-      this.router.navigate(["/emprunt-jeu"]);
+      this.empruntForm = new Emprunt(undefined, undefined, this.client);
+      this.showEmpruntSection = false;
+      this.router.navigate(["/jeux-societe"]);
     }
 }

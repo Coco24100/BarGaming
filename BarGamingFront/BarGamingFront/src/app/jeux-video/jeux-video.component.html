@@ -10,6 +10,7 @@
 <div class="videos"> Liste des Jeux Videos </div>   
 <div id="polygon"><img src=".\assets\Images\polygon.png" alt="polygon" width=100%></div>
 
+<ng-container *ngIf="isAdminUser()">
     <div class="card-body"> 
         <table class="table table-striped">
             <thead>
@@ -69,3 +70,43 @@
         <a (click)="cancel()" class="btn btn-warning btn-lg mx-2"><i class="bi bi-backspace"></i>Annuler</a>
     </div>
 </div>
+</ng-container>
+
+<ng-container *ngIf="isClientUser()">
+    <div *ngIf="!showEmpruntSection">
+      <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Platerforme</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let j of list()">
+              <td>{{ j.nom }}</td>
+              <td>{{ j.plateforme }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-footer">
+        <a (click)="Emprunt()" class="btn btn-success btn-lg"><i class="bi bi-plus-lg"></i>Emprunter un jeu vidéo</a>
+      </div>
+    </div>
+  
+    <div *ngIf="showEmpruntSection">
+      <div class="corps">
+        <div class="mb-3">
+          <label for="liste" class="form-label">Liste des jeux:</label>
+          <select class="form-select" id="evenements" [(ngModel)]="empruntForm.jeu">
+            <option *ngFor="let u of listeJeux()" [ngValue]="u">{{ u.nom }} {{ u.plateforme }} </option>
+          </select>
+          <div class="card-footer">
+            <a (click)="saveEmprunt()" class="btn btn-success btn-lg">Choisir ce jeu</a>
+            <a (click)="cancelEmprunt()" class="btn btn-warning btn-lg mx-2">Annuler</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
