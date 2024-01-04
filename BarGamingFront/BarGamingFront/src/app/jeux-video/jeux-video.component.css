@@ -36,7 +36,10 @@ body {
   margin: 0;
   font-family: 'terminalGrotesque';
 }
-
+.corps {
+  padding: 40px;
+  background-color: #13566D;
+}
 .videos {
     color: #FFEA30;
     font-family: 'angerpoise';
