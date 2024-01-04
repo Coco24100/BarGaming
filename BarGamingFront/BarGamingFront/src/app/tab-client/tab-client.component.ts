@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { Client, Evenement, Compte } from '../model';
+import { Client, Evenement, Compte, Reservation } from '../model';
 import { ClientService } from '../client/client.service';
 import { Router } from '@angular/router';
 import { EvenementService } from '../evenement/evenement.service';
 import { AuthService } from '../auth.service';
+import { ReservationService } from '../reservation/reservation.service';
 
 @Component({
   selector: 'app-tab-client',
@@ -12,7 +13,7 @@ import { AuthService } from '../auth.service';
 })
 export class TabClientComponent {
 
-  constructor(private clientService: ClientService, private router: Router, private eventService: EvenementService, private authService: AuthService) {
+  constructor(private clientService: ClientService, private router: Router, private eventService: EvenementService, private authService: AuthService, private reservationService:ReservationService) {
 
   }
   activeClass: string = 'header-info';
@@ -95,7 +96,12 @@ inscription() {
 }
 
 
-
+IsIncrite () : boolean{
+  if ( this.reservationService.findAll().some(item => item.client?.id == this.authService.getCompte()?.id)) {
+    return true;
+  }
+  return false;
+}
 
 
 

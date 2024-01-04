@@ -95,8 +95,9 @@
                         <td>{{e.date}}</td>
                         <td>{{e.horaireDebut}}</td>
                         <td>{{e.horaireFin}}</td>
+
                         <td><div class="btn-group btn-group-sm">
-                            <a (click)="inscription()"><button type="button" class="btn btn-warning">Je veux participer</button></a> 
+                            <a (click)="inscription()"><button type="button" class="btn btn-warning">{{ IsIncrite() | buttonInscription }}</button></a> 
                         </div></td>         
                     </tr>
                 </tbody>
