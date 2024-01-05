@@ -29,7 +29,7 @@ export class ClientService {
   }
 
   findById(id?: number): Observable<Client> {
-    return this.http.get<Client>(environment.apiUrl + "/compte/client/"+id);
+    return this.http.get<Client>(environment.apiUrl + "/compte/"+id);
   }
 
   create(client: Client): void {
